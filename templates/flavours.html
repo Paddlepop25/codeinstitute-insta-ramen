@@ -1,15 +1,11 @@
-<html>
+{% extends 'base.html'%}
+{% block content %}
 
-<head>
-
-</head>
-
-<body>
+<h3>Flavours</h3>
     {% for flavour in flavours %}
         {{flavour.flavour}}
         {{flavour.brand_name}}
         {{flavour.country}}
-    {% endfor %}    
-</body>
-
-</html>
+    {% endfor %}   
+    
+{% endblock %}
