@@ -1,0 +1,301 @@
+Review,Brand,Flavour,Country
+1,New Touch,T's Restaurant Tantanmen ,Japan
+2,Just Way,Noodles Spicy Hot Sesame Spicy Hot Sesame Guan-miao Noodles,Taiwan
+3,Nissin,Cup Noodles Chicken Vegetable,USA
+4,Wei Lih,GGE Ramen Snack Tomato Flavor,Taiwan
+5,Ching's Secret,Singapore Curry,India
+6,Samyang Foods,Kimchi song Song Ramen,South Korea
+7,Acecook,Spice Deli Tantan Men With Cilantro,Japan
+8,Ikeda Shoku,Nabeyaki Kitsune Udon,Japan
+9,Ripe'n'Dry,Hokkaido Soy Sauce Ramen,Japan
+10,KOKA,The Original Spicy Stir-Fried Noodles,Singapore
+11,Tao Kae Noi,Creamy tom Yum Kung Flavour,Thailand
+12,Yamachan,Yokohama Tonkotsu Shoyu,USA
+13,Nongshim,Mr. Bibim Stir-Fried Kimchi Flavor,South Korea
+14,Nissin,Deka Buto Kimchi Pork Flavor,Japan
+15,Nissin,Demae Ramen Bar Noodle Aka Tonkotsu Flavour Instant Noodle,Hong Kong
+16,KOKA,Mushroom Flavour Instant Noodles,Singapore
+17,TRDP,Mario Masala Noodles,India
+18,Yamachan,Tokyo Shoyu Ramen,USA
+19,Binh Tay,Mi Hai Cua,Vietnam
+20,Paldo,Premium Gomtang,South Korea
+21,Prima,Juzz's Mee Creamy Chicken Flavour (Export Version),Singapore
+22,Uni-President,Mushroom Flavor,Vietnam
+23,Samyang Foods,Jjamppong Big Bowl,South Korea
+24,Sokensha,Curry Udon,Japan
+25,Nissin,Straits Reborn Laksa,Singapore
+26,Nongshim,Budae Jjigae Noodle Soup,South Korea
+27,Takamori,Hearty Japanese Style Curry Udon,Japan
+28,Nissin,Cup Noodles Potato Chips Black Pepper Crab Flavour,Singapore
+29,Nissin,Cup Noodles Blacl Pepper Crab Flavour (More Angry Crab),Singapore
+30,Guava Story,Anchovy Flavor Guava Rice Noodles,South Korea
+31,Samurai Ramen,Umami Ramen,Japan
+32,Ikeda Shoku,Nabeyaki Tempura Udoin,Japan
+33,Fujiwara,Hokkaido Hakodate Miso Ramen,Japan
+34,Uni-President,Man Han Feast Spicy Beef Flavor Instant Noodles,Taiwan
+35,Ogasawara,Kirin Giraffe Shoyu Ramen,Japan
+36,Pringles,Nissin Top Ramen Chicken Flavor Potato Crisps ,USA
+37,Mom's Dry Noodle,Dan Dan Noodle,Taiwan
+38,Samyang Foods,Samyang Ramen Classic Edition,South Korea
+39,MyKuali,Penang Red Tom Yum Goong Noodle,Malaysia
+40,Maggi,Hot Heads Green Chilli Noodles,India
+41,Nissin,Demae Ramen Spicy,Germany
+42,Nissin,Cup Noodles Shrimps,Germany
+43,Nissin,Demae Ramen Tokyo Soy Sauce,Germany
+44,Paldo,Bul Jjamppong,South Korea
+45,TTL,Chicken With Chinese Shaoxing Wine,Taiwan
+46,Samyang Foods,Buldak Bokkeummyun,South Korea
+47,Acecook,Pork Wantan Men,Japan
+48,E-Zee,Instant Noodles Chicken Flavour,Malaysia
+49,Kiki Noodle,Scallion Oil & Soy Sauce Noodle,Taiwan
+50,Kiki Noodle,Sichuan Spices Flavor Noodle,Taiwan
+51,Samyang Foods,Kimchi Stew Ramyun,South Korea
+52,Maruchan,Seimen Red Spicy Dandan Men,Japan
+53,Ottogi,Ppushu Ppushu Noodle Snack Chilli Cheese Flavor,South Korea
+54,Tokyo Noodle,Mini Instant Noodle Mild Curry Flavor,Japan
+55,GGE,Noodle Snack Wheat Cracks Seaweed Flavor,Taiwan
+56,Nissin,Cup Noodles Mini Seafood Flavour,Hong Kong
+57,Myojo,Udon Japanese Style Noodles With Soup Base Hot & Sour Flavor,USA
+58,KOKA,Signature Curry Flavor Instant Noodles,Singapore
+59,Acecook,Dossari Yasai Chanpon,Japan
+60,Paldo,Volcano Curry Kkokkomyun,South Korea
+61,KOKA,Creamy Soup Witrh Crushed Noodles Curry Flavor,Singapore
+62,KOKA,Delight Laksa Singapura Flavor Instant Non-Fried Noodles,Singapore
+63,KOKA,Silk Spicy Marinara Instant Rice Fettuccine,Singapore
+64,KOKA,Signature Chicken Flavor Instant Noodles,Singapore
+65,Nissin,Cup Noodles Sopa Nissin Hot Sauce Con Camaron,Mexico
+66,MyKuali,Penang Hokkien Prawn Flavor Noodle,Japan
+67,Master Kong,Roasted Pork Noodle,China
+68,Uni-President,Man Han Feast Super Hot Pot Beef Flavor Instant Noodles,Taiwan
+69,World O' Noodle,Mi Goreng Original Flavour Fried Noodles,Indonesia
+70,Nissin,Raoh Nojyuku Toro Tonkotsu Ramen,Japan
+71,Kang Shi Fu,Artificial Dongpo's Braised Pork Flavour,Hong Kong
+72,Mum Ngon,Lau Tom Chua Cay,Vietnam
+73,Happy Cook,Old Beijing Fried Bean Sauce Noodle,Taiwan
+74,Nissin,Cup Noodles Indonesia Mie Goreng,Japan
+75,Fashion Food,Yummy Spicy Rice Soup With Seafood,Thailand
+76,Dream Kitchen,Udon Japanese Style Fresh Noodle,USA
+77,MyKuali,MeeKuali Bihun Sup Rempah Perisa Daging,Malaysia
+78,New Touch,T's Restaurant Sura Tanmen,Japan
+79,TTL,Sesame Oil Chicken With Rice Wine Noodle,Taiwan
+80,Ajinatori,HALAL Chicken Shoyu Sauce Ramen,Japan
+81,Mama Pat's,Chicken Fajita Flavor Instant Ramen Noodles,USA
+82,Mama Pat's,Lamb Stew Flavor Instant Ramen Noodles,USA
+83,Mama Pat's,Seafood Gumbo Flavor Instant Ramen Noodles,USA
+84,Mama Pat's,Chicken Taco Flavor Instant Ramen Noodles,USA
+85,Just Way,Chuan Wei Spicy Guan-miao Noodles,Taiwan
+86,Sichuan Guangyou,Sweet Potato Instant Noodle Braised Spicy Chitterling Flavor,China
+87,Nissin,Cup Noodles Mini Spicy Seafood,Hong Kong
+88,MyKuali,Penang Hokkien Prawn Noodle Soup,Singapore
+89,Goku-Uma,Yakisoba Japanese Style Noodle,USA
+90,Maggi,Nutri-licious Pazzta Tomato Twist,India
+91,Sichuan Baijia,Chongqing Noodles Burning Dry Noodles,China
+92,Nissin,Cup Noodles Tom Yam Seafood Flavour,Singapore
+93,Indomie,My Noodles Mi Goreng Pizza Cheese,Indonesia
+94,Liang Cheng Mai,Shaanxi Cold Noodle: Mustard Spicy,China
+95,Samyang Foods,Cheese Buldak Bokkeummyun (Black),South Korea
+96,Maggi,2 Minute Noodles Chicken Flavour,Fiji
+97,Master Kong,Chicken Flavor Instant Noolde,China
+98,Nissin,Cup Noodles Prawn Flavour,Hong Kong
+99,Ripe'n'Dry,Hokkaido Miso Ramen,Japan
+100,MyKuali,Penang Red Tom Yum Goong Rice Vermicelli Soup,Malaysia
+101,Samyang Foods,Stew Buldak Bokkeumtangmyun,South Korea
+102,Samyang Foods,Cheese Buldak Bokkeummyun,South Korea
+103,Samyang Foods,Buldak Bokkeummyun (New Packaging),South Korea
+104,Chuan Wei Wang,Bowl Instant Noodles Artificial Spicy Beef Flavor,China
+105,Nissin,Demae Iccho Chicken Flavour Instant Noodle (Bowl Noodle),Hong Kong
+106,Wai Wai,Instant Noodles Artificial Chicken Flavoured,India
+107,Daikoku,Kitsune Udon,Japan
+108,Sichuan Baijia,Pickled Cabbage Flavor Instant Vermicelli,China
+109,Kamfen,Noodle King Artificial Wonton Soup Flavored,Hong Kong
+110,Nongshim,Spicy Shrimp Cup Noodle,South Korea
+111,Marutai,Nagasaki Agodashi Shoyu Ramen,Japan
+112,Vifon,Viet Cuisine Bun Rieu Cua Sour Crab Soup Instant Rice Vermicelli,Vietnam
+113,Nissin,"Cup Noodles Rich Garlic, Egg Yolk & Oxtail",Japan
+114,Uni-President,Minced Pork Flavor Instant Noodles,Taiwan
+115,1 To 3 Noodles,Chatpat Masala,India
+116,Nissin,Cup Noodles BIG XO Sauce Seafood Flavour,Hong Kong
+117,Fantastic,Noodles Chicken & Corn Flavour,Australia
+118,Ripe'n'Dry,Hokkaido Salt Ramen,Japan
+119,Nissin,Demae Iccho Tonkotsu Flavour Instant Noodle (Bowl Noodle),Hong Kong
+120,Knorr,Chatt Patta Instant Noodles,Pakistan
+121,Nissin,Maxi Sopa Nissin Cuchareable Sabor A Pollo,Mexico
+122,Nissin,Sopa Nissin Sabor A Res Instantanea Tipo Ramen,Mexico
+123,Nissin,Cup Noodles Sopa Nissin Hot Sauce Sabor A Pollo,Mexico
+124,Ve Wong,Little Prince(ss) Brand Snack Noodles Artificial Mexican Pizza Flavor,Taiwan
+125,Patanjali,Atta Noodles Jhatpat Banao Befikr Khao,India
+126,Qin Zong,Shaanxi Cold Noot Hot & Sour Flavor,China
+127,Nissin,Cup Noodles Spicy Lime Flavor Ramen Noodle Soup (New Recipe),USA
+128,Nissin,Demae Iccho Tokyo Shoru Tonkotsu Instant Noodle,Hong Kong
+129,Pran,Mr. Noodles Curry Flavor Instant Noodles,Bangladesh
+130,Paldo,Bul Jjajangmyeon,South Korea
+131,Ogasawara,Kirin Giraffe Shio Ramen,Japan
+132,Sapporo Ichiban,Mie Kamayama Ramen Gyukotsu Misoaji,Japan
+133,Sau Tao,Black Pepper XO Sauce Flavour,Hong Kong
+134,Nissin,Nupasta Bolognese Flavour Instant Noodle,Japan
+135,Nongshim,Saeutang Sabalmyeon,South Korea
+136,Happy Cook,Sichuan Spicy Flavor,Taiwan
+137,MAMA,Instant Bowl Noodles Shrimp (Tom Yum) Flavor Base,Thailand
+138,Nissin,Cup Noodle Spicy Curry Chicken,Japan
+139,Goku-Uma,Ramen Noodles Miso Flavor,USA
+140,Nissin,Cup Noodles Spicy Beef Flavour,Hong Kong
+141,Pran,Mr. Noodles Instant Noodles Beef Flavour,Bangladesh
+142,Nissin,Cup Noodles Big Seafood Flavour,Hong Kong
+143,Fantastic,Noodles Chicken Chow Mein Flavour,Australia
+144,Ottogi,Ramyun Sabor Pollo,Mexico
+145,Nissin,Demae Iccho Black Garlic Oil Tonkotsu Flavour Instant Noodles,Hong Kong
+146,Ajinatori,Chicken Flavor Ramen,Japan
+147,Maggi,2 Minute Noodles Masala Spicy,India
+148,Maruchan,Sopa Maruchan Sobar A Camaron,Mexico
+149,Nissin,Yakisoba,Japan
+150,Suimin,Noodle With Oriental Chicken Flavour,Australia
+151,Nissin,Demae Ramen Spicy Xo Sauce Seafood Flavour Instant Noodle,Hong Kong
+152,Cintan,Mi Segera Mmm... Original,Malaysia
+153,Nissin,Cup Noodles Spicy Chile Chicken (New Recipe),USA
+154,Chuan Wei Wang,Bowl Instant Noodles Artificial Beef With Sauerkraut Flavor,China
+155,Suimin,Noodles With Chicken Flavour,Australia
+156,Nissin,Cup Noodles Seafood,China
+157,Sapporo Ichiban,Tabimen AizuKitakata Gyokai Shoyu Ramen,Japan
+158,Nissin,Nupasta Bacon In Carbonara Sauce Flavour Instant Noodle,Hong Kong
+159,Sichuan Baijia,Chongqing Noodles Spicy Hot Flavor,China
+160,Samyang Foods,Buldak Bokkummyun Cheese Flavor,South Korea
+161,Samyang Foods,Fresh Bibimmyun Fried Noodle,South Korea
+162,Wai Wai,Instant Noodles Veg Masala Flavour,India
+163,Nissin,Nupasta Neapolitan Flavour Instant Noodle,Hong Kong
+164,Shirakiku,Karami Ramen Spicy Chili Flavour Japanese Style Noodle With Soup Base,USA
+165,Nissin,Disney Cuties Instant Noodle Crab Flavour,Thailand
+166,Nissin,Cup Noodles Rich Soft Shelled Turle Soup,Japan
+167,Unif Tung-I,Instant Vegetarian Beehoon Rice Vermicelli,Taiwan
+168,Sichuan Baijia,Broad Noodle Artificial Beef Flavor Hot Pot,China
+169,Dream Kitchen,Curry Flavour Instant Noodles,USA
+170,Tablemark,Tohokuno Aji Yonezawa Ramen,Japan
+171,Uni-President,Science Noodle (X'Mas Edition),Taiwan
+172,Farmer's Heart,Pho Beef Flavor Vietnamese Rice Noodle Soup,USA
+173,Kamfen,Instant Wonton Noodles Scallop Lobster Soup Flavour,Hong Kong
+174,Fuku,Tom Yam Soup Instant Noodle,Hong Kong
+175,Goku-Uma,Ramen Noodles Artificially Flavored Tonkotsu,USA
+176,Daikoku,Hiroshima Flavor Yakisoba,Japan
+177,Nissin,Disney Cuties Instant Noodle Seaweed Flavour,Thailand
+178,Singa-Me,Instant Noodles Mi Goreng Flavour,Australia
+179,New Touch,Sugomen Sano Ramen,Japan
+180,Ottogi,Ramyon Sabor Y Camaron,Mexico
+181,MAMA,Instant Flat Noodles Clear Soup,Thailand
+182,MAMA,Cup Rice Noodles Tom Saab Flavour,Thailand
+183,MAMA,Instant Rice Noodles Stew Beef Flavour,Thailand
+184,MAMA,Instant Rice Noodles Phnom Penh Style,Thailand
+185,MAMA,Instant Flat Noodles Tom Yam Flavour,Thailand
+186,Maruchan,Ramen Noodle soup Mushroom Flavor,USA
+187,Happy Family,Vegetable Flavour Instant Noodles,Singapore
+188,Tseng Noodles,Rice Noodle Shallot With Braised Pork Flavor,Taiwan
+189,Great Value,Vegetable Flavour Noodles With Vegetables,Canada
+190,JML,Instant Noodle Artificial Beef Flavor 7 sour Pickled Cabbage,China
+191,Suimin,Noodles With Hot & Spicy Flavour,Australia
+192,Tseng Noodles,Rice Noodle Chinese Mushroom With Soybean Vegetarian Braised Pork Flavor,Taiwan
+193,Nissin,Piritto Karakuchi Tantan Udon,Japan
+194,Tseng Noodles,Rice Noodle Seafood Laksa Flavour,Taiwan
+195,Nongshim,Chal Bibim Myun,South Korea
+196,Menraku,Japanese Yakisoba Umami Sauce,Japan
+197,La Moderna,Sazon Casero Sopa Con Tomate Y Sabor Pollo,Mexico
+198,A-Sha Dry Noodle,Chow Mein Original Flavor,Taiwan
+199,Master Kong,Artificial Mushroom Chicken Flavor Instant Noodle,China
+200,A-Sha Dry Noodle,Chow Mein Oyster Sauce BBQ Flavor,Taiwan
+201,Nissin,Nupasta Carbonara Flavour Instant Noodle,Hong Kong
+202,Nissin,Demae Iccho Curry Beef Flavour,Hong Kong
+203,Nissin,Cup Noodles Big Spicy Seafood Flavour,Hong Kong
+204,Nissin,Demae Iccho Black Garlic Oil Tonkotsu,Hong Kong
+205,Mi Sedaap,Mi Segera Mi Goreng Ayam Krispi,Indonesia
+206,Nissin,Cup Noodles Sabor Pollo Habanero Y Limon Sopa Instantanea,Mexico
+207,Great Value,Spicy Ramen Noodles,Canada
+208,Maruchan,Bowl Taste Of Asia Beef Flavor Sukiyaki Ramen,USA
+209,A-Sha Dry Noodle,Tainan Noodle Original Sauce,Taiwan
+210,Tokushima Seifun,Negi Ramen,Japan
+211,Doll,Instant Noodle Vegetarian Flavour,Hong Kong
+212,Maggi,Fusian Special Edition Ow... Ow... Spicy Cow Mi Goreng,Australia
+213,Samyang Foods,Fresh Jjajang,South Korea
+214,Marutai,Hakata Tonkotsu Ramen,Japan
+215,Four Seas,Kung Tak Lam Vegetarian Noodle (Mushroom),Hong Kong
+216,Nongshim,Arrabiata Rice Bucatini,USA
+217,Mamee,Pepper Noodles Vegetarian,Hong Kong
+218,Ottogi,Ramyon Sabor Mariscos,Mexico
+219,Kamfen,Dried Mix Noodles Scallop Seafood Flavoured,Hong Kong
+220,Nissin,Cup Noodle Light+ Cheese Fondue,Japan
+221,Mama,JokCup Instant Porridge Soup Seafood Flavour,Thailand
+222,Baijia,Artificial Pickled Vegetable Beef Flavor,China
+223,MyOri,Malaysia Penang White Curry Noodle Super Spicy,Malaysia
+224,MyOri,Malaysia Penang Green Curry Rice Vermicelli,Malaysia
+225,MyOri,Malaysia Penang White Curry Noodle Original,Malaysia
+226,Ruski,Chicken Flavour Instant Noodles,Malaysia
+227,Ottogi,Sesame Flavor Ramen Korean Style Instant Noodle,South Korea
+228,Master Kong,Seafood Flavour Instant Cooking Noodles,China
+229,Wei Lih,Instant Noodles With Onion Flavour,Taiwan
+230,No Name,Shrimp Flavour Oriental Noodles And Soup Mix,Canada
+231,New Way,Spaghetti Instant Noodles,Vietnam
+232,Lucky Me!,Supreme Jjamppong Korean Style Spicy Seafood Soup,Philippines
+233,Hao Way,Vegetarian Penang Laksa Instant Bowl Noodles,Malaysia
+234,Emart,Dare You! Habanero Jjajang Ramen,South Korea
+235,Campbell's,Hearty Noodles Savoury Beef Flavour,Canada
+236,One Dish Asia,Japanese Ramen Noodle,USA
+237,Long Jun Hang,Taiwan Dried Noodles With Onion Oil Sauce,Taiwan
+238,Pama,Bihun Creamy Tom Yam Flavour,Malaysia
+239,A-Sha Dry Noodle,Veggie Noodle Tomato Noodle With Vine Ripened Tomato Sauce,Taiwan
+240,Thai Chef,Instant Nudelsuppe Huhn Geschmack,Germany
+241,Mama,Cup Rice Vermicelli Shrimp Creamy Tom Yum,Thailand
+242,Nissin,Original Chow Mein Premium Spicy Chicken Flavor,USA
+243,Uncle Sun,White Curry Noodle More Spicy,Malaysia
+244,JML,Emporer Instant Noodles Spicy Chicken,China
+245,Acecook,Jan Jan Dashi Shoyu Yakisoba,Japan
+246,Nongshim,Tteokgukmyun,South Korea
+247,Mom's Dry Noodle,Vegan Chilli With Sesame Sauce,Taiwan
+248,Mi E-Zee,Perisa Sayuran,Malaysia
+249,Mi E-Zee,Perisa Kari Sayuran,Malaysia
+250,E-mi,Mi Perencah Ayam Jagung,Malaysia
+251,Mi E-Zee,Perisa Bayam,Malaysia
+252,Mi E-Zee,Plain Noodles,Malaysia
+253,J.J.,Snek Mi Perisa Ayam,Malaysia
+254,CarJEN,Nyonya Curry Laksa,Malaysia
+255,E-mi,Mi Perencah Asam Pedas,Malaysia
+256,J.J.,Snek Mi Perisa BBQ,Malaysia
+257,Mi E-Zee,Perisa Kari / Curry Flavour,Malaysia
+258,United,3 Con Tom Instant Noodles Thailand Sour Shrimp Flavor,Vietnam
+259,Emart,Dare You! Habanero Ramen (New Edition),South Korea
+260,Curry Prince,Penang Authentic White Curry Noodle,Malaysia
+261,Annie Chun's,Soup Bowl South Korean Kimchi,USA
+262,Annie Chun's,Ramen House Spring Vegetable Ramen,USA
+263,Annie Chun's,Noodle Express Chinese Chow Mein,USA
+264,Nissin,Raoh Backfat Rich Soy Sauce Flavor,Japan
+265,Pot Noodle,Mr. Chu’s Golden Noodle No. 7 Sticky Rib,UK
+266,Nongshim,Bowl Noodle Soup Spicy Seafood Flavor (New Version),USA
+267,Trident,Chow Mein Soft Noodles,Australia
+268,Nissin,Bowl Noodles Hot & Spicy Super Picante,USA
+269,Sakurai Foods,ARCHE Naturküche Ramen Mit Ingwer,Japan
+270,Sakurai Foods,Soy Sauce Ramen,Japan
+271,Paldo,Kokomen Spicy Chicken,South Korea
+272,Paldo,Namja Ramen (USA version),South Korea
+273,Kamfen,dried Mix Noodles Soya Bean Paste,China
+274,Maruchan,35% Less Sodium Beef,USA
+275,Vina Acecook,Good Artificial Minced Pork Bean Vermicelli,Vietnam
+276,Kamfen,Dried Mix Noodles Artificial Spicy Pork,China
+277,Paldo,Kokomen Spicy Chicken,South Korea
+278,Ibumie,VegeMee Vegetarian Flavour,Malaysia
+279,Emart,Dare You! Habanero Ramen,South Korea
+280,Maruchan,35% Less Sodium Chicken,USA
+281,Myojo,Ippeichan Soybean Paste,Japan
+282,Ottogi,Ppushu Ppushu Tteobokki,South Korea
+283,Wu Mu,Beef Flavor Ramen,Taiwan
+284,Ve Wong,Kung Fu Artificial Sesame Chicken,Taiwan
+285,Ve Wong,Little Prince Bacon,Vietnam
+286,Sao Tao,Noodle King Hong Koing Style Wonton,Hong Kong
+287,iNoodle,Taiwan Style Chow Mein,Taiwan
+288,Mr. Udon,Chicken,South Korea
+289,Lucky Me!,N-Rich Chicken Tinola,Philippines
+290,Nongshim,Kalguksoo,South Korea
+291,Unif,100 Artificial Shallot Chicken,Taiwan
+292,Sapporo Ichiban,Miso Soybean Paste,Japan
+293,Nongshim,Mupama Tang Myun,South Korea
+294,Mama,Artificial PA-LO Duck,Thailand
+295,Vifon,Mi Chay Vegetarian,Vietnam
+296,Mama,Tom Yam Koong Rice Vermicelli,Thailand
+297,Shirakiku,Japanese Style Tokusen Karami,Japan
+298,Nissin,Yakisoba With Mayonnaise/Mustard Packet,Japan
+299,Wai Wai,Minced Pork Soeng Kreung,Thailand
+300,Doll,Shrimp Wonton,Hong Kong
