@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def ramen():
-    return 'gimme ramen. gimme'
+    return 'gimme ramen. gimme!'
 # @app.route('/get_flavours')
 # def get_flavours():
 #     return render_template('flavours.html', flavours=ramen.db.flavours.find())
