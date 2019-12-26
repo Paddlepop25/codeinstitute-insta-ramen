@@ -7,7 +7,6 @@ app = Flask(__name__)
 
 app.config['MONGO_DBNAME'] = 'ramen_database'
 app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@cluster0-mg1xb.mongodb.net/ramen_database?retryWrites=true&w=majority'
-
 ramen = PyMongo(app)
 
 @app.route('/')
