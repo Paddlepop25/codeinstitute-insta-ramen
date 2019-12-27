@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<h3>Get Ramen</h3>
+    {% for selection in selections %}
+        {{selection.Brand}}
+        {{selection.Flavour}}
+        {{selection.Style}}
+        {{selection.Country}}
+        {{selection.Stars}}
+    {% endfor %}   
+    
+{% endblock %}

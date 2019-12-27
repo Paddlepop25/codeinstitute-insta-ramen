@@ -11,12 +11,14 @@ app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@cluster0-mg1xb.mongodb.ne
 ramen = PyMongo(app)
 
 @app.route('/')
-@app.route('/get_flavours')
-def get_flavours():
-    return render_template('ramen.html', flavours=ramen.db.flavours.find())
-# @app.route('/get_tasks')
-# def get_tasks():
-#     return render_template("tasks.html", tasks=mongo.db.tasks.find())    
+@app.route('/award_winning')
+def award_winning():
+    return render_template('award_winning.html')
+    
+@app.route('/get_ramen')
+def get_ramen():
+    return render_template('get_ramen.html', selection=ramen.db.selections.find())
+    
     
     
 if __name__ == '__main__':
