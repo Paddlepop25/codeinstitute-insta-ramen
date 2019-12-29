@@ -40,19 +40,19 @@ def edit_ramen(selection_id):
     return render_template('edit_ramen.html', ramen=the_ramen,
                           brands=all_brands)     
 
-@app.route('/update_ramen/<selection_id>', methods=["POST"])
-def update_ramen(selection_id):
-    the_ramen = ramen.db.selections
-    the_ramen.update( {'_id': ObjectId(selection_id)},
-    {
-        'Review':request.form.get('Review'),
-        'Brand': request.form.get('Brand'),
-        'Flavour':request.form.get('Flavour'),
-        'Style': request.form.get('Style'),
-        'Country':request.form.get('Country'),
-        'Stars':request.form.get('Stars')
-    })
-    return redirect(url_for('get_ramen'))
+# @app.route('/update_ramen/<selection_id>', methods=["POST"])
+# def update_ramen(selection_id):
+#     the_ramen = ramen.db.selections
+#     the_ramen.update( {'_id': ObjectId(selection_id)},
+#     {
+#         'Review':request.form.get('Review'),
+#         'Brand': request.form.get('Brand'),
+#         'Flavour':request.form.get('Flavour'),
+#         'Style': request.form.get('Style'),
+#         'Country':request.form.get('Country'),
+#         'Stars':request.form.get('Stars')
+#     })
+#     return redirect(url_for('get_ramen'))
     
 @app.route('/delete_ramen/<selection_id>')
 def delete_ramen(selection_id):
