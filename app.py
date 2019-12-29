@@ -14,12 +14,18 @@ ramen = PyMongo(app)
 @app.route('/award_winning')
 def award_winning():
     return render_template('award_winning.html')
-    
+
 @app.route('/get_ramen')
 def get_ramen():
-    return render_template('get_ramen.html', selection=ramen.db.selections.find())
+    return render_template('get_ramen.html', selections=ramen.db.selections.find())
     
+@app.route('/add_ramen')
+def add_ramen():
+    return render_template('add_ramen.html')
     
+@app.route('/add_brands')
+def add_brands():
+    return render_template('add_brands.html')    
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
