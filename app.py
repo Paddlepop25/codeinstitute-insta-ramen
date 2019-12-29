@@ -11,6 +11,10 @@ app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@cluster0-mg1xb.mongodb.ne
 ramen = PyMongo(app)
 
 @app.route('/')
+@app.route('/home_page')
+def home_page():
+    return render_template('index.html')
+    
 @app.route('/award_winning')
 def award_winning():
     return render_template('award_winning.html')
@@ -22,6 +26,12 @@ def get_ramen():
 @app.route('/add_ramen')
 def add_ramen():
     return render_template('add_ramen.html')
+    
+@app.route('/insert_ramen', methods=['POST'])
+def insert_ramen():
+    new_ramen = ramen.db.selections
+    new_ramen.insert_one(request.form.to_dict())
+    return redirect(url_for('get_ramen'))     
     
 @app.route('/add_brands')
 def add_brands():
