@@ -1,7 +1,22 @@
-{% extends 'base.html'%}
+{% extends 'index.html'%} 
 {% block content %}
 
+<h3>Countries</h3>
 
+{% for brand in Brand %}
+<div>
+    <strong>{{brand.Brand}}</strong>
+</div>
 
+<!--<a href="{{url_for('edit_category', category_id=category._id)}}" class="waves-effect waves-light btn btn_small">Edit Country</a>-->
+<!--<a href="{{url_for('delete_category', category_id=category._id)}}" class="waves-effect waves-light btn btn_small blue">Delete Country</a> -->
+
+{% endfor %}
+
+<!--<div class="row">-->
+<!--    <a href="{{url_for('add_category')}}" class="waves-effect waves-light btn">-->
+<!--    <i class="material-icons right">playlist_add</i>Add Country-->
+<!--  </a>-->
+<!--</div>-->
 
 {% endblock %}
