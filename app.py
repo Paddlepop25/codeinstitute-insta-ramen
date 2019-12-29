@@ -21,7 +21,7 @@ def award_winning():
 
 @app.route('/get_ramen')
 def get_ramen():
-    return render_template('get_ramen.html', selections=ramen.db.selections.find())
+    return render_template('ramen.html', selections=ramen.db.selections.find())
     
 @app.route('/add_ramen')
 def add_ramen():
@@ -31,7 +31,33 @@ def add_ramen():
 def insert_ramen():
     new_ramen = ramen.db.selections
     new_ramen.insert_one(request.form.to_dict())
-    return redirect(url_for('get_ramen'))     
+    return redirect(url_for('get_ramen'))    
+    
+@app.route('/edit_ramen/<selection_id>')
+def edit_ramen(selection_id):
+    the_ramen = ramen.db.selections.find_one({"_id": ObjectId(selection_id)})
+    all_brands = ramen.db.brands.find()
+    return render_template('edit_ramen.html', ramen=the_ramen,
+                          brands=all_brands)     
+
+@app.route('/update_ramen/<selection_id>', methods=["POST"])
+def update_ramen(selection_id):
+    the_ramen = ramen.db.selections
+    the_ramen.update( {'_id': ObjectId(selection_id)},
+    {
+        'Review':request.form.get('Review'),
+        'Brand': request.form.get('Brand'),
+        'Flavour':request.form.get('Flavour'),
+        'Style': request.form.get('Style'),
+        'Country':request.form.get('Country'),
+        'Stars':request.form.get('Stars')
+    })
+    return redirect(url_for('get_ramen'))
+    
+@app.route('/delete_ramen/<selection_id>')
+def delete_ramen(selection_id):
+    ramen.db.selections.remove({'_id': ObjectId(selection_id)})
+    return redirect(url_for('get_ramen'))
     
 @app.route('/add_brands')
 def add_brands():
