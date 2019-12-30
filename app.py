@@ -21,7 +21,8 @@ def award_winning():
 
 @app.route('/get_ramen')
 def get_ramen():
-    return render_template('ramen.html', selections=ramen.db.selections.find())
+    selections=ramen.db.selections.find()
+    return render_template('ramen.html', selections=selections)
     
 @app.route('/add_ramen')
 def add_ramen():

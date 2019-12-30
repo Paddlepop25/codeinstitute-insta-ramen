@@ -1,34 +1,29 @@
-{% extends 'index.html' %}
-{% block content %}
+{% extends 'index.html' %} {% block content %}
 
 <h3>Display Ramen</h3>
 
-    {% for ramen in selections %}
-        <div class="row">
-    <div class="col s12 m7">
-      <div class="card">
-        <div class="card-image">
-          <img src="./static/images/noodle1.jpg">
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-            <p>Brand: {{ramen.Brand}}</p>
-            <p>Flavour: {{ramen.Flavour}}</p>
-            <p>Style: {{ramen.Style}}</p>
-            <p>Country of Origin: {{ramen.Country}}</p>
-            <p>Stars: {{ramen.Stars}}</p>
-        </div>
-        <div class="card-action">
-          <a href="{{url_for('edit_ramen', ramen_id=ramen._id)}}">Edit ramen</a>
-          <a href="{{url_for('delete_ramen', ramen_id=ramen._id)}}">Delete ramen</a>
-        </div>
+{% for ramen in selections | sort (attribute='_id', reverse = True) %}
+
+<div class="row">
+  <div class="col s12 m7">
+    <div class="card">
+      <div class="card-image">
+        <img src="./static/images/noodle1.jpg">
+        <span class="card-title">Card Title</span>
+      </div>
+      <div class="card-content">
+        <p>Brand: {{ramen.Brand}}</p>
+        <p>Flavour: {{ramen.Flavour}}</p>
+        <p>Style: {{ramen.Style}}</p>
+        <p>Country of Origin: {{ramen.Country}}</p>
+        <p>Stars: {{ramen.Stars}}</p>
+      </div>
+      <div class="card-action">
+        <a href="{{url_for('edit_ramen', ramen_id=ramen._id)}}">Edit ramen</a>
+        <a href="{{url_for('delete_ramen', ramen_id=ramen._id)}}">Delete ramen</a>
       </div>
     </div>
   </div>
-  
- 
-    {% endfor %}   
-    
+</div>
 
-  
-{% endblock %}
+{% endfor %} {% endblock %}
