@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.config['MONGO_DBNAME'] = 'ramen_database'
 app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@cluster0-mg1xb.mongodb.net/ramen_database?retryWrites=true&w=majority'
 
-ramen = PyMongo(app)
+mongo = PyMongo(app)
 
 @app.route('/')
 @app.route('/home_page')
@@ -21,33 +21,32 @@ def award_winning():
 
 @app.route('/get_ramen')
 def get_ramen():
-    selections=ramen.db.selections.find()
+    selections=mongo.db.selections.find()
     return render_template('ramen.html', selections=selections)
     
 @app.route('/add_ramen')
 def add_ramen():
-    return render_template('add_ramen.html', countries=ramen.db.countries.find())
+    return render_template('add_ramen.html', countries=mongo.db.countries.find())
     
 @app.route('/insert_ramen', methods=['POST'])
 def insert_ramen():
-    new_ramen = ramen.db.selections
+    new_ramen = mongo.db.selections
     new_ramen.insert_one(request.form.to_dict())
     return redirect(url_for('get_ramen'))    
     
-@app.route('/edit_ramen/<ramen_id>')
+@app.route('/edit_ramen/<ramen_id>', methods=['POST', 'GET'])
 def edit_ramen(ramen_id):
-    edit_ramen = ramen.db.selections.find_one({"_id": ObjectId(ramen_id)})
-    countries = ramen.db.countries.find()
-    all_brands = ramen.db.brands.find()
+    edit_ramen = mongo.db.selections.find_one({"_id": ObjectId(ramen_id)})
+    countries = mongo.db.countries.find()
+    all_brands = mongo.db.brands.find()
     return render_template('edit_ramen.html', ramen=edit_ramen,
                           brands=all_brands, countries=countries)     
 
 @app.route('/update_ramen/<ramen_id>', methods=["POST"])
 def update_ramen(ramen_id):
-    the_ramen = ramen.db.selections
+    the_ramen = mongo.db.selections
     the_ramen.update( {'_id': ObjectId(ramen_id)},
     {
-        'Review':request.form.get('Review'),
         'Brand': request.form.get('Brand'),
         'Flavour':request.form.get('Flavour'),
         'Style': request.form.get('Style'),
@@ -58,12 +57,13 @@ def update_ramen(ramen_id):
     
 @app.route('/delete_ramen/<ramen_id>')
 def delete_ramen(ramen_id):
-    ramen.db.selections.remove({'_id': ObjectId(ramen_id)})
+    mongo.db.selections.remove({'_id': ObjectId(ramen_id)})
     return redirect(url_for('get_ramen'))
     
-@app.route('/add_brands')
-def add_brands():
-    return render_template('add_brands.html')    
+@app.route('/get_brands')
+def get_brands():
+    return render_template('brands.html',
+                            brands=mongo.db.brands.find())
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

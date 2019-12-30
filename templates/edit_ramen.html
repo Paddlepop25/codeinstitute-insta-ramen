@@ -5,7 +5,7 @@
 
   <div class="row">
 
-    <form action="{{ url_for('insert_ramen', ramen_id=ramen._id) }}" method="POST" class="col s12">
+    <form action="{{ url_for('update_ramen', ramen_id=ramen._id) }}" method="POST" class="col s12">
 
       <div class="row">
         <div class="input-field col s12">
@@ -25,27 +25,37 @@
 
       <div class="row">
         <p>
-          {% set ramen_style = request.form['Style'] %} {{ ramen_style }} {% if ramen_style == "Cup" %}
-          <input class="with-gap" name="Style" type="radio" id="cup" value="Cup" checked/> {% else %}
-          <input class="with-gap" name="Style" type="radio" id="cup" value="Cup" /> {% endif %}
+          {% set ramen_style = request.form['Style'] %} 
+          {{ ramen_style }} 
+          {% if ramen_style == "Cup" %}
+          <input class="with-gap" name="Style" type="radio" id="cup" value="Cup" checked/> 
+          {% else %}
+          <input class="with-gap" name="Style" type="radio" id="cup" value="Cup" /> 
+          {% endif %}
           <label for="cup">Cup</label>
         </p>
         <p>
           {% if ramen_style == "Pack" %}
-          <input class="with-gap" name="Style" type="radio" id="pack" value="Pack" checked/> {% else %}
-          <input class="with-gap" name="Style" type="radio" id="pack" value="Pack" /> {% endif %}
+          <input class="with-gap" name="Style" type="radio" id="pack" value="Pack" checked/> 
+          {% else %}
+          <input class="with-gap" name="Style" type="radio" id="pack" value="Pack" /> 
+          {% endif %}
           <label for="pack">Pack</label>
         </p>
         <p>
           {% if ramen_style == "Tray" %}
-          <input class="with-gap" name="Style" type="radio" id="tray" value="Tray" checked/> {% else %}
-          <input class="with-gap" name="Style" type="radio" id="tray" value="Tray" /> {% endif %}
+          <input class="with-gap" name="Style" type="radio" id="tray" value="Tray" checked/> 
+          {% else %}
+          <input class="with-gap" name="Style" type="radio" id="tray" value="Tray" /> 
+          {% endif %}
           <label for="tray">Tray</label>
         </p>
         <p>
           {% if ramen_style == "Bowl" %}
-          <input class="with-gap" name="Style" type="radio" id="bowl" value="Bowl" checked/> {% else %}
-          <input class="with-gap" name="Style" type="radio" id="bowl" value="Bowl" /> {% endif %}
+          <input class="with-gap" name="Style" type="radio" id="bowl" value="Bowl" checked/> 
+          {% else %}
+          <input class="with-gap" name="Style" type="radio" id="bowl" value="Bowl" /> 
+          {% endif %}
           <label for="bowl">Bowl</label>
         </p>
       </div>
