@@ -25,9 +25,7 @@
 
       <div class="row">
         <p>
-          {% set ramen_style = request.form['Style'] %} 
-          {{ ramen_style }} 
-          {% if ramen_style == "Cup" %}
+          {% if ramen.Style == "Cup" %}
           <input class="with-gap" name="Style" type="radio" id="cup" value="Cup" checked/> 
           {% else %}
           <input class="with-gap" name="Style" type="radio" id="cup" value="Cup" /> 
@@ -35,7 +33,7 @@
           <label for="cup">Cup</label>
         </p>
         <p>
-          {% if ramen_style == "Pack" %}
+          {% if ramen.Style == "Pack" %}
           <input class="with-gap" name="Style" type="radio" id="pack" value="Pack" checked/> 
           {% else %}
           <input class="with-gap" name="Style" type="radio" id="pack" value="Pack" /> 
@@ -43,7 +41,7 @@
           <label for="pack">Pack</label>
         </p>
         <p>
-          {% if ramen_style == "Tray" %}
+          {% if ramen.Style == "Tray" %}
           <input class="with-gap" name="Style" type="radio" id="tray" value="Tray" checked/> 
           {% else %}
           <input class="with-gap" name="Style" type="radio" id="tray" value="Tray" /> 
@@ -51,7 +49,7 @@
           <label for="tray">Tray</label>
         </p>
         <p>
-          {% if ramen_style == "Bowl" %}
+          {% if ramen.Style == "Bowl" %}
           <input class="with-gap" name="Style" type="radio" id="bowl" value="Bowl" checked/> 
           {% else %}
           <input class="with-gap" name="Style" type="radio" id="bowl" value="Bowl" /> 
