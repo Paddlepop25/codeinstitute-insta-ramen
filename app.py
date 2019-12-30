@@ -25,7 +25,7 @@ def get_ramen():
     
 @app.route('/add_ramen')
 def add_ramen():
-    return render_template('add_ramen.html')
+    return render_template('add_ramen.html', countries=ramen.db.countries.find())
     
 @app.route('/insert_ramen', methods=['POST'])
 def insert_ramen():
@@ -33,30 +33,31 @@ def insert_ramen():
     new_ramen.insert_one(request.form.to_dict())
     return redirect(url_for('get_ramen'))    
     
-@app.route('/edit_ramen/<selection_id>')
-def edit_ramen(selection_id):
-    the_ramen = ramen.db.selections.find_one({"_id": ObjectId(selection_id)})
+@app.route('/edit_ramen/<ramen_id>')
+def edit_ramen(ramen_id):
+    edit_ramen = ramen.db.selections.find_one({"_id": ObjectId(ramen_id)})
+    countries = ramen.db.countries.find()
     all_brands = ramen.db.brands.find()
-    return render_template('edit_ramen.html', ramen=the_ramen,
-                          brands=all_brands)     
+    return render_template('edit_ramen.html', ramen=edit_ramen,
+                          brands=all_brands, countries=countries)     
 
-# @app.route('/update_ramen/<selection_id>', methods=["POST"])
-# def update_ramen(selection_id):
-#     the_ramen = ramen.db.selections
-#     the_ramen.update( {'_id': ObjectId(selection_id)},
-#     {
-#         'Review':request.form.get('Review'),
-#         'Brand': request.form.get('Brand'),
-#         'Flavour':request.form.get('Flavour'),
-#         'Style': request.form.get('Style'),
-#         'Country':request.form.get('Country'),
-#         'Stars':request.form.get('Stars')
-#     })
-#     return redirect(url_for('get_ramen'))
+@app.route('/update_ramen/<ramen_id>', methods=["POST"])
+def update_ramen(ramen_id):
+    the_ramen = ramen.db.selections
+    the_ramen.update( {'_id': ObjectId(ramen_id)},
+    {
+        'Review':request.form.get('Review'),
+        'Brand': request.form.get('Brand'),
+        'Flavour':request.form.get('Flavour'),
+        'Style': request.form.get('Style'),
+        'Country':request.form.get('Country'),
+        'Stars':request.form.get('Stars')
+    })
+    return redirect(url_for('get_ramen'))
     
-@app.route('/delete_ramen/<selection_id>')
-def delete_ramen(selection_id):
-    ramen.db.selections.remove({'_id': ObjectId(selection_id)})
+@app.route('/delete_ramen/<ramen_id>')
+def delete_ramen(ramen_id):
+    ramen.db.selections.remove({'_id': ObjectId(ramen_id)})
     return redirect(url_for('get_ramen'))
     
 @app.route('/add_brands')
