@@ -11,20 +11,28 @@
 
 <body>
   <header>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="{{url_for('home_page')}}" class="brand-logo">Logo</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="{{url_for('home_page')}}">Home</a></li>
-          <li><a href="{{url_for('top_ten')}}">Top Ten Ramen</a></li>
-          <li><a href="{{url_for('get_ramen')}}">Ramen Around The World</a></li>
-          <li><a href="{{url_for('add_ramen')}}">Add Ramen</a></li>
-          <li><a href="{{url_for('get_brands')}}">Ramen Brands</a></li>
-        </ul>
-      </div>
-    </nav>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="{{url_for('home_page')}}" class="brand-logo">Logo</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="{{url_for('top_ten')}}">Top Ten Ramen</a></li>
+        <li><a href="{{url_for('get_ramen')}}">Ramen Around The World</a></li>
+        <li><a href="{{url_for('add_ramen')}}">Add Ramen</a></li>
+        <li><a href="{{url_for('get_brands')}}">Ramen Brands</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="{{url_for('home_page')}}">Home</a></li>
+        <li><a href="{{url_for('top_ten')}}">Top Ten Ramen</a></li>
+        <li><a href="{{url_for('get_ramen')}}">Ramen Around The World</a></li>
+        <li><a href="{{url_for('add_ramen')}}">Add Ramen</a></li>
+        <li><a href="{{url_for('get_brands')}}">Ramen Brands</a></li>
+      </ul>
+    </div>
+  </nav>
   </header>
-  {% block content %} {% endblock %}
+	
+   {% block content %} {% endblock %}
   <footer class="page-footer">
           <div class="container">
             <div class="row">
@@ -51,6 +59,7 @@
   <!--<script type="text/javascript" src="./static/scripts/app.js"></script>-->
   <script type="text/javascript">
     $(document).ready(function() {
+      $(".button-collapse").sideNav();
       $('select').material_select();
     });
   </script>
