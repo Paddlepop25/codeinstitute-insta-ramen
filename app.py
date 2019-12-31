@@ -19,6 +19,12 @@ def home_page():
 def award_winning():
     return render_template('award_winning.html')
 
+@app.route('/ramen_asia')
+def ramen_asia():
+    selections=mongo.db.selections.find()
+    return render_template('ramen_asia.html', selections=selections)
+
+
 @app.route('/get_ramen')
 def get_ramen():
     selections=mongo.db.selections.find()
@@ -30,11 +36,13 @@ def add_ramen():
     
 @app.route('/insert_ramen', methods=['POST'])
 def insert_ramen():
-    new_ramen = mongo.db.selections
-    new_ramen.insert_one(request.form.to_dict())
+    ramen = mongo.db.selections
+    brands = mongo.db.brands.find()
+    ramen.insert_one(request.form.to_dict())
+    brands.insert_one(request.form.to_dict())
     return redirect(url_for('get_ramen'))    
     
-@app.route('/edit_ramen/<ramen_id>', methods=['POST', 'GET'])
+@app.route('/edit_ramen/<ramen_id>', methods=['GET', 'POST'])
 def edit_ramen(ramen_id):
     edit_ramen = mongo.db.selections.find_one({"_id": ObjectId(ramen_id)})
     countries = mongo.db.countries.find()
