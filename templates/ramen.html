@@ -55,8 +55,8 @@
   
 </div>
 
-
-{% for ramen in selections | sort (attribute='Brand') %}
+<h3>Ramen from All Over The World</h3>
+{% for ramen in ramens | sort (attribute='Brand') %}
 <div class="row">
         <div class="col s12 m7">
           <div class="card">
@@ -70,6 +70,7 @@
         <p>Style: {{ramen.Style}}</p>
         <p>Country of Origin: {{ramen.Country}}</p>
         <p>Stars: {{ramen.Stars}}</p>
+        <p>Ratings: {{ramen.Ratings}}</p>
             </div>
             <div class="card-action">
               <a href="{{url_for('edit_ramen', ramen_id=ramen._id)}}">Edit ramen</a>

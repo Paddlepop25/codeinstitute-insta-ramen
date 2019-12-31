@@ -1,5 +1,4 @@
-{% extends 'index.html' %} 
-{% block content %}
+{% extends 'index.html' %} {% block content %}
 
 <h3>Add Ramen</h3>
 <div class="container">
@@ -26,19 +25,19 @@
 
       <div class="row">
         <p>
-          <input class="with-gap" name="Style" type="radio" id="cup" value="Cup"/>
+          <input class="with-gap" name="Style" type="radio" id="cup" value="Cup" />
           <label for="cup">Cup</label>
         </p>
         <p>
-          <input class="with-gap" name="Style" type="radio" id="pack" value="Pack"/>
+          <input class="with-gap" name="Style" type="radio" id="pack" value="Pack" />
           <label for="pack">Pack</label>
         </p>
         <p>
-          <input class="with-gap" name="Style" type="radio" id="tray" value="Tray"/>
+          <input class="with-gap" name="Style" type="radio" id="tray" value="Tray" />
           <label for="tray">Tray</label>
         </p>
         <p>
-          <input class="with-gap" name="Style" type="radio" id="bowl" value="Bowl"/>
+          <input class="with-gap" name="Style" type="radio" id="bowl" value="Bowl" />
           <label for="bowl">Bowl</label>
         </p>
       </div>
@@ -60,6 +59,14 @@
         <p class="range-field">
           <input type="range" id="Stars" name="Stars" min="0" max="5" />
         </p>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">textsms</i>
+          <input id="Ratings" name="Ratings" type="text">
+          <label for="ramen_rating">Ratings</label>
+        </div>
       </div>
 
       <div class="row">

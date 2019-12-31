@@ -17,23 +17,32 @@ def home_page():
     
 @app.route('/top_ten')
 def top_ten():
-    ramen=mongo.db.selections.find({ 'Stars': { '$gt': 3, '$lt': 5 } } ).limit(10)
-    return render_template('top_ten.html', ramen=ramen)
+    ramens=mongo.db.ramens.find({ 'Stars': { '$gt': 3, '$lt': 5 } } ).limit(10)
+    return render_template('top_ten.html', ramens=ramens)
 
 @app.route('/ramen_asia')
 def ramen_asia():
-    selections=mongo.db.selections.find(
+    ramens=mongo.db.ramens.find(
         {'$or':
             [{'Country': 'Malaysia'},{'Country': "Singapore"}]
         }
         )
-    return render_template('ramen_asia.html', selections=selections)
-
+    return render_template('ramen_asia.html', ramens=ramens)
 
 @app.route('/get_ramen')
 def get_ramen():
-    selections=mongo.db.selections.find()
-    return render_template('ramen.html', selections=selections)
+    ramens=mongo.db.ramens.find()
+    return render_template('ramen.html', ramens=ramens)
+    
+@app.route('/search_ramen/', methods=["GET", "POST"])
+def search_ramen():
+    if request.method == "POST":
+        post_request = request.form.get('searchbar_input')
+        print(post_request)
+    # return render_template("search_ramen.html",
+    #                         local_category=mongo.db.flavours.find(), 
+    #                         recipes=mongo.db.recipes.find({"title" : {"$regex": post_request, "$options": "i"}}),
+    #                         recipe_count=mongo.db.recipes.find({"title" : {"$regex": post_request, "$options": "i"}}).count())
     
 @app.route('/add_ramen')
 def add_ramen():
@@ -41,39 +50,38 @@ def add_ramen():
     
 @app.route('/insert_ramen', methods=['POST'])
 def insert_ramen():
-    ramen = mongo.db.selections
-    ramen.insert_one(request.form.to_dict())
+    ramens = mongo.db.ramens
+    ramens.insert_one(request.form.to_dict())
     return redirect(url_for('get_ramen'))    
     
 @app.route('/edit_ramen/<ramen_id>', methods=['GET', 'POST'])
 def edit_ramen(ramen_id):
-    edit_ramen = mongo.db.selections.find_one({"_id": ObjectId(ramen_id)})
+    ramen = mongo.db.ramens.find_one({"_id": ObjectId(ramen_id)})
     countries = mongo.db.countries.find()
-    all_brands = mongo.db.brands.find()
-    return render_template('edit_ramen.html', ramen=edit_ramen,
-                          brands=all_brands, countries=countries)     
+    return render_template('edit_ramen.html', ramen=ramen, countries=countries)     
 
 @app.route('/update_ramen/<ramen_id>', methods=["POST"])
 def update_ramen(ramen_id):
-    the_ramen = mongo.db.selections
-    the_ramen.update( {'_id': ObjectId(ramen_id)},
+    ramen = mongo.db.ramens
+    ramen.update( {'_id': ObjectId(ramen_id)},
     {
         'Brand': request.form.get('Brand'),
         'Flavour':request.form.get('Flavour'),
         'Style': request.form.get('Style'),
         'Country':request.form.get('Country'),
-        'Stars':request.form.get('Stars')
+        'Stars':request.form.get('Stars'),
+        'Ratings':request.form.get('Ratings')
     })
     return redirect(url_for('get_ramen'))
     
 @app.route('/delete_ramen/<ramen_id>')
 def delete_ramen(ramen_id):
-    mongo.db.selections.remove({'_id': ObjectId(ramen_id)})
+    mongo.db.ramens.remove({'_id': ObjectId(ramen_id)})
     return redirect(url_for('get_ramen'))
     
 @app.route('/get_brands')
 def get_brands():
-    brands = mongo.db.selections.find({})
+    brands = mongo.db.ramens.find()
     return render_template('brands.html',
                             brands=brands)
     
