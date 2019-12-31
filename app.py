@@ -15,13 +15,18 @@ mongo = PyMongo(app)
 def home_page():
     return render_template('index.html')
     
-@app.route('/award_winning')
-def award_winning():
-    return render_template('award_winning.html')
+@app.route('/top_ten')
+def top_ten():
+    ramen=mongo.db.selections.find({ 'Stars': { '$gt': 3, '$lt': 5 } } ).limit(10)
+    return render_template('top_ten.html', ramen=ramen)
 
 @app.route('/ramen_asia')
 def ramen_asia():
-    selections=mongo.db.selections.find()
+    selections=mongo.db.selections.find(
+        {'$or':
+            [{'Country': 'Malaysia'},{'Country': "Singapore"}]
+        }
+        )
     return render_template('ramen_asia.html', selections=selections)
 
 
@@ -37,9 +42,7 @@ def add_ramen():
 @app.route('/insert_ramen', methods=['POST'])
 def insert_ramen():
     ramen = mongo.db.selections
-    brands = mongo.db.brands.find()
     ramen.insert_one(request.form.to_dict())
-    brands.insert_one(request.form.to_dict())
     return redirect(url_for('get_ramen'))    
     
 @app.route('/edit_ramen/<ramen_id>', methods=['GET', 'POST'])
@@ -70,8 +73,9 @@ def delete_ramen(ramen_id):
     
 @app.route('/get_brands')
 def get_brands():
+    brands = mongo.db.selections.find({})
     return render_template('brands.html',
-                            brands=mongo.db.brands.find())
+                            brands=brands)
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

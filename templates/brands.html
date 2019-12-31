@@ -7,7 +7,7 @@
     <th>Ramen Brand</th>
     <th></th>
     <th></th>
-    {% for brand in brands %}
+    {% for brand in brands | sort (attribute='Brand') %}
     <tr>
       <td>{{ brand.Brand }}</td>
       <td>
@@ -21,7 +21,7 @@
       </button>
       </td>
     </tr>
-      {%- endfor %}
+      {% endfor %}
     
       
   </thead>

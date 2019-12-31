@@ -27,8 +27,6 @@
     </div>
   </div>
 
-
-
   <div class="col s12 m3">
     <div class="card">
       <div class="card-image">
@@ -41,9 +39,7 @@
       </div>
     </div>
   </div>
-
-
-
+  
   <div class="col s12 m3">
     <div class="card">
       <div class="card-image">
@@ -52,39 +48,38 @@
         <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
       </div>
       <div class="card-content">
-        <h3>Ramen from AUSTRALIA</h3>
+        <h3>Ramen from THE REST OF THE WORLD</h3>
       </div>
     </div>
   </div>
+  
 </div>
 
 
-{% for ramen in selections | sort (attribute='_id', reverse = True) %}
+{% for ramen in selections | sort (attribute='Brand') %}
 <div class="row">
-  <div class="col s12 m7">
-    <div class="card">
-      <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" src="./static/images/noodle1.jpg">
-      </div>
-      <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-        <p><a href="#">This is a link</a></p>
-      </div>
-      <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Card Title</span>
-        <p>Brand: {{ramen.Brand}}</p>
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image">
+              <img src="./static/images/noodle1.jpg">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>Brand: {{ramen.Brand}}</p>
         <p>Flavour: {{ramen.Flavour}}</p>
         <p>Style: {{ramen.Style}}</p>
         <p>Country of Origin: {{ramen.Country}}</p>
         <p>Stars: {{ramen.Stars}}</p>
-      </div>
-      <div class="card-action">
-        <a href="{{url_for('edit_ramen', ramen_id=ramen._id)}}">Edit ramen</a>
+            </div>
+            <div class="card-action">
+              <a href="{{url_for('edit_ramen', ramen_id=ramen._id)}}">Edit ramen</a>
         <a href="{{url_for('delete_ramen', ramen_id=ramen._id)}}">Delete ramen</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
+
+      
 
 
 {% endfor %} {% endblock %}
