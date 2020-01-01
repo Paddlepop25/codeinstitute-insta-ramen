@@ -1,198 +1,198 @@
-Country
-Afghanistan
-Albania
-Algeria
-Andorra
-Angola
-Antigua and Barbuda
-Argentina
-Armenia
-Australia
-Austria
-Azerbaijan
-Bahamas
-Bahrain
-Bangladesh
-Barbados
-Belarus
-Belgium
-Belize
-Benin
-Bhutan
-Bolivia
-Bosnia and Herzegovina
-Botswana
-Brazil
-Brunei
-Bulgaria
-Burkina Faso
-Burundi
-Cabo Verde
-Cambodia
-Cameroon
-Canada
-Central African Republic (CAR)
-Chad
-Chile
-China
-Colombia
-Comoros
-"Congo, Democratic Republic of the"
-"Congo, Republic of the"
-Costa Rica
-Cote d'Ivoire
-Croatia
-Cuba
-Cyprus
-Czechia
-Denmark
-Djibouti
-Dominica
-Dominican Republic
-Ecuador
-Egypt
-El Salvador
-Equatorial Guinea
-Eritrea
-Estonia
-Eswatini (formerly Swaziland)
-Ethiopia
-Fiji
-Finland
-France
-Gabon
-Gambia
-Georgia
-Germany
-Ghana
-Greece
-Grenada
-Guatemala
-Guinea
-Guinea-Bissau
-Guyana
-Haiti
-Honduras
-Hungary
-Iceland
-India
-Indonesia
-Iran
-Iraq
-Ireland
-Israel
-Italy
-Jamaica
-Japan
-Jordan
-Kazakhstan
-Kenya
-Kiribati
-Kosovo
-Kuwait
-Kyrgyzstan
-Laos
-Latvia
-Lebanon
-Lesotho
-Liberia
-Libya
-Liechtenstein
-Lithuania
-Luxembourg
-Madagascar
-Malawi
-Malaysia
-Maldives
-Mali
-Malta
-Marshall Islands
-Mauritania
-Mauritius
-Mexico
-Micronesia
-Moldova
-Monaco
-Mongolia
-Montenegro
-Morocco
-Mozambique
-Myanmar (formerly Burma)
-Namibia
-Nauru
-Nepal
-Netherlands
-New Zealand
-Nicaragua
-Niger
-Nigeria
-North Korea
-North Macedonia (formerly Macedonia)
-Norway
-Oman
-Pakistan
-Palau
-Palestine
-Panama
-Papua New Guinea
-Paraguay
-Peru
-Philippines
-Poland
-Portugal
-Qatar
-Romania
-Russia
-Rwanda
-Saint Kitts and Nevis
-Saint Lucia
-Saint Vincent and the Grenadines
-Samoa
-San Marino
-Sao Tome and Principe
-Saudi Arabia
-Senegal
-Serbia
-Seychelles
-Sierra Leone
-Singapore
-Slovakia
-Slovenia
-Solomon Islands
-Somalia
-South Africa
-South Korea
-South Sudan
-Spain
-Sri Lanka
-Sudan
-Suriname
-Sweden
-Switzerland
-Syria
-Taiwan
-Tajikistan
-Tanzania
-Thailand
-Timor-Leste
-Togo
-Tonga
-Trinidad and Tobago
-Tunisia
-Turkey
-Turkmenistan
-Tuvalu
-Uganda
-Ukraine
-United Arab Emirates (UAE)
-United Kingdom (UK)
-United States of America (USA)
-Uruguay
-Uzbekistan
-Vanuatu
-Vatican City (Holy See)
-Venezuela
-Vietnam
-Yemen
-Zambia
-Zimbabwe
+Country,Asia,Europe,The Americas,The Rest
+Afghanistan,Afghanistan,Albania,Antigua and Barbuda,Australia
+Albania,Armenia,Andorra,Bahamas,Fiji
+Algeria,Azerbaijan,Armenia,Barbados,Kiribati
+Andorra,Bahrain,Austria,Belize,Marshall Islands
+Angola,Bangladesh,Azerbaijan,Canada,Micronesia
+Antigua and Barbuda,Bhutan,Belarus,Costa Rica,Nauru
+Argentina,Brunei,Belgium,Cuba,New Zealand
+Armenia,Cambodia,Bosnia and Herzegovina,Dominica,Palau
+Australia,China,Bulgaria,Dominican Republic,Papua New Guinea
+Austria,Cyprus,Croatia,El Salvador,Samoa
+Azerbaijan,Georgia,Cyprus,Grenada,Solomon Islands
+Bahamas,India,Czechia,Guatemala,Tonga
+Bahrain,Indonesia,Denmark,Haiti,Tuvalu
+Bangladesh,Iran,Estonia,Honduras,Vanuatu
+Barbados,Iraq,Finland,Jamaica,Algeria
+Belarus,Israel,France,Mexico,Angola
+Belgium,Japan,Georgia,Nicaragua,Benin
+Belize,Jordan,Germany,Panama,Botswana
+Benin,Kazakhstan,Greece,Saint Kitts and Nevis,Burkina Faso
+Bhutan,Kuwait,Hungary,Saint Lucia,Burundi
+Bolivia,Kyrgyzstan,Iceland,Saint Vincent and the Grenadines,Cabo Verde
+Bosnia and Herzegovina,Laos,Ireland,Trinidad and Tobago,Cameroon
+Botswana,Lebanon,Italy,United States of America (USA),Central African Republic (CAR)
+Brazil,Malaysia,Kazakhstan,Argentina,Chad
+Brunei,Maldives,Kosovo,Bolivia,Comoros
+Bulgaria,Mongolia,Latvia,Brazil,"Congo, Democratic Republic of the"
+Burkina Faso,Myanmar (formerly Burma),Liechtenstein,Chile,"Congo, Republic of the"
+Burundi,Nepal,Lithuania,Colombia,Cote d'Ivoire
+Cabo Verde,North Korea,Luxembourg,Ecuador,Djibouti
+Cambodia,Oman,Malta,Guyana,Egypt
+Cameroon,Pakistan,Moldova,Paraguay,Equatorial Guinea
+Canada,Palestine,Monaco,Peru,Eritrea
+Central African Republic (CAR),Philippines,Montenegro,Suriname,Eswatini (formerly Swaziland)
+Chad,Qatar,Netherlands,Uruguay,Ethiopia
+Chile,Russia,North Macedonia (formerly Macedonia),Venezuela,Gabon
+China,Saudi Arabia,Norway,,Gambia
+Colombia,Singapore,Poland,,Ghana
+Comoros,South Korea,Portugal,,Guinea
+"Congo, Democratic Republic of the",Sri Lanka,Romania,,Guinea-Bissau
+"Congo, Republic of the",Syria,Russia,,Kenya
+Costa Rica,Taiwan,San Marino,,Lesotho
+Cote d'Ivoire,Tajikistan,Serbia,,Liberia
+Croatia,Thailand,Slovakia,,Libya
+Cuba,Timor-Leste,Slovenia,,Madagascar
+Cyprus,Turkey,Spain,,Malawi
+Czechia,Turkmenistan,Sweden,,Mali
+Denmark,United Arab Emirates (UAE),Switzerland,,Mauritania
+Djibouti,Uzbekistan,Turkey,,Mauritius
+Dominica,Vietnam,Ukraine,,Morocco
+Dominican Republic,Yemen,United Kingdom (UK),,Mozambique
+Ecuador,,Vatican City (Holy See),,Namibia
+Egypt,,,,Niger
+El Salvador,,,,Nigeria
+Equatorial Guinea,,,,Rwanda
+Eritrea,,,,Sao Tome and Principe
+Estonia,,,,Senegal
+Eswatini (formerly Swaziland),,,,Seychelles
+Ethiopia,,,,Sierra Leone
+Fiji,,,,Somalia
+Finland,,,,South Africa
+France,,,,South Sudan
+Gabon,,,,Sudan
+Gambia,,,,Tanzania
+Georgia,,,,Togo
+Germany,,,,Tunisia
+Ghana,,,,Uganda
+Greece,,,,Zambia
+Grenada,,,,Zimbabwe
+Guatemala,,,,
+Guinea,,,,
+Guinea-Bissau,,,,
+Guyana,,,,
+Haiti,,,,
+Honduras,,,,
+Hungary,,,,
+Iceland,,,,
+India,,,,
+Indonesia,,,,
+Iran,,,,
+Iraq,,,,
+Ireland,,,,
+Israel,,,,
+Italy,,,,
+Jamaica,,,,
+Japan,,,,
+Jordan,,,,
+Kazakhstan,,,,
+Kenya,,,,
+Kiribati,,,,
+Kosovo,,,,
+Kuwait,,,,
+Kyrgyzstan,,,,
+Laos,,,,
+Latvia,,,,
+Lebanon,,,,
+Lesotho,,,,
+Liberia,,,,
+Libya,,,,
+Liechtenstein,,,,
+Lithuania,,,,
+Luxembourg,,,,
+Madagascar,,,,
+Malawi,,,,
+Malaysia,,,,
+Maldives,,,,
+Mali,,,,
+Malta,,,,
+Marshall Islands,,,,
+Mauritania,,,,
+Mauritius,,,,
+Mexico,,,,
+Micronesia,,,,
+Moldova,,,,
+Monaco,,,,
+Mongolia,,,,
+Montenegro,,,,
+Morocco,,,,
+Mozambique,,,,
+Myanmar (formerly Burma),,,,
+Namibia,,,,
+Nauru,,,,
+Nepal,,,,
+Netherlands,,,,
+New Zealand,,,,
+Nicaragua,,,,
+Niger,,,,
+Nigeria,,,,
+North Korea,,,,
+North Macedonia (formerly Macedonia),,,,
+Norway,,,,
+Oman,,,,
+Pakistan,,,,
+Palau,,,,
+Palestine,,,,
+Panama,,,,
+Papua New Guinea,,,,
+Paraguay,,,,
+Peru,,,,
+Philippines,,,,
+Poland,,,,
+Portugal,,,,
+Qatar,,,,
+Romania,,,,
+Russia,,,,
+Rwanda,,,,
+Saint Kitts and Nevis,,,,
+Saint Lucia,,,,
+Saint Vincent and the Grenadines,,,,
+Samoa,,,,
+San Marino,,,,
+Sao Tome and Principe,,,,
+Saudi Arabia,,,,
+Senegal,,,,
+Serbia,,,,
+Seychelles,,,,
+Sierra Leone,,,,
+Singapore,,,,
+Slovakia,,,,
+Slovenia,,,,
+Solomon Islands,,,,
+Somalia,,,,
+South Africa,,,,
+South Korea,,,,
+South Sudan,,,,
+Spain,,,,
+Sri Lanka,,,,
+Sudan,,,,
+Suriname,,,,
+Sweden,,,,
+Switzerland,,,,
+Syria,,,,
+Taiwan,,,,
+Tajikistan,,,,
+Tanzania,,,,
+Thailand,,,,
+Timor-Leste,,,,
+Togo,,,,
+Tonga,,,,
+Trinidad and Tobago,,,,
+Tunisia,,,,
+Turkey,,,,
+Turkmenistan,,,,
+Tuvalu,,,,
+Uganda,,,,
+Ukraine,,,,
+United Arab Emirates (UAE),,,,
+United Kingdom (UK),,,,
+United States of America (USA),,,,
+Uruguay,,,,
+Uzbekistan,,,,
+Vanuatu,,,,
+Vatican City (Holy See),,,,
+Venezuela,,,,
+Vietnam,,,,
+Yemen,,,,
+Zambia,,,,
+Zimbabwe,,,,

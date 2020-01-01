@@ -1,61 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="row">
-  <div class="col s12 m6 l4">
-    <div class="card">
-      <div class="card-image">
-        <img src="./static/images/noodle1.jpg">
-        <span class="card-title">Card Title</span>
-        <a href="{{ url_for('ramen_asia') }}" class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-      </div>
-      <div class="card-content">
-        <h3>Ramen from <br>ASIA</h3>
-      </div>
-    </div>
-  </div>
-
-  <div class="col s12 m6 l4">
-    <div class="card">
-      <div class="card-image">
-        <img src="./static/images/noodle1.jpg">
-        <span class="card-title">Card Title</span>
-        <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-      </div>
-      <div class="card-content">
-        <h3>Ramen from EUROPE</h3>
-      </div>
-    </div>
-  </div>
-
-  <div class="col s12 m6 l4">
-    <div class="card">
-      <div class="card-image">
-        <img src="./static/images/noodle1.jpg">
-        <span class="card-title">Card Title</span>
-        <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-      </div>
-      <div class="card-content">
-        <h3>Ramen from <br>THE AMERICAS</h3>
-      </div>
-    </div>
-  </div>
-
-  <div class="col s12 m6 l4">
-    <div class="card">
-      <div class="card-image">
-        <img src="./static/images/noodle1.jpg">
-        <span class="card-title">Card Title</span>
-        <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-      </div>
-      <div class="card-content">
-        <h3>Ramen from <br>THE REST OF THE WORLD</h3>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<h3>Ramen from All Over The World</h3>
+<h3>Ramen Collection</h3>
 <div class="row">
 {% for ramen in ramens | sort (attribute='Brand') %}
   <div class="col s12 m6 l3">
@@ -67,13 +12,8 @@
       <div class="card-content">
         <p>Brand: {{ramen.Brand}}</p>
         <p>Flavour: {{ramen.Flavour}}</p>
-        <p>Style: {{ramen.Style}}</p>
-        <p>Country of Origin: {{ramen.Country}}</p>
-        <p>Stars: {{ramen.Stars}}</p>
-        <p>Ratings: {{ramen.Ratings}}</p>
       </div>
       <div class="card-action">
-        <a href="{{url_for('edit_ramen', ramen_id=ramen._id)}}" class="waves-effect waves-light btn">Edit</a>
         <a href="{{url_for('display_ramen', ramen_id=ramen._id)}}" class="waves-effect waves-light btn">More</a>
       </div>
     </div>
