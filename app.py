@@ -2,6 +2,7 @@ import os
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+import re
 
 app = Flask(__name__)
 
@@ -59,16 +60,35 @@ def ramen_world():
         )
     return render_template('ramen_world.html', ramens=ramens)    
 
-@app.route('/search_ramen/', methods=["GET", "POST"])
-def search_ramen():
-    if request.method == "POST":
-        post_request = request.form.get('searchbar_input')
-        print(post_request)
+# @app.route('/search_ramen/', methods=["GET", "POST"])
+# def search_ramen():
+#     if request.method == "POST":
+#         post_request = request.form.get('searchbar_input')
+#         print(post_request)
     # return render_template("search_ramen.html",
     #                         local_category=mongo.db.flavours.find(), 
     #                         recipes=mongo.db.recipes.find({"title" : {"$regex": post_request, "$options": "i"}}),
     #                         recipe_count=mongo.db.recipes.find({"title" : {"$regex": post_request, "$options": "i"}}).count())
+ 
+@app.route('/search_ramen')
+def search_ramen():
+    # return render_template('add_ramen.html')
+    orig_query = request.args['query']
+#     # Using regular expressions to search for any case
+    query = {'$regex': re.compile('.*{}.*'.format(orig_query)), '$options': 'i'}
+#     # This will do a find amoungst recipe name, recipe description & recipe instructions
+    results=mongo.db.ramens.find(
+        {'$or':
+            [{'Flavour': query}
+            ]
+        })
     
+    ramen = []
+    for result in results:
+        ramen.append(result)
+    
+    return render_template('ramen_search.html', query=orig_query, ramen=ramen)
+    # return render_template('ramen_search.html')
     
 @app.route('/add_ramen')
 def add_ramen():
