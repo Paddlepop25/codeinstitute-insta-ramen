@@ -17,8 +17,8 @@ def home_page():
     
 @app.route('/top_ten')
 def top_ten():
-    ramens=mongo.db.ramens.find({ 'Stars': { '$gt': 0, '$lt': 5 } } ).limit(10)
-    return render_template('top_ten.html', ramens=ramens)
+    ten_ramens=mongo.db.ramens.find({ 'Stars': { '$gt': 4, '$lt': 5 } } ).limit(10)
+    return render_template('top_ten.html', ten_ramens=ten_ramens)
 
 @app.route('/ramen_asia')
 def ramen_asia():
