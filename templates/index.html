@@ -1,68 +1,30 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %} {% block content %}
 
-<head>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-  <link rel="stylesheet" href="/static/styles/style.css" type="text/css" />  
-</head>
+<div class="container-fluid">
+  <img src="static/images/noodle_index.jpg" width="100%"></img>
+</div>
 
-<body>
-  <header>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="{{url_for('home_page')}}" class="brand-logo">Logo</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="{{url_for('top_ten')}}">Top Ten Ramen</a></li>
-        <li><a href="{{url_for('get_ramen')}}">Ramen Around The World</a></li>
-        <li><a href="{{url_for('add_ramen')}}">Add Ramen</a></li>
-        <li><a href="{{url_for('get_brands')}}">Ramen Brands</a></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="{{url_for('home_page')}}">Home</a></li>
-        <li><a href="{{url_for('top_ten')}}">Top Ten Ramen</a></li>
-        <li><a href="{{url_for('get_ramen')}}">Ramen Around The World</a></li>
-        <li><a href="{{url_for('add_ramen')}}">Add Ramen</a></li>
-        <li><a href="{{url_for('get_brands')}}">Ramen Brands</a></li>
-      </ul>
-    </div>
-  </nav>
-  </header>
-	
-   {% block content %} {% endblock %}
-  <footer class="page-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Insta-Ramen</h5>
-                <p class="grey-text text-lighten-4">&copy; Designed by Linda Hsu, 2019</p>
-                <small>For educational purpose</small>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Keep In Touch</h5>
-                <ul>
-                  <li><a href="https://github.com/Paddlepop25" target="_blank"><i class="fab fa-github"></i></a></li>
-                  <li><a href="https://www.linkedin.com/in/lindahsu007/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                  <li><a href="https://twitter.com/shecodeshsucode" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="https://www.instagram.com/shecodeshsucodes/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </footer>
- 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <!--<script type="text/javascript" src="./static/scripts/app.js"></script>-->
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $(".button-collapse").sideNav();
-      $('select').material_select();
-    });
-  </script>
-</body>
+<div class="container">
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+  sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+  magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+  quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+  ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat,
+  vel illum dolore eu feugiat nulla facilisis at vero eros et
+  accumsan et iusto odio dignissim qui blandit praesent luptatum
+  zzril delenit augue duis dolore te feugait nulla facilisi.
+  Nam liber tempor cum soluta nobis eleifend option congue
+  nihil imperdiet doming id quod mazim placerat facer possim
+  assum. Typi non habent claritatem insitam; est usus legentis
+  in iis qui facit eorum claritatem. Investigationes
+  demonstraverunt lectores legere me lius quod ii legunt saepius.
+  Claritas est etiam processus dynamicus, qui sequitur mutationem
+  consuetudium lectorum. Mirum est notare quam littera gothica,
+  quam nunc putamus parum claram, anteposuerit litterarum formas
+  humanitatis per seacula quarta decima et quinta decima. Eodem
+  modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
+  in futurum.</p>
+</div>
 
-</html>
+{% endblock %}

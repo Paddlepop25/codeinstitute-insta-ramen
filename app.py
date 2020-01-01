@@ -17,14 +17,14 @@ def home_page():
     
 @app.route('/top_ten')
 def top_ten():
-    ramens=mongo.db.ramens.find({ 'Stars': { '$gt': 3, '$lt': 5 } } ).limit(10)
+    ramens=mongo.db.ramens.find({ 'Stars': { '$gt': 0, '$lt': 5 } } ).limit(10)
     return render_template('top_ten.html', ramens=ramens)
 
 @app.route('/ramen_asia')
 def ramen_asia():
     ramens=mongo.db.ramens.find(
         {'$or':
-            [{'Country': 'Malaysia'},{'Country': "Singapore"}]
+            [{'Country': 'Taiwan'},{'Country': "Japan"}]
         }
         )
     return render_template('ramen_asia.html', ramens=ramens)
@@ -54,11 +54,16 @@ def insert_ramen():
     ramens.insert_one(request.form.to_dict())
     return redirect(url_for('get_ramen'))    
     
-@app.route('/edit_ramen/<ramen_id>', methods=['GET', 'POST'])
+@app.route('/edit_ramen/<ramen_id>', methods=['GET'])
 def edit_ramen(ramen_id):
     ramen = mongo.db.ramens.find_one({"_id": ObjectId(ramen_id)})
     countries = mongo.db.countries.find()
-    return render_template('edit_ramen.html', ramen=ramen, countries=countries)     
+    return render_template('edit_ramen.html', ramen=ramen, countries=countries)
+    
+@app.route('/display_ramen/<ramen_id>', methods=['GET'])
+def display_ramen(ramen_id):
+    ramen = mongo.db.ramens.find_one({"_id": ObjectId(ramen_id)})
+    return render_template('display_ramen.html', ramen=ramen)      
 
 @app.route('/update_ramen/<ramen_id>', methods=["POST"])
 def update_ramen(ramen_id):

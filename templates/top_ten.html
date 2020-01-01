@@ -1,32 +1,28 @@
-{% extends 'index.html'%}
-{% block content %}
+{% extends 'base.html'%} {% block content %}
 <h3>Top Ten Ramen</h3>
 
 
 {% for top_ten_ramen in ramens | sort (attribute='Stars', reverse = True)%}
 <div class="row">
-        <div class="col s12 m7">
-          <div class="card">
-            <div class="card-image">
-              <img src="./static/images/noodle1.jpg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-              <p>Brand: {{top_ten_ramen.Brand}}</p>
+  <div class="col s12 m6 l4">
+    <div class="card">
+      <div class="card-image">
+        <img src="./static/images/noodle1.jpg">
+        <span class="card-title">Card Title</span>
+      </div>
+      <div class="card-content">
+        <p>Brand: {{top_ten_ramen.Brand}}</p>
         <p>Flavour: {{top_ten_ramen.Flavour}}</p>
         <p>Style: {{top_ten_ramen.Style}}</p>
         <p>Country of Origin: {{top_ten_ramen.Country}}</p>
         <p>Stars: {{top_ten_ramen.Stars}}</p>
         <p>Ratings: {{top_ten_ramen.Ratings}}</p>
-            </div>
-            <div class="card-action">
-              <a href="{{url_for('edit_ramen', ramen_id=top_ten_ramen._id)}}">Edit ramen</a>
-        <a href="{{url_for('delete_ramen', ramen_id=top_ten_ramen._id)}}">Delete ramen</a>
-            </div>
-          </div>
-        </div>
       </div>
+      <div class="card-action">
+        <a href="{{url_for('edit_ramen', ramen_id=top_ten_ramen._id)}}" class="waves-effect waves-light btn">Edit</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-{% endfor %}
-  
-{% endblock %}
+{% endfor %} {% endblock %}
