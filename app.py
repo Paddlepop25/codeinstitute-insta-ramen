@@ -29,7 +29,7 @@ def display_ramen(ramen_id):
 @app.route('/get_ramen')
 def get_ramen():
     ramens=mongo.db.ramens.find()
-    return render_template('ramen.html', ramens=ramens)
+    return render_template('ramen-collection.html', ramens=ramens)
     
     
 # @app.route('/ramen_asia')
@@ -49,6 +49,15 @@ def ramen_asia():
         }
         )
     return render_template('ramen_asia.html', ramens=ramens)
+    
+@app.route('/ramen_world')
+def ramen_world():
+    ramens=mongo.db.ramens.find(
+        {'$or':
+            [{'Country': 'Brunei'},{'Country': "Singapore"}]
+        }
+        )
+    return render_template('ramen_world.html', ramens=ramens)    
 
 @app.route('/search_ramen/', methods=["GET", "POST"])
 def search_ramen():
@@ -102,6 +111,10 @@ def get_brands():
     brands = mongo.db.ramens.find()
     return render_template('brands.html',
                             brands=brands)
+
+@app.errorhandler(404)
+def error_404(not_found):
+    return render_template('error404.html', not_found=not_found)
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
