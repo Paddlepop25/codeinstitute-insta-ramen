@@ -1,7 +1,5 @@
 {% extends 'base.html' %} {% block content %}
 
-<h3>Ramen Search</h3>
-
 <div id="recipe-container-listing" class="container-fluid">
 
     <div class="row recipe-row">
@@ -15,7 +13,7 @@
                     <div class="row search-bar-row">
                         <div class="input-field col s12">
                             <input id="search-recipe-listing" name="query" type="text" class="validate">
-                            <label for="search-recipe-listing-label">Search for recipe...</label>
+                            <label for="search">Search for Ramen flavours</label>
                             <div class="search-button">
                                 <button class="btn waves-effect waves-light blue lighten-1" type="submit" name="action">Search</button>
                             </div>
@@ -24,55 +22,13 @@
                 </form>
             </div>
         </div>
-         
-        {% if results|length > 0 %} {% for recipe in results %}
-        <div class="col s12 m6 l4 card-container-listing">
-            <div class="card-surrounding">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <a class="recipe-name-link" href="{{ url_for('recipe', recipe_id=recipe._id) }}">
-                            <img class="activator recipe-image" src="{{recipe.recipe_image_url}}">
-                        </a>
-                    </div>
-                    <div class="card-content">
-                        <div class='card-title-spacer'>
-                            <a class="recipe-name-link" href="{{ url_for('recipe', recipe_id=recipe._id) }}">
-                                <div class="card-title activator grey-text text-darken-4 recipe-name">{{recipe.recipe_name}}
-                            </a>
-                            <i class="material-icons right more-info">more_vert</i></div>
-                        </div>
-                        <div class="button-container">
-                            <a href="{{ url_for('recipe', recipe_id=recipe._id) }}">
-                                <button class="btn waves-effect waves-light blue lighten-1" type="submit" name="action">View Recipe</button>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card-reveal recipe-close">
-                        <span class="card-title grey-text text-darken-4">{{recipe.recipe_name}}<i class="material-icons right">close</i></span>
-                        <p>{{recipe.recipe_description}}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        {% endfor %} {% else %}
-        <div class="container">
-            <div class="row">
-                <div class="no-results-column col s12">
-                    <img class="sad-face-no-results" src="{{ url_for('static', filename='images/sad-face.png') }}"></img>
-                </div>
-                <div class="no-results-column col s12">
-                    <h4 class="text-center">No results have been found</h4>
-                </div>
-                
-            </div>
-        </div>
-        {% endif %}
     </div>
 </div>
 
 <!--codes from display-->
+{% if ramen_search|length > 0 %} 
 <div class="row">
+{% for ramen in ramen_search %}
   <div class="col s12 m6 l3">
     <div class="card">
       <div class="card-image">
@@ -94,5 +50,20 @@
       </div>
     </div>
   </div>
+  
+{% endfor %} 
 </div>
+{% else %}
+        <div class="container">
+            <div class="row">
+                <div class="no-results-column col s12">
+                    <img class="sad-face-no-results" src="{{ url_for('static', filename='images/noodle_icon.png') }}"></img>
+                </div>
+                <div class="no-results-column col s12">
+                    <h4 class="text-center">No results have been found</h4>
+                </div>
+                
+            </div>
+        </div>
+        {% endif %}
 {% endblock %}

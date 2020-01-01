@@ -72,22 +72,21 @@ def ramen_world():
  
 @app.route('/search_ramen')
 def search_ramen():
-    # return render_template('add_ramen.html')
     orig_query = request.args['query']
 #     # Using regular expressions to search for any case
     query = {'$regex': re.compile('.*{}.*'.format(orig_query)), '$options': 'i'}
+    print(query)
 #     # This will do a find amoungst recipe name, recipe description & recipe instructions
     results=mongo.db.ramens.find(
         {'$or':
-            [{'Flavour': query}
-            ]
+            [{'Flavour': query}]
         })
     
     ramen = []
     for result in results:
         ramen.append(result)
     
-    return render_template('ramen_search.html', query=orig_query, ramen=ramen)
+    return render_template('ramen_search.html', query=orig_query, ramen_search=ramen)
     # return render_template('ramen_search.html')
     
 @app.route('/add_ramen')
