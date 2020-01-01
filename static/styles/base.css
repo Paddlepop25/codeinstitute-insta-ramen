@@ -1,0 +1,13 @@
+.ramen_logo {
+    width: 45px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.ramen_form {
+    border: 2px solid black;
+    border-radius: 25px;
+    box-shadow: 2px 2px 8px grey;
+    margin: 100px auto;
+    padding: 85px;
+}
