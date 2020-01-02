@@ -7,16 +7,26 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link rel="stylesheet" href="/static/styles/base.css" type="text/css" />
   <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon" />
+
+  <!-- Meta Data -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Insta Ramen">
+  <meta name="keywords" content="Noodles, Ramen, Instant, Cup, Bowl, Packet">
+  <meta name="author" content="Linda Hsu">
+
+  <title>InstaRamen - {{ title }} </title>
 </head>
 
 <body>
   <header>
     <nav>
       <div class="nav-wrapper">
-        <a href="{{url_for('home_page')}}" class="brand-logo"><img class="ramen_logo" src="{{ url_for('static', filename='images/noodle_icon.png') }}" alt="Ramen noodles with chopsticks logo"/></a>
+        <a href="{{url_for('index')}}" class="brand-logo"><img class="ramen_logo" src="{{ url_for('static', filename='images/noodle_icon.png') }}" alt="Ramen noodles with chopsticks logo"/></a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="{{url_for('home_page')}}">Home</a></li>
+          <li><a href="{{url_for('index')}}">Home</a></li>
           <li><a href="{{url_for('get_ramen')}}">Ramen Collection</a></li>
           <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Ramen Around The World<i class="material-icons right">arrow_drop_down</i></a>
             <ul id="dropdown1" class="dropdown-content">
@@ -31,7 +41,7 @@
           <li><a href="{{url_for('get_brands')}}">Ramen Brands</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-          <li><a href="{{url_for('home_page')}}">Home</a></li>
+          <li><a href="{{url_for('index')}}">Home</a></li>
           <li><a href="{{url_for('get_ramen')}}">Ramen Around The World</a></li>
           <li><a href="{{url_for('add_ramen')}}">Add Ramen</a></li>
           <li><a href="{{url_for('get_brands')}}">Ramen Brands</a></li>
