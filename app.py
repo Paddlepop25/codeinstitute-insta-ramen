@@ -14,13 +14,9 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/home_page')
 def home_page():
-    return render_template('index.html')
+    top_three=mongo.db.ramens.find({'Stars': {'$gt': 3, '$lt':5}}).limit(5)
+    return render_template('index.html', top_three=top_three)
     
-@app.route('/top_five')
-def top_five():
-    five_ramens=mongo.db.ramens.find({ 'Stars': {'$gt': 3, '$lt':5} }).limit(5)
-    return render_template('top_five.html', five_ramens=five_ramens)
-
 @app.route('/display_ramen/<ramen_id>', methods=['GET'])
 def display_ramen(ramen_id):
     ramen = mongo.db.ramens.find_one({"_id": ObjectId(ramen_id)})
@@ -32,16 +28,6 @@ def get_ramen():
     ramens=mongo.db.ramens.find()
     return render_template('ramen-collection.html', ramens=ramens)
     
-    
-# @app.route('/ramen_asia')
-# def ramen_asia():
-#     ramens=mongo.db.ramens.find(
-#         {'$or':
-#             [{'Country': 'Taiwan'},{'Country': "Japan"}]
-#         }
-#         )
-#     return render_template('ramen_asia.html', ramens=ramens)
-
 @app.route('/ramen_asia')
 def ramen_asia():
     ramens=mongo.db.ramens.find(
@@ -60,34 +46,19 @@ def ramen_world():
         )
     return render_template('ramen_world.html', ramens=ramens)    
 
-# @app.route('/search_ramen/', methods=["GET", "POST"])
-# def search_ramen():
-#     if request.method == "POST":
-#         post_request = request.form.get('searchbar_input')
-#         print(post_request)
-    # return render_template("search_ramen.html",
-    #                         local_category=mongo.db.flavours.find(), 
-    #                         recipes=mongo.db.recipes.find({"title" : {"$regex": post_request, "$options": "i"}}),
-    #                         recipe_count=mongo.db.recipes.find({"title" : {"$regex": post_request, "$options": "i"}}).count())
  
 @app.route('/search_ramen')
 def search_ramen():
     orig_query = request.args['query']
-#     # Using regular expressions to search for any case
     query = {'$regex': re.compile('.*{}.*'.format(orig_query)), '$options': 'i'}
     print(query)
-#     # This will do a find amoungst recipe name, recipe description & recipe instructions
-    results=mongo.db.ramens.find(
-        {'$or':
-            [{'Flavour': query}]
-        })
+    results=mongo.db.ramens.find({'Flavour': query})
     
     ramen = []
     for result in results:
         ramen.append(result)
     
     return render_template('ramen_search.html', query=orig_query, ramen_search=ramen)
-    # return render_template('ramen_search.html')
     
 @app.route('/add_ramen')
 def add_ramen():
@@ -104,7 +75,6 @@ def edit_ramen(ramen_id):
     ramen = mongo.db.ramens.find_one({"_id": ObjectId(ramen_id)})
     countries = mongo.db.countries.find()
     return render_template('edit_ramen.html', ramen=ramen, countries=countries)
-    
 
 @app.route('/update_ramen/<ramen_id>', methods=["POST"])
 def update_ramen(ramen_id):

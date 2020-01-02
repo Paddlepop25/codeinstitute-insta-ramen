@@ -2,7 +2,6 @@
 
 <div class="container-fluid">
   <img src="static/images/noodle_index.jpg" width="100%"></img>
-
   <div class="container">
     <div class="row">
       <h1>Welcome to Insta-Ramen!</h1>
@@ -30,5 +29,33 @@
     Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit
     litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
 </div>
+
+<div class="container">
+<div class="row">
+{% for top_three_ramen in top_three | sort (attribute='Stars', reverse = True) %}
+  <div class="col s12 m6 l4">
+    <div class="card">
+      <div class="card-image">
+        <img src="./static/images/noodle1.jpg">
+        <span class="card-title">Card Title</span>
+      </div>
+      <div class="card-content">
+        <p>Brand: {{top_three_ramen.Brand}}</p>
+        <p>Flavour: {{top_three_ramen.Flavour}}</p>
+        <p>Country of Origin: {{top_three_ramen.Country}}</p>
+        <p>Stars: {{top_three_ramen.Stars}}</p>
+        <p>Ratings: {{top_three_ramen.Ratings}}</p>
+      </div>
+      <div class="card-action">
+        <a href="{{url_for('display_ramen', ramen_id=top_three_ramen._id)}}" class="waves-effect waves-light btn">More</a>
+      </div>
+    </div>
+  </div>
+{% endfor %} 
+</div>
+
+</div>
+
+
 
 {% endblock %}
