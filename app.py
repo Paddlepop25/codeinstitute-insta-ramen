@@ -7,7 +7,7 @@ import re
 app = Flask(__name__)
 
 app.config['MONGO_DBNAME'] = 'ramen_database'
-app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@cluster0-mg1xb.mongodb.net/ramen_database?retryWrites=true&w=majority'
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
 mongo = PyMongo(app)
 
@@ -21,7 +21,6 @@ def index():
 def display_ramen(ramen_id):
     ramen = mongo.db.ramens.find_one({"_id": ObjectId(ramen_id)})
     return render_template('display_ramen.html', title="Display Ramen", ramen=ramen)   
-    
     
 @app.route('/get_ramen')
 def get_ramen():
