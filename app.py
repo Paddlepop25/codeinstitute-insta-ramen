@@ -15,7 +15,7 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/index')
 def index():
-    top_three=mongo.db.ramens.find({'Stars': {'$gt': 3, '$lt':5}}).limit(5)
+    top_three=mongo.db.ramens.find({'Stars': {'$gt': 3, '$lt':5}}).limit(3)
     return render_template('index.html', title="Home", top_three=top_three)
     
 @app.route('/display_ramen/<ramen_id>', methods=['GET'])
@@ -107,11 +107,11 @@ def add_brands():
     add_a_brand = mongo.db.ramens.find()
     return render_template('add_brands.html', title="Add a Brand", add_a_brand=add_a_brand, brands=brands)
     
-# @app.route('/insert_brand', methods=['POST'])
-# def insert_brand():
-#     ramens = mongo.db.ramens
-#     ramens.insert_one(request.form.to_dict())
-#     return redirect(url_for('get_ramen'))       
+@app.route('/insert_brand', methods=['POST'])
+def insert_brand():
+    brand = mongo.db.brands
+    brand.insert_one(request.form.to_dict())
+    return redirect(url_for('get_ramen'))       
     
 @app.errorhandler(404)
 def error_404(not_found):
