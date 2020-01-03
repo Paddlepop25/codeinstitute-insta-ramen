@@ -14,7 +14,7 @@
               <option value="{{ brand.Brand }}" >{{ brand.Brand }}</option>
           {% endfor %}
         </select>
-        <label>Select Brand</label>
+        <label><span>* </span>Select Brand</label>
       </div>
       <div class="input-field col s6">
         <p>Brand not found? Click here to add a new one</p>
@@ -26,12 +26,12 @@
       <div class="input-field col s12">
         <i class="material-icons prefix">subject</i>
         <input id="Flavour" name="Flavour" type="text" required>
-        <label for="ramen_flavour">Ramen Flavour</label>
+        <label for="ramen_flavour"><span>* </span>Ramen Flavour</label>
       </div>
     </div>
 
     <div class="row">
-      <label>Ramen Packaging</label>
+      <label><span>* </span>Ramen Packaging</label>
       <p>
         <input class="with-gap" name="Style" type="radio" id="cup" value="Cup" required/>
         <label for="cup">Cup</label>
@@ -58,12 +58,12 @@
               <option value="{{ ramen.Country }}" >{{ ramen.Country }}</option>
           {% endfor %}
         </select>
-        <label>Country Select</label>
+        <label><span>* </span>Country Select</label>
       </div>
 
       <div class="input-field col s12 m6">
         <i class="material-icons prefix">local_play</i>
-        <label>Rating (0 - 5)</label>
+        <label><span>* </span>Rating (0 - 5)</label>
         <p class="range-field">
           <input type="range" id="Stars" name="Stars" min="0" max="5" required/>
         </p>
@@ -75,7 +75,7 @@
       <div class="input-field col s12">
         <i class="material-icons prefix">textsms</i>
         <input id="Ratings" name="Ratings" type="text" required>
-        <label for="ramen_rating">Did you like this ramen?</label>
+        <label for="ramen_rating"><span>* </span>Did you like this ramen?</label>
       </div>
     </div>
 

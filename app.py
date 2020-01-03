@@ -74,8 +74,9 @@ def insert_ramen():
 @app.route('/edit_ramen/<ramen_id>', methods=['GET'])
 def edit_ramen(ramen_id):
     ramen = mongo.db.ramens.find_one({"_id": ObjectId(ramen_id)})
+    brands = mongo.db.brands.find()
     countries = mongo.db.countries.find()
-    return render_template('edit_ramen.html', title="Edit Ramen", ramen=ramen, countries=countries)
+    return render_template('edit_ramen.html', title="Edit Ramen", ramen=ramen, brands=brands, countries=countries)
 
 @app.route('/update_ramen/<ramen_id>', methods=["POST"])
 def update_ramen(ramen_id):
