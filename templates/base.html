@@ -56,12 +56,15 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Insta-Ramen</h5>
+          <div class="website-info">
+          <a href="{{url_for('index')}}" class="brand-logo"><img class="ramen_logo" src="{{ url_for('static', filename='images/noodle_icon.png') }}" alt="Ramen noodles with chopsticks logo"/></a>
+          <a href="{{url_for('index')}}">InstaRamen</a>
+          </div>
           <p class="grey-text text-lighten-4">&copy; Designed by Linda Hsu, 2019</p>
           <small>For educational purpose</small>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Keep In Touch</h5>
+          <h5>Keep In Touch</h5>
           <ul>
             <li><a href="https://github.com/Paddlepop25" target="_blank"><i class="fab fa-github"></i></a></li>
             <li><a href="https://www.linkedin.com/in/lindahsu007/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>

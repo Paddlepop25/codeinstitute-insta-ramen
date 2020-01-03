@@ -45,7 +45,6 @@ def ramen_world():
         )
     return render_template('ramen_world.html', title="Rest Of The World", ramens=ramens)    
 
- 
 @app.route('/search_ramen')
 def search_ramen():
     orig_query = request.args['query']
