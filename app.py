@@ -3,6 +3,7 @@ from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 import re
+import math
 
 app = Flask(__name__)
 
@@ -60,7 +61,9 @@ def search_ramen():
     
 @app.route('/add_ramen')
 def add_ramen():
-    return render_template('add_ramen.html', title="Add a Ramen", countries=mongo.db.countries.find())
+    brands = mongo.db.brands.find()
+    countries=mongo.db.countries.find()
+    return render_template('add_ramen.html', title="Add a Ramen", countries=countries, brands=brands)
     
 @app.route('/insert_ramen', methods=['POST'])
 def insert_ramen():
@@ -95,9 +98,21 @@ def delete_ramen(ramen_id):
     
 @app.route('/get_brands')
 def get_brands():
-    brands = mongo.db.ramens.find()
+    brands = mongo.db.brands.find()
     return render_template('brands.html', title="Ramen Brands", brands=brands)
 
+@app.route('/add_brands')
+def add_brands():
+    brands = mongo.db.brands.find()
+    add_a_brand = mongo.db.ramens.find()
+    return render_template('add_brands.html', title="Add a Brand", add_a_brand=add_a_brand, brands=brands)
+    
+# @app.route('/insert_brand', methods=['POST'])
+# def insert_brand():
+#     ramens = mongo.db.ramens
+#     ramens.insert_one(request.form.to_dict())
+#     return redirect(url_for('get_ramen'))       
+    
 @app.errorhandler(404)
 def error_404(not_found):
     return render_template('error404.html', title="Error 404", not_found=not_found)

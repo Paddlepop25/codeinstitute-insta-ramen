@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
-<h3>Ramen Collection</h3>
+<h3>The Entire Ramen Collection</h3>
 <div class="row">
 {% for ramen in ramens | sort (attribute='_id', reverse = True) %}
   <div class="col s12 m6 l3">
