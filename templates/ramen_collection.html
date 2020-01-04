@@ -2,12 +2,12 @@
 
 <h3>The Entire Ramen Collection</h3>
 <div class="row">
-{% for ramen in ramens | sort (attribute='_id', reverse = True) %}
+{% for ramen in ramens %}
   <div class="col s12 m6 l3">
     <div class="card">
       <div class="card-image">
         <img src="./static/images/noodle1.jpg">
-        <span class="card-title">Card Title</span>
+        <span class="card-title"></span>
       </div>
       <div class="card-content">
         <p>Brand: {{ramen.Brand}}</p>

@@ -3,6 +3,21 @@ body {
     font-family: 'Poppins', cursive;
 }
 
+.welcome {
+    background-image: url("/static/images/noodle_index.jpeg");
+    width: 100vw;
+    height: 100vh;
+}
+
+.welcome_message {
+    background: red;
+}
+
+.search_box {
+    background: blue;
+}
+
+
 .ramen_logo {
     width: 2.8rem;
     margin-left: 20px;
@@ -15,4 +30,9 @@ body {
     box-shadow: 2px 2px 8px grey;
     margin: 100px auto;
     padding: 20px;
+}
+
+.card .card-content {
+    overflow: scroll;
+    min-height: 200px;
 }

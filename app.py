@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, redirect, request, url_for
-from flask_pymongo import PyMongo
+from flask_pymongo import PyMongo, DESCENDING
 from bson.objectid import ObjectId
 import re
 import math
@@ -13,10 +13,10 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo = PyMongo(app)
 
 @app.route('/')
-@app.route('/index')
 def index():
-    top_three=mongo.db.ramens.find({'Stars': {'$gt': 3, '$lt':5}}).limit(3)
-    return render_template('index.html', title="Home", top_three=top_three)
+    # top_three=mongo.db.ramens.find({'Stars': {'$gt': 3, '$lt':6}}).limit(3)
+    lastest_three=mongo.db.ramens.find().sort([("_id", DESCENDING)]).limit(3)
+    return render_template('index.html', title="Home", lastest_three=lastest_three)
     
 @app.route('/display_ramen/<ramen_id>', methods=['GET'])
 def display_ramen(ramen_id):
@@ -25,23 +25,34 @@ def display_ramen(ramen_id):
     
 @app.route('/get_ramen')
 def get_ramen():
-    ramens=mongo.db.ramens.find()
+    ramens=mongo.db.ramens.find().sort([("_id", DESCENDING)])
     return render_template('ramen_collection.html', title="Ramen Collection", ramens=ramens)
     
 @app.route('/ramen_asia')
 def ramen_asia():
-    ramens=mongo.db.ramens.find(
-        {'$or':
-            [{'Country': 'Taiwan'},{'Country': "Japan"}]
-        }
-        )
+    ramens=mongo.db.ramens.find({'Continent': 'Asia'})
     return render_template('ramen_asia.html', title="Asian", ramens=ramens)
+    
+@app.route('/ramen_europe')
+def ramen_europe():
+    ramens=mongo.db.ramens.find({'Continent': 'Europe'})
+    return render_template('ramen_europe.html', title="Europe", ramens=ramens)
+    
+@app.route('/ramen_americas')
+def ramen_americas():
+    ramens=mongo.db.ramens.find({'Continent': 'The Americas'})
+    return render_template('ramen_americas.html', title="Europe", ramens=ramens)    
+    
+@app.route('/ramen_rest_world')
+def ramen_rest_world():
+    ramens=mongo.db.ramens.find({'Continent': 'The Rest'})
+    return render_template('ramen_rest_world.html', title="Rest Of The World", ramens=ramens)    
     
 @app.route('/ramen_world')
 def ramen_world():
     ramens=mongo.db.ramens.find(
         {'$or':
-            [{'Country': 'Brunei'},{'Country': "Singapore"}]
+            [{'Continent': 'Asia'},{'Continent': "Europe"},{'Continent': "The Americas"},{'Continent': "The Rest"}]
         }
         )
     return render_template('ramen_world.html', title="Rest Of The World", ramens=ramens)    
@@ -68,7 +79,15 @@ def add_ramen():
 @app.route('/insert_ramen', methods=['POST'])
 def insert_ramen():
     ramens = mongo.db.ramens
-    ramens.insert_one(request.form.to_dict())
+    new_ramen = {
+        'Brand': request.form.get('Brand'),
+        'Flavour':request.form.get('Flavour'),
+        'Style': request.form.get('Style'),
+        'Country':request.form.get('Country'),
+        'Stars':int(request.form.get('Stars')),
+        'Ratings':request.form.get('Ratings')
+    }
+    ramens.insert_one(new_ramen)
     return redirect(url_for('get_ramen'))    
     
 @app.route('/edit_ramen/<ramen_id>', methods=['GET'])
@@ -87,7 +106,7 @@ def update_ramen(ramen_id):
         'Flavour':request.form.get('Flavour'),
         'Style': request.form.get('Style'),
         'Country':request.form.get('Country'),
-        'Stars':request.form.get('Stars'),
+        'Stars':int(request.form.get('Stars')),
         'Ratings':request.form.get('Ratings')
     })
     return redirect(url_for('get_ramen'))
@@ -111,8 +130,14 @@ def add_brands():
 @app.route('/insert_brand', methods=['POST'])
 def insert_brand():
     brand = mongo.db.brands
-    brand.insert_one(request.form.to_dict())
-    return redirect(url_for('get_ramen'))       
+    query = request.form.get('Brand').lower()
+    find_brand = mongo.db.brands.find_one({'Brand': query})
+    if find_brand is None:
+        new_brand = {
+            'Brand': request.form.get('Brand').lower()
+        }
+        brand.insert_one(new_brand)
+    return redirect(url_for('add_ramen'))       
     
 @app.errorhandler(404)
 def error_404(not_found):

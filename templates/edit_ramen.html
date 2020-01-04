@@ -12,7 +12,7 @@
                     <option value="" disabled selected>Choose Brand</option>
                     {% for ramen_brand in brands | sort (attribute='Brand') %}
                     {% if ramen_brand.Brand == ramen.Brand %}
-                        <option value="{{ ramen_brand.Brand }}" selected>{{ ramen_brand.Brand }}</option>
+                        <option value="{{ ramen_brand.Brand }}" selected>{{ ramen_brand.Brand|capitalize}}</option>
                       {% else %}
                       <option value="{{ ramen_brand.Brand }}">{{ ramen_brand.Brand }}</option>
                         {% endif %}

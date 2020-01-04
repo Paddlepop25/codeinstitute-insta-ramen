@@ -1,58 +1,58 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="container-fluid">
-  <img src="static/images/noodle_index.jpeg" width="100%"></img>
-  <div class="container">
-    <div class="row">
-      <form class="col s12" action="{{ url_for('search_ramen') }}">
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="search" name="query" type="text" class="validate">
-            <label for="search">Search for Ramen flavours</label>
-            <div class="search-button">
-              <button class="btn waves-effect waves-light blue lighten-1" type="submit" name="action">Search</button>
+  <div class="row welcome">
+    <div class="col s12">
+      <div class="row welcome_message">
+        <h1>Welcome to InstaRamen!</h1>
+      </div>
+      <div class="row search_box">
+        <form class="col s12" action="{{ url_for('search_ramen') }}">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="search" name="query" type="text" class="validate">
+              <label for="search">Search for Ramen flavours</label>
+              <div class="search-button">
+                <button class="btn waves-effect waves-light blue lighten-1" type="submit" name="action">Search</button>
+              </div>
             </div>
           </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <p>If you love slurpping on hot, savoury instant ramen, you're in for a treat! This website is a collection of instant ramens from around the world. Want to view some yummy examples? On the search box above, input your favourite flavours, or click on the
+    selection of tabs on top of the page. You will be spoiled for choice for all the exciting varieties there are in the world! Cannot find something you're loking for? No worries! </p>
+
+  <div class="container">
+    <div class="row">
+      {% for three_ramen in lastest_three | sort (attribute='_id', reverse = True) %}
+      <div class="col s12 m6 l4">
+        <div class="card">
+          <div class="card-image">
+            <img src="./static/images/noodle1.jpg">
+            <span class="card-title">Card Title</span>
+          </div>
+          <div class="card-content">
+            <p>Brand: {{three_ramen.Brand}}</p>
+            <p>Flavour: {{three_ramen.Flavour}}</p>
+            <p>Country of Origin: {{three_ramen.Country}}</p>
+            <p>Stars: {{three_ramen.Stars}}</p>
+            <p>Ratings: {{three_ramen.Ratings}}</p>
+          </div>
+          <div class="card-action">
+            <a href="{{url_for('display_ramen', ramen_id=three_ramen._id)}}" class="waves-effect waves-light btn">More</a>
+          </div>
         </div>
-      </form>
+      </div>
+      {% endfor %}
     </div>
+
   </div>
-</div>
-
-<div class="container">
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
-    ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit
-    augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
-    Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit
-    litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
-</div>
-
-<div class="container">
-<div class="row">
-{% for top_three_ramen in top_three | sort (attribute='Stars', reverse = True) %}
-  <div class="col s12 m6 l4">
-    <div class="card">
-      <div class="card-image">
-        <img src="./static/images/noodle1.jpg">
-        <span class="card-title">Card Title</span>
-      </div>
-      <div class="card-content">
-        <p>Brand: {{top_three_ramen.Brand}}</p>
-        <p>Flavour: {{top_three_ramen.Flavour}}</p>
-        <p>Country of Origin: {{top_three_ramen.Country}}</p>
-        <p>Stars: {{top_three_ramen.Stars}}</p>
-        <p>Ratings: {{top_three_ramen.Ratings}}</p>
-      </div>
-      <div class="card-action">
-        <a href="{{url_for('display_ramen', ramen_id=top_three_ramen._id)}}" class="waves-effect waves-light btn">More</a>
-      </div>
-    </div>
-  </div>
-{% endfor %} 
-</div>
-
-</div>
 
 
 
-{% endblock %}
+  {% endblock %}

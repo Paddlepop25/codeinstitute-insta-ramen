@@ -11,7 +11,7 @@
         <select required id="Brand" name="Brand">
           <option value="" disabled selected>Choose Brand</option>
           {% for brand in brands | sort (attribute='Brand')%}
-              <option value="{{ brand.Brand }}" >{{ brand.Brand }}</option>
+              <option value="{{ brand.Brand }}" >{{ brand.Brand|capitalize}}</option>
           {% endfor %}
         </select>
         <label><span>* </span>Select Brand</label>
