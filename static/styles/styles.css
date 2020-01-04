@@ -12,15 +12,20 @@ body {
 }
 
 /*.welcome_message h1 {*/
+
 /*    text-align: center;*/
+
 /*    color: white;*/
+
 /*    margin-top: 23vh;*/
+
 /*}*/
 
 /*.search_box {*/
-/*    text-align: center;*/
-/*}*/
 
+/*    text-align: center;*/
+
+/*}*/
 
 .ramen_logo {
     width: 2.8rem;
@@ -39,4 +44,35 @@ body {
 .card .card-content {
     overflow: scroll;
     min-height: 200px;
+}
+
+/*Footer*/
+
+.footer-logo {
+    text-align: center
+}
+
+.footer-logo p {
+    position: relative;
+    top: -8px;
+    padding: 0px 18px;
+}
+
+.footer-logo small {
+    position: relative;
+    top: -25px;
+}
+
+.footer-social {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer-social p {
+    margin-top: 0;
+    margin-bottom: 7px;
+}
+
+.footer-social span {
+    margin-right: 10px;
 }
