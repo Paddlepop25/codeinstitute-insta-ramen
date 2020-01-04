@@ -28,23 +28,27 @@
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="{{url_for('index')}}">Home</a></li>
+          <li><a href="{{url_for('add_ramen')}}">Add Ramen</a></li>
           <li><a href="{{url_for('get_ramen')}}">Ramen Collection</a></li>
+          <li><a href="{{url_for('get_brands')}}">Ramen Brands</a></li>
           <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Ramen Around The World<i class="material-icons right">arrow_drop_down</i></a>
             <ul id="dropdown1" class="dropdown-content">
               <li><a href="{{ url_for('ramen_asia') }}">Asia</a></li>
               <li><a href="{{ url_for('ramen_americas') }}">The Americas</a></li>
               <li><a href="{{ url_for('ramen_europe') }}">Europe</a></li>
-             <li><a href="{{ url_for('ramen_rest_world') }}">Rest Of The World</a></li>
+              <li><a href="{{ url_for('ramen_rest_world') }}">Rest Of The World</a></li>
             </ul>
           </li>
-          <li><a href="{{url_for('add_ramen')}}">Add Ramen</a></li>
-          <li><a href="{{url_for('get_brands')}}">Ramen Brands</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <li><a href="{{url_for('index')}}">Home</a></li>
-          <li><a href="{{url_for('get_ramen')}}">Ramen Around The World</a></li>
           <li><a href="{{url_for('add_ramen')}}">Add Ramen</a></li>
+          <li><a href="{{url_for('get_ramen')}}">Ramen Collection</a></li>
           <li><a href="{{url_for('get_brands')}}">Ramen Brands</a></li>
+          <li><a href="{{ url_for('ramen_asia') }}">Ramen from Asia</a></li>
+          <li><a href="{{ url_for('ramen_americas') }}">Ramen from The Americas</a></li>
+          <li><a href="{{ url_for('ramen_europe') }}">Ramen from Europe</a></li>
+          <li><a href="{{ url_for('ramen_rest_world') }}">Ramen from Rest Of The World</a></li>
         </ul>
       </div>
     </nav>
@@ -56,8 +60,8 @@
       <div class="row">
         <div class="col l6 s12">
           <div class="website-info">
-          <a href="{{url_for('index')}}" class="brand-logo"><img class="ramen_logo" src="{{ url_for('static', filename='images/noodle_icon.png') }}" alt="Ramen noodles with chopsticks logo"/></a>
-          <a href="{{url_for('index')}}" class="white-text">InstaRamen</a>
+            <a href="{{url_for('index')}}" class="brand-logo"><img class="ramen_logo" src="{{ url_for('static', filename='images/noodle_icon.png') }}" alt="Ramen noodles with chopsticks logo"/></a>
+            <a href="{{url_for('index')}}" class="white-text">InstaRamen</a>
           </div>
           <p class="grey-text text-lighten-4">&copy; Designed by Linda Hsu, 2019</p>
           <p>For educational purpose</p>

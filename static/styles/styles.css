@@ -3,19 +3,23 @@ body {
     font-family: 'Poppins', cursive;
 }
 
-.welcome {
+.welcome-page {
     background-image: url("/static/images/noodle_index.jpeg");
-    width: 100vw;
+    /*width: 80vw;*/
+    background-size: cover;
+    /*opacity: 0.2;*/
     height: 100vh;
 }
 
-.welcome_message {
-    background: red;
-}
+/*.welcome_message h1 {*/
+/*    text-align: center;*/
+/*    color: white;*/
+/*    margin-top: 23vh;*/
+/*}*/
 
-.search_box {
-    background: blue;
-}
+/*.search_box {*/
+/*    text-align: center;*/
+/*}*/
 
 
 .ramen_logo {

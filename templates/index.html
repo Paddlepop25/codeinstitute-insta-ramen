@@ -1,58 +1,59 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="container-fluid">
-  <div class="row welcome">
-    <div class="col s12">
-      <div class="row welcome_message">
-        <h1>Welcome to InstaRamen!</h1>
-      </div>
-      <div class="row search_box">
-        <form class="col s12" action="{{ url_for('search_ramen') }}">
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="search" name="query" type="text" class="validate">
-              <label for="search">Search for Ramen flavours</label>
-              <div class="search-button">
-                <button class="btn waves-effect waves-light blue lighten-1" type="submit" name="action">Search</button>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
+<!--<div class="container-fluid">-->
+  
+<!--  <div class="container">-->
+<!--    <div class="row welcome-page">-->
+<!--      <div class="col s12 welcome-box">-->
+<!--        <div class="row">-->
+<!--          <h4>Welcome to InstaRamen!</h1>-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--          <form class="col s12" action="{{ url_for('search_ramen') }}">-->
+<!--            <div class="row">-->
+<!--              <div class="input-field col s12">-->
+<!--                <input id="search" name="query" type="text" class="validate">-->
+<!--                <label for="search">Search for Ramen flavours</label>-->
+<!--                <div class="search-button">-->
+<!--                  <button class="btn waves-effect waves-light blue lighten-1" type="submit" name="action">Search</button>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </form>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
 
-<div class="container">
-  <p>If you love slurpping on hot, savoury instant ramen, you're in for a treat! This website is a collection of instant ramens from around the world. Want to view some yummy examples? On the search box above, input your favourite flavours, or click on the
-    selection of tabs on top of the page. You will be spoiled for choice for all the exciting varieties there are in the world! Cannot find something you're loking for? No worries! </p>
+<!--  <div class="container">-->
+<!--    <p>If you love slurpping on hot, savoury instant ramen, you're in for a treat! This website is a collection of instant ramens from around the world. Want to view some yummy examples? On the search box above, input your favourite flavours, or click on-->
+<!--      the selection of tabs on top of the page. You will be spoiled for choice for all the exciting varieties there are in the world! Cannot find something you're loking for? No worries! </p>-->
+<!--  </div>-->
+<!--  <div class="container">-->
+<!--    <div class="row">-->
+<!--      {% for three_ramen in lastest_three | sort (attribute='_id', reverse = True) %}-->
+<!--      <div class="col s12 m6 l4">-->
+<!--        <div class="card">-->
+<!--          <div class="card-image">-->
+<!--            <img src="./static/images/noodle1.jpg">-->
+<!--            <span class="card-title">Card Title</span>-->
+<!--          </div>-->
+<!--          <div class="card-content">-->
+<!--            <p>Brand: {{three_ramen.Brand}}</p>-->
+<!--            <p>Flavour: {{three_ramen.Flavour}}</p>-->
+<!--            <p>Country of Origin: {{three_ramen.Country}}</p>-->
+<!--            <p>Stars: {{three_ramen.Stars}}</p>-->
+<!--            <p>Ratings: {{three_ramen.Ratings}}</p>-->
+<!--          </div>-->
+<!--          <div class="card-action">-->
+<!--            <a href="{{url_for('display_ramen', ramen_id=three_ramen._id)}}" class="waves-effect waves-light btn">More</a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      {% endfor %}-->
+<!--    </div>-->
+<!--  </div>-->
 
-  <div class="container">
-    <div class="row">
-      {% for three_ramen in lastest_three | sort (attribute='_id', reverse = True) %}
-      <div class="col s12 m6 l4">
-        <div class="card">
-          <div class="card-image">
-            <img src="./static/images/noodle1.jpg">
-            <span class="card-title">Card Title</span>
-          </div>
-          <div class="card-content">
-            <p>Brand: {{three_ramen.Brand}}</p>
-            <p>Flavour: {{three_ramen.Flavour}}</p>
-            <p>Country of Origin: {{three_ramen.Country}}</p>
-            <p>Stars: {{three_ramen.Stars}}</p>
-            <p>Ratings: {{three_ramen.Ratings}}</p>
-          </div>
-          <div class="card-action">
-            <a href="{{url_for('display_ramen', ramen_id=three_ramen._id)}}" class="waves-effect waves-light btn">More</a>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
+<!--</div>-->
 
-  </div>
-
-
-
-  {% endblock %}
+{% endblock %}
