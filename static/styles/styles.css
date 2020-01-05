@@ -48,8 +48,12 @@ body {
 
 /*Footer*/
 
+.page-footer {
+    padding-bottom: 20px;
+}
+
 .footer-logo {
-    text-align: center
+    text-align: center;
 }
 
 .footer-logo p {
@@ -65,14 +69,27 @@ body {
 
 .footer-social {
     text-align: center;
-    margin-bottom: 30px;
 }
 
-.footer-social p {
+.footer-social p:first-child {
     margin-top: 0;
     margin-bottom: 7px;
 }
 
 .footer-social span {
     margin-right: 10px;
+}
+
+.design {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+
+@media (min-width: 601px) {
+    .footer-social {
+    /*margin-top: 50px;*/
+    position: relative;
+    top: 8vh;
+    }
 }
