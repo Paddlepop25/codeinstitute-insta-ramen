@@ -3,35 +3,62 @@ body {
     font-family: 'Poppins', cursive;
 }
 
-.welcome-page {
-    background-image: url("/static/images/noodle_index.jpeg");
-    /*width: 80vw;*/
-    background-size: cover;
-    /*opacity: 0.2;*/
-    height: 100vh;
+.noodle_img_index img {
+    width: 100vw;
 }
 
-/*.welcome_message h1 {*/
+.welcome-page {
+    text-align: center;
+}
 
-/*    text-align: center;*/
+.welcome-page h1 {
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
 
-/*    color: white;*/
+.welcome-message {
+    position: relative;
+    top: -68px;
+}
 
-/*    margin-top: 23vh;*/
+.welcome-message p {
+    padding: 0 25px;
+    font-size: 1rem;
+}
 
-/*}*/
-
-/*.search_box {*/
-
-/*    text-align: center;*/
-
-/*}*/
+.search-section {
+    position: relative;
+    top: -35px;
+}
 
 .ramen_logo {
     width: 2.8rem;
     margin-left: 20px;
     margin-top: 10px;
 }
+
+.index-page-card {
+    position: relative;
+    top: -70px;
+}
+
+.index-page-card .card .card-content {
+    overflow: scroll;
+    min-height: 230px;
+}
+
+.index-page-card h4 {
+    font-size: 1.8rem;
+}
+
+.index-page-card a {
+    position: relative;
+    left: 30px;
+    top: -13px;
+    width: 70%;
+}
+
 
 .ramen_form {
     border: 2px solid black;
@@ -41,10 +68,13 @@ body {
     padding: 20px;
 }
 
-.card .card-content {
-    overflow: scroll;
-    min-height: 200px;
-}
+/*.card .card-content {*/
+
+/*    overflow: scroll;*/
+
+/*    min-height: 200px;*/
+
+/*}*/
 
 /*Footer*/
 
@@ -85,11 +115,61 @@ body {
     margin-bottom: 0;
 }
 
+.footer-social small {
+    position: relative;
+    top: -5px;
+}
+
 
 @media (min-width: 601px) {
+    .welcome-page h1 {
+        font-size: 2.8rem;
+    }
+
+    .welcome-message p {
+        font-size: 1.1rem;
+    }
+
+    .index-page-card h4 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
     .footer-social {
-    /*margin-top: 50px;*/
-    position: relative;
-    top: 8vh;
+        position: relative;
+        top: 4.5vh;
+    }
+}
+
+@media (min-width: 993px) {
+    .welcome-page h1 {
+        font-size: 3rem;
+    }
+
+    .index-page-card h4 {
+        font-size: 2.7rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .welcome-page h1 {
+        font-size: 3.3rem;
+    }
+    .index-page-card h4 {
+        font-size: 3rem;
+    }
+}
+
+
+@media (min-width: 1022px) {
+    .footer-social {
+        position: relative;
+        top: 3vh;
+    }
+}
+
+@media (min-width: 1450px) {
+    .footer-social {
+        position: relative;
+        top: 1.5vh;
     }
 }

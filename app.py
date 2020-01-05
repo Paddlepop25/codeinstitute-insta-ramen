@@ -14,7 +14,6 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def index():
-    # top_three=mongo.db.ramens.find({'Stars': {'$gt': 3, '$lt':6}}).limit(3)
     lastest_three=mongo.db.ramens.find().sort([("_id", DESCENDING)]).limit(3)
     return render_template('index.html', title="Home", lastest_three=lastest_three)
     
