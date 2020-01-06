@@ -42,7 +42,7 @@ body {
 
 .search-button button {
     width: 60%;
-    border-radius: 50px;
+    border-radius: 12px;
 }
 
 .search-button button:hover {
@@ -62,7 +62,6 @@ body {
 .index-page-card {
     position: relative;
     top: -70px;
-    border-radius: 50px;
 }
 
 .index-page-card .card .card-content {
@@ -82,7 +81,7 @@ body {
     position: relative;
     width: 60%;
     margin: 0 0 5% 20%;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
 .index-page-card a:hover {
@@ -97,14 +96,6 @@ body {
     margin: 100px auto;
     padding: 20px;
 }
-
-/*.card .card-content {*/
-
-/*    overflow: scroll;*/
-
-/*    min-height: 200px;*/
-
-/*}*/
 
 /*Footer*/
 
@@ -177,7 +168,7 @@ small {
 
 .select-brand a {
     width: 100%;
-    border-radius: 50px;
+    border-radius: 12px;
 }
 
 .select-packaging {
@@ -204,13 +195,48 @@ small {
     position: relative;
     top: -25px;
     width: 100%;
-    border-radius: 50px;
+    border-radius: 12px;
 }
 
 .select-submit a {
     width: 100%;
-    border-radius: 50px;
+    border-radius: 12px;
 }
+
+/* Ramen Collection Page */
+
+.ramen-collection-page h4 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.ramen-collection-page .card .card-content {
+    overflow-y: scroll;
+    min-height: 230px;
+}
+
+.ramen-collection-page h4 {
+    font-size: 1.8rem;
+}
+
+.ramen-collection-page .card-content {
+    text-align: center;
+}
+
+.ramen-collection-page a {
+    position: relative;
+    width: 60%;
+    margin: 0 0 5% 20%;
+    border-radius: 12px;
+}
+
+.ramen-collection-page a:hover {
+    color: #000000;
+}
+
+
+
+
 
 @media (min-width: 601px) {
     .index-page-card .card .card-content {
@@ -234,14 +260,14 @@ small {
         position: relative;
         top: 4.5vh;
     }
-    
+
     .ramen-form {
         padding: 60px;
     }
-    
+
     .select-brand a {
-    width: 40%;
-}
+        width: 40%;
+    }
 
     .select-flavour {
         position: relative;
@@ -276,16 +302,16 @@ small {
         position: relative;
         top: -65px;
     }
-    
+
     .select-submit button {
-    position: relative;
-    top: -80px;
-}
+        position: relative;
+        top: -80px;
+    }
 
     .select-submit a {
-    position: relative;
-    top: -80px;
-}
+        position: relative;
+        top: -80px;
+    }
 
 }
 
