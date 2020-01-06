@@ -7,6 +7,14 @@ body {
     width: 100vw;
 }
 
+.nav-wrapper ul li:last-child li a {
+    color: #ef6c00;
+}
+
+.nav-wrapper ul li a {
+    color: #000000;
+}
+
 .welcome-page {
     text-align: center;
 }
@@ -32,20 +40,34 @@ body {
     top: -35px;
 }
 
+.search-button button {
+    width: 60%;
+    border-radius: 50px;
+}
+
+.search-button button:hover {
+    color: #000000;
+}
+
 .ramen_logo {
     width: 2.8rem;
     margin-left: 20px;
     margin-top: 10px;
 }
 
+.card .card-content {
+    padding: 24px 10px;
+}
+
 .index-page-card {
     position: relative;
     top: -70px;
+    border-radius: 50px;
 }
 
 .index-page-card .card .card-content {
-    overflow: scroll;
-    min-height: 230px;
+    overflow-y: scroll;
+    min-height: 200px;
 }
 
 .index-page-card h4 {
@@ -60,10 +82,15 @@ body {
     position: relative;
     width: 60%;
     margin: 0 0 5% 20%;
+    border-radius: 15px;
+}
+
+.index-page-card a:hover {
+    color: #000000;
 }
 
 
-.ramen_form {
+.ramen-form {
     border: 2px solid black;
     border-radius: 25px;
     box-shadow: 2px 2px 8px grey;
@@ -81,8 +108,18 @@ body {
 
 /*Footer*/
 
+footer a,
+p,
+small {
+    color: #000000;
+}
+
 .page-footer {
     padding-bottom: 20px;
+}
+
+.page-footer a:last-child:hover {
+    color: #ffffff;
 }
 
 .footer-logo {
@@ -104,6 +141,10 @@ body {
     text-align: center;
 }
 
+.footer-social a:hover {
+    color: #ffffff;
+}
+
 .footer-social p:first-child {
     margin-top: 0;
     margin-bottom: 7px;
@@ -123,8 +164,60 @@ body {
     top: -5px;
 }
 
+/* Add Ramen Page*/
+
+.dropdown-content li>a,
+.dropdown-content li>span {
+    color: #ef6c00;
+}
+
+.select-brand p {
+    margin-top: -20px;
+}
+
+.select-brand a {
+    width: 100%;
+    border-radius: 50px;
+}
+
+.select-packaging {
+    position: relative;
+    top: -20px;
+}
+
+.select-country-stars {
+    position: relative;
+    top: -15px;
+}
+
+.select-country-stars .stars {
+    position: relative;
+    top: 9px;
+}
+
+.select-reviews {
+    position: relative;
+    top: -15px;
+}
+
+.select-submit button {
+    position: relative;
+    top: -25px;
+    width: 100%;
+    border-radius: 50px;
+}
+
+.select-submit a {
+    width: 100%;
+    border-radius: 50px;
+}
 
 @media (min-width: 601px) {
+    .index-page-card .card .card-content {
+        overflow-y: scroll;
+        min-height: 290px;
+    }
+
     .welcome-page h1 {
         font-size: 2.8rem;
     }
@@ -141,6 +234,59 @@ body {
         position: relative;
         top: 4.5vh;
     }
+    
+    .ramen-form {
+        padding: 60px;
+    }
+    
+    .select-brand a {
+    width: 40%;
+}
+
+    .select-flavour {
+        position: relative;
+        top: -55px;
+    }
+
+    .select-country-stars {
+        position: relative;
+        top: -60px;
+    }
+
+    .select-reviews {
+        position: relative;
+        top: -80px;
+    }
+
+}
+
+@media (min-width: 601px) {
+    .index-page-card .card .card-content {
+        overflow-y: scroll;
+        min-height: 240px;
+    }
+
+    .select-brand a {
+        position: relative;
+        left: 250px;
+        bottom: 54px;
+    }
+
+    .select-packaging {
+        position: relative;
+        top: -65px;
+    }
+    
+    .select-submit button {
+    position: relative;
+    top: -80px;
+}
+
+    .select-submit a {
+    position: relative;
+    top: -80px;
+}
+
 }
 
 @media (min-width: 993px) {
@@ -159,6 +305,10 @@ body {
     }
     .index-page-card h4 {
         font-size: 3rem;
+    }
+    .index-page-card .card .card-content {
+        overflow-y: scroll;
+        min-height: 220px;
     }
 }
 

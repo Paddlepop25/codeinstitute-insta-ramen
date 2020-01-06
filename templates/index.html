@@ -1,7 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="container-fluid">
-
   <div class="container-fluid">
     <div class="noodle_img_index">
       <img src="/static/images/noodle_index.jpeg" alt="delicious noodle ramen seseme seeds colorful" />
@@ -30,11 +29,19 @@
       </div>
     </div>
     <div class="row welcome-message">
-      <p>If you love slurpping on hot, savoury instant ramen, you're in for a treat! This website is a collection of instant ramens from around the world.
+      <p>If you love slurpping on hot, savoury instant ramen, you're in for a treat!
+      <br>
+      This website is a collection of instant ramens from around the world.
         <br>
-        <br> Want to view some yummy examples? On the search box above, input your favourite flavours, or click on the selection of tabs on top of the page.
         <br>
-        <br> You will be spoiled for choice for all the exciting varieties there are in the world! Cannot find something you're loking for? No worries! </p>
+        Want to view some yummy examples? On the search box above, input your favourite flavours, or click on the selection of tabs on top of the page.
+        You will be spoiled for choice for all the exciting varieties there are in the world!
+        <br>
+        <br>
+         Cannot find something you're lo0king for? No worries! Add a new ramen to the collection and give your honest review.
+         <br>
+         <br>
+         Enjoy!</p>
     </div>
   </div>
 
@@ -49,11 +56,11 @@
           </div>
           <div class="card-content">
             <p>Brand:
-              <br> {{three_ramen.Brand}}
+              <br> {{three_ramen.Brand|capitalize}}
             </p>
             <br>
             <p>Flavour:
-              <br> {{three_ramen.Flavour}}
+              <br> {{three_ramen.Flavour|capitalize}}
             </p>
           </div>
 
@@ -67,7 +74,6 @@
       {% endfor %}
     </div>
   </div>
-
 </div>
 
 {% endblock %}

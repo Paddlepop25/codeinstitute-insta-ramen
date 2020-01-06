@@ -10,8 +10,8 @@
         <span class="card-title"></span>
       </div>
       <div class="card-content">
-        <p>Brand: {{ramen.Brand}}</p>
-        <p>Flavour: {{ramen.Flavour}}</p>
+        <p>Brand: {{ramen.Brand|capitalize}}</p>
+        <p>Flavour: {{ramen.Flavour|capitalize}}</p>
       </div>
       <div class="card-action">
         <a href="{{url_for('display_ramen', ramen_id=ramen._id)}}" class="waves-effect waves-light btn">More</a>
