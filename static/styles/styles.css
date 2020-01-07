@@ -225,6 +225,7 @@ small {
 }
 
 /* Ramen Collection Page */
+
 .ramen-collection-page h4 {
     font-size: 2.5rem;
     text-align: center;
@@ -240,7 +241,7 @@ small {
 }
 
 .ramen-collection-page .card-content {
-    text-align: center;
+    text-align: left;
 }
 
 .ramen-collection-page a {
@@ -256,9 +257,15 @@ small {
 
 
 /* Display Page */
+
 .display-page img {
- width: 100%;
- margin-top: 40px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.display-page p {
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .display-edit-delete a {
@@ -272,6 +279,7 @@ small {
 }
 
 /* Asia Collection */
+
 .asia-page h4 {
     font-size: 2.5rem;
     text-align: center;
@@ -287,7 +295,7 @@ small {
 }
 
 .asia-page .card-content {
-    text-align: center;
+    text-align: left;
 }
 
 .asia-page a {
@@ -302,6 +310,7 @@ small {
 }
 
 /* Europe page */
+
 .europe-page h4 {
     font-size: 2.5rem;
     text-align: center;
@@ -317,7 +326,7 @@ small {
 }
 
 .europe-page .card-content {
-    text-align: center;
+    text-align: left;
 }
 
 .europe-page a {
@@ -332,6 +341,7 @@ small {
 }
 
 /* The Americas page */
+
 .america-page h4 {
     font-size: 2.5rem;
     text-align: center;
@@ -347,7 +357,7 @@ small {
 }
 
 .america-page .card-content {
-    text-align: center;
+    text-align: left;
 }
 
 .america-page a {
@@ -362,6 +372,7 @@ small {
 }
 
 /* The Rest Of The World page */
+
 .rest-world-page h4 {
     font-size: 2.5rem;
     text-align: center;
@@ -377,7 +388,7 @@ small {
 }
 
 .rest-world-page .card-content {
-    text-align: center;
+    text-align: left;
 }
 
 .rest-world-page a {
@@ -436,11 +447,20 @@ small {
         position: relative;
         top: -80px;
     }
-    
+
+    .display-details p {
+        padding-left: 50px;
+    }
+
+    .display-brand {
+        padding-top: 30px
+    }
+
+
     .display-edit-delete div:first-child {
-    position: relative;
-    top: 0;
-}
+        position: relative;
+        top: 0;
+    }
 
 }
 

@@ -5,23 +5,15 @@
     <div class="col s12 m5">
       <img src="/static/images/noodle1.jpg">
     </div>
-    <div class="col s12 m7">
-      <p>Brand:
-        <br> {{ramen.Brand|capitalize}}
-      </p>
+    <div class="col s12 m7 display-details">
+      <p class="display-brand">Brand: {{ramen.Brand|capitalize}}</p>
       <p>Flavour:
         <br>{{ramen.Flavour|capitalize}}
       </p>
-      <p>Style:
-        <br>{{ramen.Style}}
-      </p>
-      <p>Country of Origin:
-        <br>{{ramen.Country}}
-      </p>
-      <p>Stars:
-        <br> {{ramen.Stars}}
-      </p>
-      <p>Ratings:
+      <p>Style: {{ramen.Style}}</p>
+      <p>Country of Origin: {{ramen.Country}}</p>
+      <p>Stars: {{ramen.Stars}}</p>
+      <p>Reviews:
         <br>{{ramen.Ratings}}
       </p>
     </div>
