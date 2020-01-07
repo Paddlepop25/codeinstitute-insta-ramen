@@ -1,24 +1,34 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="row">
-  {% for ramen in ramens | sort (attribute='Country') %}
-  <div class="col s12 m6 l4">
-    <div class="card">
-      <div class="card-image">
-        <img src="./static/images/noodle1.jpg">
-        <span class="card-title">Card Title</span>
-      </div>
-      <div class="card-content">
-        <p>Brand: {{ramen.Brand}}</p>
-        <p>Flavour: {{ramen.Flavour}}</p>
-        <p>Country of Origin: {{ramen.Country}}</p>
-      </div>
-      <div class="card-action">
-        <a href="{{url_for('display_ramen', ramen_id=ramen._id)}}" class="waves-effect waves-light btn">More</a>
+<div class="container rest-world-page">
+  <h4>The Rest Of The World Ramen Collection</h4>
+  <div class="row">
+    {% for ramen in ramens | sort (attribute='Country') %}
+    <div class="col s12 m6 l4">
+      <div class="card">
+        <div class="card-image">
+          <img src="./static/images/noodle1.jpg">
+        </div>
+        <div class="card-content">
+          <p>Brand:
+            <br>{{ramen.Brand|capitalize}}
+          </p>
+          <br>
+          <p>Flavour:
+            <br>{{ramen.Flavour|capitalize}}
+          </p>
+          <br>
+          <p>Country:
+            <br>{{ramen.Country|capitalize}}
+          </p>
+        </div>
+        <div class="row">
+          <a href="{{url_for('display_ramen', ramen_id=ramen._id)}}" class="waves-effect waves-light btn orange">More</a>
+        </div>
       </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
 
 {% endblock %}

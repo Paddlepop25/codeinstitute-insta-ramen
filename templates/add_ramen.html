@@ -1,6 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="container">
+<div class="container add-ramen">
+    <h4>Add a New Ramen</h4>
   <form action="{{ url_for('insert_ramen') }}" method="POST" class="ramen-form">
     <div class="row">
       <span>*</span><span>All fields are required</span>
@@ -87,7 +88,7 @@
 
     <div class="row select-submit">
       <div class="col s12 m6">
-        <button class="btn waves-effect waves-light orange sf-but" type="submit" name="action">
+        <button class="btn waves-effect waves-light orange" type="submit" name="action">
           <i class="material-icons right">playlist_add</i>Add Ramen
       </button>
       </div>

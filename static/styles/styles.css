@@ -1,10 +1,12 @@
 body {
     font-size: 16px;
     font-family: 'Poppins', cursive;
+    /*background: #FFF5E6;*/
 }
 
 .noodle_img_index img {
     width: 100vw;
+    opacity: 0.8;
 }
 
 .nav-wrapper ul li:last-child li a {
@@ -42,7 +44,7 @@ body {
 
 .search-button button {
     width: 60%;
-    border-radius: 12px;
+    border-radius: 15px;
 }
 
 .search-button button:hover {
@@ -81,15 +83,34 @@ body {
     position: relative;
     width: 60%;
     margin: 0 0 5% 20%;
-    border-radius: 12px;
+    border-radius: 15px;
 }
 
 .index-page-card a:hover {
     color: #000000;
 }
 
+.add-ramen h4 {
+    position: relative;
+    top: 90px;
+    text-align: center;
+}
 
 .ramen-form {
+    border: 2px solid black;
+    border-radius: 25px;
+    box-shadow: 2px 2px 8px grey;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.edit-ramen h4 {
+    position: relative;
+    top: 90px;
+    text-align: center;
+}
+
+.edit-ramen {
     border: 2px solid black;
     border-radius: 25px;
     box-shadow: 2px 2px 8px grey;
@@ -168,7 +189,7 @@ small {
 
 .select-brand a {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 15px;
 }
 
 .select-packaging {
@@ -195,16 +216,15 @@ small {
     position: relative;
     top: -25px;
     width: 100%;
-    border-radius: 12px;
+    border-radius: 15px;
 }
 
 .select-submit a {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 15px;
 }
 
 /* Ramen Collection Page */
-
 .ramen-collection-page h4 {
     font-size: 2.5rem;
     text-align: center;
@@ -227,7 +247,7 @@ small {
     position: relative;
     width: 60%;
     margin: 0 0 5% 20%;
-    border-radius: 12px;
+    border-radius: 15px;
 }
 
 .ramen-collection-page a:hover {
@@ -235,8 +255,141 @@ small {
 }
 
 
+/* Display Page */
+.display-page img {
+ width: 100%;
+ margin-top: 40px;
+}
 
+.display-edit-delete a {
+    width: 100%;
+    border-radius: 10px;
+}
 
+.display-edit-delete div:first-child {
+    position: relative;
+    top: -15px;
+}
+
+/* Asia Collection */
+.asia-page h4 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.asia-page .card .card-content {
+    overflow-y: scroll;
+    min-height: 230px;
+}
+
+.asia-page h4 {
+    font-size: 1.8rem;
+}
+
+.asia-page .card-content {
+    text-align: center;
+}
+
+.asia-page a {
+    position: relative;
+    width: 60%;
+    margin: 0 0 5% 20%;
+    border-radius: 15px;
+}
+
+.asia-page a:hover {
+    color: #000000;
+}
+
+/* Europe page */
+.europe-page h4 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.europe-page .card .card-content {
+    overflow-y: scroll;
+    min-height: 230px;
+}
+
+.europe-page h4 {
+    font-size: 1.8rem;
+}
+
+.europe-page .card-content {
+    text-align: center;
+}
+
+.europe-page a {
+    position: relative;
+    width: 60%;
+    margin: 0 0 5% 20%;
+    border-radius: 15px;
+}
+
+.europe-page a:hover {
+    color: #000000;
+}
+
+/* The Americas page */
+.america-page h4 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.america-page .card .card-content {
+    overflow-y: scroll;
+    min-height: 230px;
+}
+
+.america-page h4 {
+    font-size: 1.8rem;
+}
+
+.america-page .card-content {
+    text-align: center;
+}
+
+.america-page a {
+    position: relative;
+    width: 60%;
+    margin: 0 0 5% 20%;
+    border-radius: 15px;
+}
+
+.america-page a:hover {
+    color: #000000;
+}
+
+/* The Rest Of The World page */
+.rest-world-page h4 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.rest-world-page .card .card-content {
+    overflow-y: scroll;
+    min-height: 230px;
+}
+
+.rest-world-page h4 {
+    font-size: 1.8rem;
+}
+
+.rest-world-page .card-content {
+    text-align: center;
+}
+
+.rest-world-page a {
+    position: relative;
+    width: 60%;
+    margin: 0 0 5% 20%;
+    border-radius: 15px;
+}
+
+.rest-world-page a:hover {
+    color: #000000;
+}
 
 @media (min-width: 601px) {
     .index-page-card .card .card-content {
@@ -283,6 +436,11 @@ small {
         position: relative;
         top: -80px;
     }
+    
+    .display-edit-delete div:first-child {
+    position: relative;
+    top: 0;
+}
 
 }
 

@@ -1,12 +1,13 @@
 import os
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, request, url_for, send_from_directory
 from flask_pymongo import PyMongo, DESCENDING
 from bson.objectid import ObjectId
 import re
 import math
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
-
+app.config['UPLOAD_FOLDER'] = '/home/ubuntu/environment/uploads'
 app.config['MONGO_DBNAME'] = 'ramen_database'
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
@@ -63,6 +64,12 @@ def search_ramen():
     print(query)
     results=mongo.db.ramens.find({'Flavour': query})
     
+    # if file and allowed_file(file.filename):
+    #         filename = secure_filename(file.filename)
+    #         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+    #         return redirect(url_for('uploaded_file',
+    #                                 filename=filename))
+                                    
     ramen = []
     for result in results:
         ramen.append(result)

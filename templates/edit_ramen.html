@@ -1,6 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="container">
+<div class="container edit-ramen">
+      <h4>Edit Ramen</h4>
   <div class="row">
     <form action="{{ url_for('update_ramen', ramen_id=ramen._id) }}" method="POST" class="ramen_form">
       <div class="row">
@@ -99,4 +100,6 @@
 
   </div>
 </div>
+
+
 {% endblock %}
