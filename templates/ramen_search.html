@@ -1,69 +1,55 @@
 {% extends 'base.html' %} {% block content %}
 
-<div id="recipe-container-listing" class="container-fluid">
-
-    <div class="row recipe-row">
-        
-        <div class="recipe-listing-column col s12">
-            <h5>{{title}} for <em>'{{query}}'</em></h5>
-        </div>
-        <div class="container">
+<div class="container">
+    <div class="row">
+        <form class="col s12" action="{{ url_for('search_ramen') }}">
+            <h4>{{title}} for <em>'{{query}}'</em></h4>
             <div class="row">
-                <form class="col s12" action="{{ url_for('search_ramen') }}">
-                    <div class="row search-bar-row">
-                        <div class="input-field col s12">
-                            <input id="search-recipe-listing" name="query" type="text" class="validate">
-                            <label for="search">Search for Ramen flavours</label>
-                            <div class="search-button">
-                                <button class="btn waves-effect waves-light blue lighten-1" type="submit" name="action">Search</button>
-                            </div>
-                        </div>
+                <div class="input-field col s12">
+                    <input id="search" name="query" type="text" class="validate" required>
+                    <label for="search">Search for Ramen flavours</label>
+                    <div class="search-button search-result">
+                        <button class="btn waves-effect waves-light orange accent-3" type="submit" name="action">Search</button>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 </div>
 
-<!--codes from display-->
-{% if ramen_search|length > 0 %} 
-<div class="row">
-{% for ramen in ramen_search %}
-  <div class="col s12 m6 l3">
-    <div class="card">
-      <div class="card-image">
-        <img src="/static/images/noodle1.jpg">
-        <span class="card-title">Card Title</span>
-      </div>
-      <div class="card-content">
-        <p>Brand: {{ramen.Brand}}</p>
-        <p>Flavour: {{ramen.Flavour}}</p>
-        <p>Style: {{ramen.Style}}</p>
-        <p>Country of Origin: {{ramen.Country}}</p>
-        <p>Stars: {{ramen.Stars}}</p>
-        <p>Ratings: {{ramen.Ratings}}</p>
-      </div>
-      <div class="card-action">
-        <a href="{{url_for('edit_ramen', ramen_id=ramen._id)}}" class="waves-effect waves-light btn"><i class="material-icons right">playlist_add</i>Edit</a>
-        <a href="{{url_for('delete_ramen', ramen_id=ramen._id)}}" class="waves-effect waves-light btn"><i class="material-icons right">playlist_add</i>Delete</a>
-      
-      </div>
-    </div>
-  </div>
-  
-{% endfor %} 
-</div>
-{% else %}
-        <div class="container">
-            <div class="row">
-                <div class="no-results-column col s12">
-                    <img class="sad-face-no-results" src="{{ url_for('static', filename='images/noodle_icon.png') }}"></img>
+<div class="container search-page-card">
+    {% if ramen_search|length > 0 %}
+    <div class="row">
+        {% for ramen in ramen_search %}
+        <div class="col s12 m4 l4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="./static/images/noodle1.jpg">
                 </div>
-                <div class="no-results-column col s12">
-                    <h4 class="text-center">No results have been found</h4>
+                <div class="card-content">
+                    <p>Brand: {{ramen.Brand|capitalize}}</p>
+                    <br>
+                    <p>Flavour:
+                        <br> {{ramen.Flavour|capitalize}}
+                    </p>
                 </div>
-                
+                <div class="row">
+                    <a href="{{url_for('display_ramen', ramen_id=ramen._id)}}" class="waves-effect waves-light btn orange">More</a>
+                </div>
             </div>
         </div>
-        {% endif %}
-{% endblock %}
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="container sorry">
+        <div class="row">
+            <div class="col s12">
+                <img class="sorry-cat" src="{{ url_for('static', filename='images/sorry-cat.jpg') }}"></img>
+            </div>
+            <div class="col s12">
+                <h4>No results have been found</h4>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %} {% endblock %}

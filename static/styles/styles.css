@@ -51,6 +51,26 @@ body {
     color: #000000;
 }
 
+.search-result {
+    position: relative;
+    margin: 0 0 5% 20%;
+}
+
+.sorry-cat {
+    width: 100%;
+}
+
+.error-page p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.error-page a {
+    width: 60%;
+    margin-left: 20%;
+}
+
 .ramen_logo {
     width: 2.8rem;
     margin-left: 20px;
@@ -90,6 +110,36 @@ body {
     color: #000000;
 }
 
+/* Search page*/
+
+.search-page-card .card .card-content {
+    overflow-y: scroll;
+    min-height: 200px;
+}
+
+.search-page-card h4 {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.search-page-card .card-content {
+    text-align: left;
+}
+
+.search-page-card a {
+    position: relative;
+    width: 60%;
+    margin: 0 0 5% 20%;
+    border-radius: 15px;
+}
+
+.search-page-card a:hover {
+    color: #000000;
+}
+
+
+/* Add Ramen page*/
+
 .add-ramen h4 {
     position: relative;
     top: 90px;
@@ -104,18 +154,17 @@ body {
     padding: 20px;
 }
 
+.dropdown-content li>a,
+.dropdown-content li>span {
+    color: #ef6c00;
+}
+
+
+/* Edit Ramen Page*/
 .edit-ramen h4 {
     position: relative;
     top: 90px;
     text-align: center;
-}
-
-.edit-ramen {
-    border: 2px solid black;
-    border-radius: 25px;
-    box-shadow: 2px 2px 8px grey;
-    margin: 100px auto;
-    padding: 20px;
 }
 
 /*Footer*/
@@ -178,11 +227,6 @@ small {
 
 /* Add Ramen Page*/
 
-.dropdown-content li>a,
-.dropdown-content li>span {
-    color: #ef6c00;
-}
-
 .select-brand p {
     margin-top: -20px;
 }
@@ -223,6 +267,7 @@ small {
     width: 100%;
     border-radius: 15px;
 }
+
 
 /* Ramen Collection Page */
 

@@ -1,10 +1,17 @@
-{% extends 'base.html' %} 
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
-<h3>Error 404 page</h3>
-<h5>Click here to go back to the home page.</h5>
-
-<a href="{{ url_for('index') }}">
-<button class="btn waves-effect waves-light blue" type="submit" name="action">Home Page</button>
-</a> 
+<div class="container error-page">
+    <p>Sorry, something went wrong</p>
+    <div class="row">
+        <div class="col s12">
+            <img class="sorry-cat" src="{{ url_for('static', filename='images/shocked-cat.jpg') }}"></img>
+        </div>
+        <div class="row">
+            <div class="col s12">
+            <p>Click go back to the main page</p>
+            <a href="{{url_for('index')}}" class="waves-effect waves-light btn orange">Home</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

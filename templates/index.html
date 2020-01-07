@@ -17,7 +17,7 @@
           <form class="col s12" action="{{ url_for('search_ramen') }}">
             <div class="row">
               <div class="input-field col s12">
-                <input id="search" name="query" type="text" class="validate">
+                <input id="search" name="query" type="text" class="validate" required>
                 <label for="search">Search for Ramen flavours</label>
                 <div class="search-button">
                   <button class="btn waves-effect waves-light orange accent-3" type="submit" name="action">Search</button>
@@ -51,9 +51,7 @@
             <img src="./static/images/noodle1.jpg">
           </div>
           <div class="card-content">
-            <p>Brand:
-              <br> {{three_ramen.Brand|capitalize}}
-            </p>
+            <p>Brand: {{three_ramen.Brand|capitalize}}</p>
             <br>
             <p>Flavour:
               <br> {{three_ramen.Flavour|capitalize}}
