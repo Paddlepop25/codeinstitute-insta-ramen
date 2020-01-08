@@ -1,29 +1,29 @@
 brand,flavour,style,country,continent,stars,reviews,imageURL
-fantastic,Noodles Chicken & Corn Flavour,Cup,Australia,The Rest,3,"As the brand suggest, this ramen really is fantastic! I bet they use Australian corn for this",
-nissin,Lamen Sabor Picanha,Pack,Brazil,The Americas,4,Muy Bien,
-xiuhe,Hot & Sour Beef Noodles,Bowl,China,Asia,1,One of my favourties. Wish it's more sour,
-golden mie,Vegetable,Pack,United Arab Emirates (UAE),Asia,4,"A simple, fuss free ramen for the ordinary folks",
-maggi,2 Minute Noodles Chicken Flavour,Pack,Fiji,The Rest,3,"2 minutes is all it took to cook this. That chicken taste like cardboard, though",
-pirkka,Nuudeli Kana Nudlar Kyckling,Pack,Finland,Europe,4,A taste of mom's cooking,
-bamee,Oriental Style Instant Noodles Beef Flavour,Pack,Germany,Europe,3,"If you want the real deal, head to a proper oriental restaurant instead of making this",
-yum-mie,Instant Noodles Beef In Light Soup Flavour,Pack,Ghana,The Rest,4,Really really amazing ramen. Tastes like the one from the corner restaurant that's been around for over 30 years!,
-nissin,Smack Chili,Pack,Hungary,Europe,4,"Too spicy for my family, but I love it!",
-bonasia,Instant Noodles Duck Flavour,Pack,Hungary,Europe,3,Meh,
-1 To 3 noodles,Chatpat Masala,Pack,India,Asia,2,"The portion is so little, you could finish it when you count 1 to 3",
-super bihun,Bihun Kuah Rasa Baso Sapi,Pack,Indonesia,Asia,4,"Lazatnya, aku selalu masakkan bihun ini untuk makan malam",
-ikeda shoku,Nabeyaki Kitsune Udon,Tray,Japan,Asia,4,Oiishi desu ne. Domo arigato gozaimasu,
-maruchan,Sopa Maruchan Sobar A Camaron,Pack,Mexico,The Americas,3,My family love eating this for supper. Cheap and good,
-nissin,Cup Noodles Sopa Nissin Sabor A Carne De Res,Cup,Mexico,The Americas,4,"A quick tip, leave the hot water inside the cup for longer. The noodles were quite chewy and not the nice kind. Taste okay though",
-mama,Instant Noodles Chicken Sichek Flavour,Pack,Myanmar,Asia,4,"The most popular instant ramen in the country, influenced from our counsin Thailand",
-asian thai foods,Rumpum Gundruk Flavour,Pack,Nepal,Asia,1,Nasty,
-unox,Good Noodles Tandoori,Pack,Netherlands,Europe,5,What do you get when you put indian and chinese foods together? You get tandoori noodles that's amazing,
-indomie,Onion Chicken Flavor,Pack,Nigeria,The Rest,2,"Tasted average, nothing to shout about",
-knorr,Chatt Patta Instant Noodles,Pack,Pakistan,Asia,1,I only make this when mom's not cooking at home. Survivor food that I can do without,
-koka,Signature Curry Flavor Instant Noodles,Cup,Singapore,Asia,4,Our office pantry is stocked with these and they always disappeared after a day or two. We love it,
-fantastic,Volcano Curry Kkokkomyun,Pack,South Korea,Asia,4,Too spicy!,
-little cook,Thailand Green Curry Instant Noodle,Bowl,Taiwan,Asia,5,Wow tasted like real green curry and they even give you a pack of green peas as garnish,
-mr. lee's noodles,Shaolin Monk Vegetables,Cup,United Kingdom,Europe,5,Eat this and you''ll dream of shaolin monk kicking around in your stomach. Intense!,
-nissin,Cup Noodles Chicken Vegetable,Cup,USA,The Americas,2,Average ramen,
-shirakiku,Sanukiya Udon Shrimp Flavor,Pack,USA,The Americas,3,What did I just eat? Yucks!,
-thien houng foods,Lemon Chicken Flavour Instant Noodles,Pack,Vietnam,Asia,3,Once is more than enough,
-prima,Spicy Laksa,Pack,Singapore,Asia,5,"Mind blowing! The coconut flavour with curry is so fragrant, I don't even feel like I'm eating instant ramen",
+fantastic,Noodles Chicken & Corn Flavour,Cup,Australia,The Rest,3,"As the brand suggest, this ramen really is fantastic! I bet they use Australian corn for this",/static/images/noodle1.jpg
+nissin,Lamen Sabor Picanha,Pack,Brazil,The Americas,4,Muy Bien,/static/images/noodle2.jpg
+xiuhe,Hot & Sour Beef Noodles,Bowl,China,Asia,1,One of my favourties. Wish it's more sour,/static/images/noodle3.jpg
+golden mie,Vegetable,Pack,United Arab Emirates (UAE),Asia,4,"A simple, fuss free ramen for the ordinary folks",/static/images/noodle4.jpg
+maggi,2 Minute Noodles Chicken Flavour,Pack,Fiji,The Rest,3,"2 minutes is all it took to cook this. That chicken taste like cardboard, though",/static/images/noodle5.jpg
+pirkka,Nuudeli Kana Nudlar Kyckling,Pack,Finland,Europe,4,A taste of mom's cooking,/static/images/noodle28.jpg
+bamee,Oriental Style Instant Noodles Beef Flavour,Pack,Germany,Europe,3,"If you want the real deal, head to a proper oriental restaurant instead of making this",/static/images/noodle7.jpg
+yum-mie,Instant Noodles Beef In Light Soup Flavour,Pack,Ghana,The Rest,4,Really really amazing ramen. Tastes like the one from the corner restaurant that's been around for over 30 years!,/static/images/noodle8.jpg
+nissin,Smack Chili,Pack,Hungary,Europe,4,"Too spicy for my family, but I love it!",/static/images/noodle9.jpg
+bonasia,Instant Noodles Duck Flavour,Pack,Hungary,Europe,3,Meh,/static/images/noodle10.jpg
+1 To 3 noodles,Chatpat Masala,Pack,India,Asia,2,"The portion is so little, you could finish it when you count 1 to 3",/static/images/noodle11.jpg
+super bihun,Bihun Kuah Rasa Baso Sapi,Pack,Indonesia,Asia,4,"Lazatnya, aku selalu masakkan bihun ini untuk makan malam",/static/images/noodle12.jpg
+ikeda shoku,Nabeyaki Kitsune Udon,Tray,Japan,Asia,4,Oiishi desu ne. Domo arigato gozaimasu,/static/images/noodle13.jpg
+maruchan,Sopa Maruchan Sobar A Camaron,Pack,Mexico,The Americas,3,My family love eating this for supper. Cheap and good,/static/images/noodle14.jpg
+nissin,Cup Noodles Sopa Nissin Sabor A Carne De Res,Cup,Mexico,The Americas,4,"A quick tip, leave the hot water inside the cup for longer. The noodles were quite chewy and not the nice kind. Taste okay though",/static/images/noodle6.jpg
+mama,Instant Noodles Chicken Sichek Flavour,Pack,Myanmar,Asia,4,"The most popular instant ramen in the country, influenced from our counsin Thailand",/static/images/noodle15.jpg
+asian thai foods,Rumpum Gundruk Flavour,Pack,Nepal,Asia,1,Nasty,/static/images/noodle16.jpg
+unox,Good Noodles Tandoori,Pack,Netherlands,Europe,5,What do you get when you put indian and chinese foods together? You get tandoori noodles that's amazing,/static/images/noodle17.jpg
+indomie,Onion Chicken Flavor,Pack,Nigeria,The Rest,2,"Tasted average, nothing to shout about",/static/images/noodle18.jpg
+knorr,Chatt Patta Instant Noodles,Pack,Pakistan,Asia,1,I only make this when mom's not cooking at home. Survivor food that I can do without,/static/images/noodle19.jpg
+koka,Signature Curry Flavor Instant Noodles,Cup,Singapore,Asia,4,Our office pantry is stocked with these and they always disappeared after a day or two. We love it,/static/images/noodle20.jpg
+fantastic,Volcano Curry Kkokkomyun,Pack,South Korea,Asia,4,Too spicy!,/static/images/noodle21.jpg
+little cook,Thailand Green Curry Instant Noodle,Bowl,Taiwan,Asia,5,Wow tasted like real green curry and they even give you a pack of green peas as garnish,/static/images/noodle22.jpg
+mr. lee's noodles,Shaolin Monk Vegetables,Cup,United Kingdom,Europe,5,Eat this and you''ll dream of shaolin monk kicking around in your stomach. Intense!,/static/images/noodle23.jpg
+nissin,Cup Noodles Chicken Vegetable,Cup,USA,The Americas,2,Average ramen,/static/images/noodle24.jpg
+shirakiku,Sanukiya Udon Shrimp Flavor,Pack,USA,The Americas,3,What did I just eat? Yucks!,/static/images/noodle25.jpg
+thien houng foods,Lemon Chicken Flavour Instant Noodles,Pack,Vietnam,Asia,3,Once is more than enough,/static/images/noodle26.jpg
+prima,Spicy Laksa,Pack,Singapore,Asia,5,"Mind blowing! The coconut flavour with curry is so fragrant, I don't even feel like I'm eating instant ramen",/static/images/noodle27.jpg

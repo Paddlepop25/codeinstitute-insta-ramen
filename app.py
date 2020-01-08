@@ -91,7 +91,8 @@ def insert_ramen():
         'style': request.form.get('style'),
         'country':request.form.get('country'),
         'stars':int(request.form.get('stars')),
-        'reviews':request.form.get('reviews')
+        'reviews':request.form.get('reviews'),
+        'imageURL':request.form.get('imageURL')
     }
     ramens.insert_one(new_ramen)
     return redirect(url_for('get_ramen'))    
@@ -113,7 +114,8 @@ def update_ramen(ramen_id):
         'style': request.form.get('style'),
         'country':request.form.get('country'),
         'stars':int(request.form.get('stars')),
-        'reviews':request.form.get('reviews')
+        'reviews':request.form.get('reviews'),
+        'imageURL':request.form.get('imageURL')
     })
     return redirect(url_for('get_ramen'))
     
