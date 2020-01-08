@@ -99,7 +99,7 @@ def insert_ramen():
 @app.route('/edit_ramen/<ramen_id>', methods=['GET'])
 def edit_ramen(ramen_id):
     ramen = mongo.db.ramens.find_one({"_id": ObjectId(ramen_id)})
-    brands = mongo.db.brands.find()
+    brands = mongo.db.brands.find().sort([("brand", ASCENDING)])
     countries = mongo.db.countries.find()
     return render_template('edit_ramen.html', title="Edit Ramen", ramen=ramen, brands=brands, countries=countries)
 
@@ -121,17 +121,12 @@ def update_ramen(ramen_id):
 def delete_ramen(ramen_id):
     mongo.db.ramens.remove({'_id': ObjectId(ramen_id)})
     return redirect(url_for('get_ramen'))
-    
-@app.route('/get_brands')
-def get_brands():
-    brand = mongo.db.brands.find()
-    return render_template('brands.html', title="Ramen Brands", brand=brand)
 
 @app.route('/add_brands')
 def add_brands():
     brand = mongo.db.brands.find()
     add_a_brand = mongo.db.ramens.find()
-    return render_template('add_brands.html', title="Add a Brand", add_a_brand=add_a_brand, brand=brand)
+    return render_template('add_brands.html', title="Add a Brand", brand=brand)
     
 @app.route('/insert_brand', methods=['POST'])
 def insert_brand():
@@ -147,7 +142,7 @@ def insert_brand():
     
 @app.errorhandler(404)
 def error_404(not_found):
-    return render_template('error404.html', title="Error 404", not_found=not_found)
+    return render_template('error404.html', title="Error 404")
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

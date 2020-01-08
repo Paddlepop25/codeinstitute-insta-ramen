@@ -12,10 +12,14 @@
       <label for="ramen_brand">Add a New Brand</label>
     </div>
     <div class="row">
-      <button class="btn waves-effect waves-light orange" type="submit" name="action">Add Brand
+      <div class="col s12 m6">
+        <button class="btn waves-effect waves-light orange" type="submit" name="action">Add Brand
         <i class="material-icons right">playlist_add</i>
       </button>
-      <a href="{{url_for('get_ramen')}}" class="btn orange"><i class="material-icons right">cancel</i>Cancel</a>
+      </div>
+      <div class="col s12 m6">
+        <a href="{{url_for('add_ramen')}}" class="btn orange"><i class="material-icons right">cancel</i>Cancel</a>
+      </div>
     </div>
   </form>
 </div>

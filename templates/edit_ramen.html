@@ -15,7 +15,7 @@
           {% for ramen_brand in brands %}
           {% if ramen_brand.brand == ramen.brand %}
           print("YAY")
-              <option value="{{ ramen_brand.brand }}" selected>{{ ramen_brand.brand|capitalize}}</option>
+              <option value="{{ ramen_brand.brand }}" selected>{{ ramen_brand.brand|title}}</option>
             {% else %}
             <option value="{{ ramen_brand.brand }}">{{ ramen_brand.brand }}</option>
               {% endif %}

@@ -13,7 +13,7 @@
         <select required id="brand" name="brand">
           <option value="" disabled selected>Choose Brand</option>
           {% for brand in brands %}
-              <option value="{{ brand.brand }}" >{{ brand.brand|capitalize}}</option>
+              <option value="{{ brand.brand }}" >{{ brand.brand|title}}</option>
           {% endfor %}
         </select>
         <label><span>* </span>Select Brand</label>

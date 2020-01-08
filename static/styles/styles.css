@@ -271,10 +271,13 @@ small {
 /* Add Brand page*/
 .add-brand button {
     border-radius: 12px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .add-brand a {
     border-radius: 12px;
+    width: 100%;
 }
 
 /* Ramen Collection Page */
@@ -516,6 +519,19 @@ small {
     }
 
 }
+
+/* Error page*/
+.error-page p {
+    font-size: 1.5rem;
+    
+}
+
+.error-page a {
+    border-radius: 12px;
+}
+
+
+
 
 @media (min-width: 601px) {
     .index-page-card .card .card-content {
