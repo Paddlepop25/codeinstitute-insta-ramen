@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, redirect, request, url_for, send_from_directory
-from flask_pymongo import PyMongo, DESCENDING
+from flask_pymongo import PyMongo, ASCENDING, DESCENDING
 from bson.objectid import ObjectId
 import re
 import math
@@ -30,29 +30,29 @@ def get_ramen():
     
 @app.route('/ramen_asia')
 def ramen_asia():
-    ramens=mongo.db.ramens.find({'Continent': 'Asia'})
+    ramens=mongo.db.ramens.find({'continent': 'Asia'})
     return render_template('ramen_asia.html', title="Asian", ramens=ramens)
     
 @app.route('/ramen_europe')
 def ramen_europe():
-    ramens=mongo.db.ramens.find({'Continent': 'Europe'})
+    ramens=mongo.db.ramens.find({'continent': 'Europe'})
     return render_template('ramen_europe.html', title="Europe", ramens=ramens)
     
 @app.route('/ramen_americas')
 def ramen_americas():
-    ramens=mongo.db.ramens.find({'Continent': 'The Americas'})
+    ramens=mongo.db.ramens.find({'continent': 'The Americas'})
     return render_template('ramen_americas.html', title="Europe", ramens=ramens)    
     
 @app.route('/ramen_rest_world')
 def ramen_rest_world():
-    ramens=mongo.db.ramens.find({'Continent': 'The Rest'})
+    ramens=mongo.db.ramens.find({'continent': 'The Rest'})
     return render_template('ramen_rest_world.html', title="Rest Of The World", ramens=ramens)    
     
 @app.route('/ramen_world')
 def ramen_world():
     ramens=mongo.db.ramens.find(
         {'$or':
-            [{'Continent': 'Asia'},{'Continent': "Europe"},{'Continent': "The Americas"},{'Continent': "The Rest"}]
+            [{'continent': 'Asia'},{'continent': "Europe"},{'continent': "The Americas"},{'continent': "The Rest"}]
         }
         )
     return render_template('ramen_world.html', title="Rest Of The World", ramens=ramens)    
@@ -62,7 +62,7 @@ def search_ramen():
     orig_query = request.args['query']
     query = {'$regex': re.compile('.*{}.*'.format(orig_query)), '$options': 'i'}
     print(query)
-    results=mongo.db.ramens.find({'Flavour': query})
+    results=mongo.db.ramens.find({'flavour': query})
     
     # if file and allowed_file(file.filename):
     #         filename = secure_filename(file.filename)
@@ -78,7 +78,7 @@ def search_ramen():
     
 @app.route('/add_ramen')
 def add_ramen():
-    brands = mongo.db.brands.find()
+    brands = mongo.db.brands.find().sort([("brand", ASCENDING)])
     countries=mongo.db.countries.find()
     return render_template('add_ramen.html', title="Add a Ramen", countries=countries, brands=brands)
     
@@ -86,12 +86,12 @@ def add_ramen():
 def insert_ramen():
     ramens = mongo.db.ramens
     new_ramen = {
-        'Brand': request.form.get('Brand'),
-        'Flavour':request.form.get('Flavour'),
-        'Style': request.form.get('Style'),
-        'Country':request.form.get('Country'),
-        'Stars':int(request.form.get('Stars')),
-        'Ratings':request.form.get('Ratings')
+        'brand': request.form.get('brand'),
+        'flavour':request.form.get('flavour'),
+        'style': request.form.get('style'),
+        'country':request.form.get('country'),
+        'stars':int(request.form.get('stars')),
+        'reviews':request.form.get('reviews')
     }
     ramens.insert_one(new_ramen)
     return redirect(url_for('get_ramen'))    
@@ -108,12 +108,12 @@ def update_ramen(ramen_id):
     ramen = mongo.db.ramens
     ramen.update( {'_id': ObjectId(ramen_id)},
     {
-        'Brand': request.form.get('Brand'),
-        'Flavour':request.form.get('Flavour'),
-        'Style': request.form.get('Style'),
-        'Country':request.form.get('Country'),
-        'Stars':int(request.form.get('Stars')),
-        'Ratings':request.form.get('Ratings')
+        'brand': request.form.get('brand'),
+        'flavour':request.form.get('flavour'),
+        'style': request.form.get('style'),
+        'country':request.form.get('country'),
+        'stars':int(request.form.get('stars')),
+        'reviews':request.form.get('reviews')
     })
     return redirect(url_for('get_ramen'))
     
@@ -124,23 +124,23 @@ def delete_ramen(ramen_id):
     
 @app.route('/get_brands')
 def get_brands():
-    brands = mongo.db.brands.find()
-    return render_template('brands.html', title="Ramen Brands", brands=brands)
+    brand = mongo.db.brands.find()
+    return render_template('brands.html', title="Ramen Brands", brand=brand)
 
 @app.route('/add_brands')
 def add_brands():
-    brands = mongo.db.brands.find()
+    brand = mongo.db.brands.find()
     add_a_brand = mongo.db.ramens.find()
-    return render_template('add_brands.html', title="Add a Brand", add_a_brand=add_a_brand, brands=brands)
+    return render_template('add_brands.html', title="Add a Brand", add_a_brand=add_a_brand, brand=brand)
     
 @app.route('/insert_brand', methods=['POST'])
 def insert_brand():
     brand = mongo.db.brands
-    query = request.form.get('Brand').lower()
-    find_brand = mongo.db.brands.find_one({'Brand': query})
+    query = request.form.get('brand').lower()
+    find_brand = mongo.db.brands.find_one({'brand': query})
     if find_brand is None:
         new_brand = {
-            'Brand': request.form.get('Brand').lower()
+            'brand': request.form.get('brand').lower()
         }
         brand.insert_one(new_brand)
     return redirect(url_for('add_ramen'))       

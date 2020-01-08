@@ -44,7 +44,7 @@ body {
 
 .search-button button {
     width: 60%;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
 .search-button button:hover {
@@ -103,7 +103,7 @@ body {
     position: relative;
     width: 60%;
     margin: 0 0 5% 20%;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
 .index-page-card a:hover {
@@ -130,7 +130,7 @@ body {
     position: relative;
     width: 60%;
     margin: 0 0 5% 20%;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
 .search-page-card a:hover {
@@ -233,7 +233,7 @@ small {
 
 .select-brand a {
     width: 100%;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
 .select-packaging {
@@ -260,14 +260,22 @@ small {
     position: relative;
     top: -25px;
     width: 100%;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
 .select-submit a {
     width: 100%;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
+/* Add Brand page*/
+.add-brand button {
+    border-radius: 12px;
+}
+
+.add-brand a {
+    border-radius: 12px;
+}
 
 /* Ramen Collection Page */
 
@@ -293,7 +301,7 @@ small {
     position: relative;
     width: 60%;
     margin: 0 0 5% 20%;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
 .ramen-collection-page a:hover {
@@ -315,7 +323,7 @@ small {
 
 .display-edit-delete a {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .display-edit-delete div:first-child {
@@ -347,7 +355,7 @@ small {
     position: relative;
     width: 60%;
     margin: 0 0 5% 20%;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
 .asia-page a:hover {
@@ -378,7 +386,7 @@ small {
     position: relative;
     width: 60%;
     margin: 0 0 5% 20%;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
 .europe-page a:hover {
@@ -409,7 +417,7 @@ small {
     position: relative;
     width: 60%;
     margin: 0 0 5% 20%;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
 .america-page a:hover {
@@ -440,7 +448,7 @@ small {
     position: relative;
     width: 60%;
     margin: 0 0 5% 20%;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
 .rest-world-page a:hover {

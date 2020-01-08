@@ -1,25 +1,25 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="container add-ramen">
-    <h4>Add a New Ramen</h4>
+  <h4>Add a New Ramen</h4>
   <form action="{{ url_for('insert_ramen') }}" method="POST" class="ramen-form">
     <div class="row">
       <span>*</span><span>All fields are required</span>
     </div>
 
-    <div class="row select-countries">
+    <div class="row">
       <div class="input-field col s12">
-          <i class="material-icons prefix">subject</i>
-        <select required id="Brand" name="Brand">
+        <i class="material-icons prefix">subject</i>
+        <select required id="brand" name="brand">
           <option value="" disabled selected>Choose Brand</option>
-          {% for brand in brands | sort (attribute='Brand')%}
-              <option value="{{ brand.Brand }}" >{{ brand.Brand|capitalize}}</option>
+          {% for brand in brands %}
+              <option value="{{ brand.brand }}" >{{ brand.brand|capitalize}}</option>
           {% endfor %}
         </select>
         <label><span>* </span>Select Brand</label>
       </div>
     </div>
-    
+
     <div class="row select-brand">
       <div class="input-field col s12">
         <p>Brand not found?
@@ -31,7 +31,7 @@
     <div class="row select-flavour">
       <div class="input-field col s12">
         <i class="material-icons prefix">subject</i>
-        <input id="Flavour" name="Flavour" type="text" required>
+        <input id="flavour" name="flavour" type="text" required>
         <label for="ramen_flavour"><span>* </span>Ramen Flavour</label>
       </div>
     </div>
@@ -39,31 +39,31 @@
     <div class="row select-packaging">
       <label><span>* </span>Select a packaging</label>
       <p>
-        <input class="with-gap" name="Style" type="radio" id="cup" value="Cup" required/>
+        <input class="with-gap" name="style" type="radio" id="cup" value="Cup" required/>
         <label for="cup">Cup</label>
       </p>
       <p>
-        <input class="with-gap" name="Style" type="radio" id="pack" value="Pack" />
+        <input class="with-gap" name="style" type="radio" id="pack" value="Pack" />
         <label for="pack">Pack</label>
       </p>
       <p>
-        <input class="with-gap" name="Style" type="radio" id="tray" value="Tray" />
+        <input class="with-gap" name="style" type="radio" id="tray" value="Tray" />
         <label for="tray">Tray</label>
       </p>
       <p>
-        <input class="with-gap" name="Style" type="radio" id="bowl" value="Bowl" />
+        <input class="with-gap" name="style" type="radio" id="bowl" value="Bowl" />
         <label for="bowl">Bowl</label>
       </p>
     </div>
 
     <div class="row select-country-stars">
-      
+
       <div class="input-field col s12 m6">
         <i class="material-icons prefix">local_play</i>
-        <select id="Country" name="Country" required>
-          <option value="" disabled selected>Choose Country</option>
+        <select id="country" name="country" required>
+          <option value="" disabled selected>Choose a Country</option>
           {% for ramen in countries %}
-              <option value="{{ ramen.Country }}" >{{ ramen.Country }}</option>
+              <option value="{{ ramen.country }}" >{{ ramen.country }}</option>
           {% endfor %}
         </select>
         <label><span>* </span>Country Select</label>
@@ -73,7 +73,7 @@
         <i class="material-icons prefix">local_play</i>
         <label><span>* </span>Stars (0-5)</label>
         <p class="range-field stars">
-          <input type="range" id="Stars" name="Stars" min="0" max="5" required/>
+          <input type="range" id="stars" name="stars" min="0" max="5" required/>
         </p>
       </div>
 
@@ -82,8 +82,8 @@
     <div class="row select-reviews">
       <div class="input-field col s12">
         <i class="material-icons prefix">textsms</i>
-        <input id="Ratings" name="Ratings" type="text" required>
-        <label for="ramen_rating"><span>* </span>Did you like this ramen?</label>
+        <input id="reviews" name="reviews" type="text" required>
+        <label for="ramen_reviews"><span>* </span>Did you like this ramen?</label>
       </div>
     </div>
 
@@ -97,10 +97,7 @@
         <a href="{{url_for('get_ramen')}}" class="btn orange"><i class="material-icons right">cancel</i>Cancel</a>
       </div>
     </div>
-    
-
   </form>
-
 </div>
 
 {% endblock %}

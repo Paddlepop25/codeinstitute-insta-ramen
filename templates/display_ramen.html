@@ -6,15 +6,15 @@
       <img src="/static/images/noodle1.jpg">
     </div>
     <div class="col s12 m7 display-details">
-      <p class="display-brand">Brand: {{ramen.Brand|capitalize}}</p>
+      <p class="display-brand">Brand: {{ramen.brand|title}}</p>
       <p>Flavour:
-        <br>{{ramen.Flavour|capitalize}}
+        <br>{{ramen.flavour|title}}
       </p>
-      <p>Style: {{ramen.Style}}</p>
-      <p>Country of Origin: {{ramen.Country}}</p>
-      <p>Stars: {{ramen.Stars}}</p>
-      <p>Reviews:
-        <br>{{ramen.Ratings}}
+      <p>Style: {{ramen.style}}</p>
+      <p>Country of Origin: {{ramen.country}}</p>
+      <p>Stars: {{ramen.stars}}</p>
+      <p>Review:
+        <br>{{ramen.reviews}}
       </p>
     </div>
   </div>
@@ -24,7 +24,7 @@
       <a href="{{url_for('edit_ramen', ramen_id=ramen._id)}}" class="waves-effect waves-light btn orange"><i class="material-icons right">playlist_add</i>Edit</a>
     </div>
     <div class="col s12 m6">
-      <a href="{{url_for('get_ramen')}}" class="btn orange"><i class="material-icons right">cancel</i>Delete</a>
+      <a href="{{url_for('delete_ramen', ramen_id=ramen._id)}}" class="btn orange"><i class="material-icons right">cancel</i>Delete</a>
     </div>
   </div>
 </div>
