@@ -50,6 +50,7 @@ body {
 
 .search-button button:hover {
     color: #000000;
+    box-shadow: 4px 3px 6px 1px grey;
 }
 
 .search-result {
@@ -138,10 +139,16 @@ body {
 
 .index-page-card a:hover {
     color: #000000;
+    box-shadow: 4px 3px 6px 1px grey;
 }
 
 /* Search page*/
 
+.search-box input:focus {
+    border-bottom: 1px solid #ff9800 !important;
+    box-shadow: 0 1px 0 0 #ff9800 !important;
+}
+    
 .search-page-card .card .card-content {
     overflow-y: scroll;
     min-height: 200px;
@@ -165,6 +172,7 @@ body {
 
 .search-page-card a:hover {
     color: #000000;
+    box-shadow: 4px 3px 6px 1px grey;
 }
 
 
@@ -209,6 +217,7 @@ form input[type=range] {
 
 .select-brand a:hover {
     color: #000000;
+    box-shadow: 4px 3px 6px 1px grey;
 }
 
 .select-packaging {
@@ -265,6 +274,7 @@ form input[type=range] {
 
 .select-upload-image button:hover {
     color: #000000;
+    box-shadow: 4px 3px 6px 1px grey;
 }
 
 .select-upload-image a {
@@ -276,6 +286,7 @@ form input[type=range] {
 
 .select-upload-image a:hover {
     color: #000000;
+    box-shadow: 4px 3px 6px 1px grey;
 }
 
 
@@ -362,16 +373,22 @@ small {
 
 
 /* Add Brand page*/
+.add-brand input:focus {
+    border-bottom: 1px solid #ff9800 !important;
+    box-shadow: 0 1px 0 0 #ff9800 !important;
+}
 
 .add-brand button {
     border-radius: 12px;
     width: 100%;
+    margin-top: 30px;
     margin-bottom: 20px;
 }
 
 .add-brand a {
     border-radius: 12px;
     width: 100%;
+    margin-top: 30px;
 }
 
 /* Ramen Collection Page */
@@ -403,6 +420,7 @@ small {
 
 .ramen-collection-page a:hover {
     color: #000000;
+    box-shadow: 4px 3px 6px 1px grey;
 }
 
 
@@ -463,6 +481,7 @@ small {
 
 .asia-page a:hover {
     color: #000000;
+    box-shadow: 4px 3px 6px 1px grey;
 }
 
 /* Europe page */
@@ -494,6 +513,7 @@ small {
 
 .europe-page a:hover {
     color: #000000;
+    box-shadow: 4px 3px 6px 1px grey;
 }
 
 /* The Americas page */
@@ -525,6 +545,7 @@ small {
 
 .america-page a:hover {
     color: #000000;
+    box-shadow: 4px 3px 6px 1px grey;
 }
 
 /* The Rest Of The World page */
@@ -556,6 +577,7 @@ small {
 
 .rest-world-page a:hover {
     color: #000000;
+    box-shadow: 4px 3px 6px 1px grey;
 }
 
 @media (min-width: 601px) {

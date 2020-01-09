@@ -36,7 +36,7 @@
     <div class="row select-flavour">
       <div class="input-field col s12">
         <i class="material-icons prefix">subject</i>
-        <input id="flavour" name="flavour" type="text" value="{{ramen.flavour}}" required>
+        <input id="flavour" name="flavour" type="text" value="{{ramen.flavour}}" data-length="99" required>
         <label for="ramen_flavour"><span>* </span>Ramen Flavour</label>
       </div>
     </div>
@@ -115,91 +115,21 @@
         </select>
         <label><span>* </span>Continent Select</label>
       </div>
-
-      <!--<div class="input-field col s12 m6">-->
-      <!--  <i class="material-icons prefix">local_play</i>-->
-      <!--  <select id="continent" name="continent" required>-->
-      <!--    <option value="" disabled selected>Choose a Continent</option>-->
-      <!--{% for ramen_continent in countries %}-->
-      <!--{% if ramen_continent.continent == "Asia" %}-->
-      <!--        <option value="Asia" >Asia</option>-->
-      <!--{% else %}-->
-      <!--<option value="Asia" >Asia</option>-->
-      <!--{% endif %}-->
-
-      <!--{% if ramen_continent.continent == "Europe" %}-->
-      <!--<option value="{{ ramen_continent.continent }}" selected >{{ ramen_continent.continent }}</option>-->
-      <!--{% else %}-->
-      <!--<option value="{{ ramen_continent.continent }}" >{{ ramen_continent.continent }}</option>-->
-      <!--{% endif %}-->
-
-      <!--{% if ramen_continent.continent == "The Americas" %}-->
-      <!--    <option value="Rest of The World<" selected >Rest of The World<</option>-->
-      <!--    {% else %}-->
-      <!--    <option value="Rest of The World<" >Rest of The World<</option>-->
-      <!--{% endif %}-->
-
-      <!--{% endfor %}-->
-      <!--<option value="Europe" >Asia</option>-->
-      <!--<option value="Europe" >Europe</option>-->
-      <!--<option value="The Americas" >The Americas</option>-->
-      <!--<option value="Rest of The World" >Rest of The World</option>-->
-      <!--  </select>-->
-      <!--  <label><span>* </span>Continent Select</label>-->
-      <!--</div>-->
     </div>
 
-
-    <div class="row select-country-stars">
+    <div class="row select-stars-reviews">
       <div class="input-field col s12 m6">
-        <!--  <i class="material-icons prefix">local_play</i>-->
-        <!--  <select id="country" name="country" required>-->
-        <!--    <option value="" disabled selected>Choose a Country</option>-->
-        <!--    {% for ramen_country in countries %}-->
-        <!--        {% if ramen_country.country == ramen.country %}-->
-        <!--        <option value="{{ ramen_country.country }}" selected>{{ ramen_country.country }}</option>-->
-        <!--          {% else %}-->
-        <!--          <option value="{{ ramen_country.country }}">{{ ramen_country.country }}</option>-->
-        <!--                  {% endif %}-->
-        <!--    {% endfor %}-->
-        <!--  </select>-->
-        <!--  <label><span>* </span>Country Select</label>-->
-        <!--</div>-->
-
-        <!--<div class="input-field col s12 m6">-->
-        <!--  <i class="material-icons prefix">local_play</i>-->
-        <!--  <label><span>* </span>Stars (0-5)</label>-->
-        <!--  <p class="range-field stars">-->
-        <!--    <input type="range" id="stars" name="stars" min="0" max="5" value="{{ramen.stars}}" />-->
-        <!--  </p>-->
-        <!--</div>-->
+        <i class="material-icons prefix">local_play</i>
+        <label class="active" for="rating">Stars (0-5)</label>
+        <p class="range-field stars">
+          <input type="range" id="stars" name="stars" min="0" max="5" value="{{ramen.stars}}" required/>
+        </p>
       </div>
 
-      <!--<div class="row select-reviews">-->
-      <!--  <div class="input-field col s12">-->
-      <!--    <i class="material-icons prefix">textsms</i>-->
-      <!--    <input id="reviews" name="reviews" type="text" value="{{ramen.reviews}}" required>-->
-      <!--    <label for="ramen_reviews"><span>* </span>Did you like this ramen?</label>-->
-      <!--  </div>-->
-    </div>
-
-    <div class="row select-stars-reviews edit-stars">
-      <div class="select-reviews">
-        <div class="input-field col s12 m6">
-          <i class="material-icons prefix">local_play</i>
-          <label><span>* </span>Stars (0-5)</label>
-          <p class="range-field stars">
-            <input type="range" id="stars" name="stars" min="0" max="5" value="{{ramen.stars}}" required/>
-          </p>
-        </div>
-      </div>
-
-      <div class="row select-reviews edit-reviews">
-        <div class="input-field col s12 m6">
-          <i class="material-icons prefix">textsms</i>
-          <input id="reviews" name="reviews" type="text" value="{{ramen.reviews}}" required>
-          <label for="ramen_reviews"><span>* </span>Did you like this ramen?</label>
-        </div>
+      <div class="input-field col s12 m6 select-reviews">
+        <i class="material-icons prefix">textsms</i>
+        <input id="reviews" name="reviews" type="text" data-length="99" value="{{ramen.reviews}}" required>
+        <label for="ramen_reviews"><span>* </span>Did you like this ramen?</label>
       </div>
     </div>
 
