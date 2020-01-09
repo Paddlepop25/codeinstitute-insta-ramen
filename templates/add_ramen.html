@@ -2,7 +2,7 @@
 
 <div class="container add-ramen">
   <h4>Add a New Ramen</h4>
-  <form action="{{ url_for('insert_ramen') }}" method="POST" class="ramen-form">
+  <form action="{{ url_for('insert_ramen') }}" method="POST" enctype="multipart/form-data" class="ramen-form">
     <div class="row">
       <span>*</span><span>All fields are required</span>
     </div>
@@ -87,16 +87,49 @@
       </div>
     </div>
 
-    <div class="row select-submit">
-      <div class="col s12 m6">
-        <button class="btn waves-effect waves-light orange" type="submit" name="action">
+    <!--<div class="row select-upload-image">-->
+    <!--  <div class="col s12">-->
+    <!--    <div class="input">-->
+    <!--<label for="image">Upload image</label><br>-->
+    <!--      <label><span>* </span>Upload image</label>-->
+    <!--      <input type="file" name="product_image" class="btn orange">-->
+    <!--<a class="btn waves-effect waves-light orange">Add Image</a>-->
+    <!--    </div>-->
+    <!--  </div>-->
+    <!--</div>-->
+
+    <div class="select-upload-image">
+      <div class="row">
+        <div class="col s12">
+          <label for="ramen_image"><span>* </span>Click to upload image</label>
+          <input type="file" name="ramen_image" id="ramen_image" required>
+          <!--<a href="" class="btn upload-image"><i class="material-icons right">upload</i>Add file</a>-->
+          <!--<label for="img">Click me to upload image</label>-->
+          <!--<input type="file" name="uploadfile" id="img" style="display:none;" />-->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <button class="btn waves-effect waves-light orange" type="submit" name="action">
           <i class="material-icons right">playlist_add</i>Add Ramen
       </button>
-      </div>
-      <div class="col s12 m6">
-        <a href="{{url_for('get_ramen')}}" class="btn orange"><i class="material-icons right">cancel</i>Cancel</a>
+        </div>
+        <div class="col s12 m6">
+          <a href="{{url_for('get_ramen')}}" class="btn orange"><i class="material-icons right">cancel</i>Cancel</a>
+        </div>
       </div>
     </div>
+
+    <!--<div class="row select-submit">-->
+    <!--  <div class="col s12 m6">-->
+    <!--    <button class="btn waves-effect waves-light orange" type="submit" name="action">-->
+    <!--      <i class="material-icons right">playlist_add</i>Add Ramen-->
+    <!--  </button>-->
+    <!--  </div>-->
+    <!--  <div class="col s12 m6">-->
+    <!--    <a href="{{url_for('get_ramen')}}" class="btn orange"><i class="material-icons right">cancel</i>Cancel</a>-->
+    <!--  </div>-->
+    <!--</div>-->
   </form>
 </div>
 

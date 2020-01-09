@@ -44,11 +44,11 @@
   <div class="container index-page-card">
     <h4>Newly Added Ramens</h4>
     <div class="row">
-      {% for three_ramen in lastest_three | sort (attribute='_id', reverse = True) %}
+      {% for three_ramen in latest_three %}
       <div class="col s12 m4 l4">
         <div class="card">
           <div class="card-image">
-            <img src="{{three_ramen.imageURL}}">
+            <img src="{{url_for('file', filename=three_ramen['imageURL'])}}">
           </div>
           <div class="card-content">
             <p>Brand: {{three_ramen.brand|title}}</p>

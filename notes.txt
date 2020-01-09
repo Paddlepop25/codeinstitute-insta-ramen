@@ -1,1 +1,7 @@
 {% for brand in brands | sort (attribute='brand')%}
+
+<img src="{{url_for('file', filename=ramen['imageURL'])}}">
+
+
+| sort (attribute='_id', reverse = True) 
+

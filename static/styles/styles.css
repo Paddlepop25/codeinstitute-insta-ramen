@@ -161,6 +161,7 @@ body {
 
 
 /* Edit Ramen Page*/
+
 .edit-ramen h4 {
     position: relative;
     top: 90px;
@@ -256,19 +257,35 @@ small {
     top: -15px;
 }
 
-.select-submit button {
+.select-upload-image {
     position: relative;
-    top: -25px;
+    top: -20px;
+}
+
+.select-upload-image input {
+    border: 2px solid orange;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+}
+
+.select-upload-image button {
+    /*position: relative;*/
+    /*top: -25px;*/
     width: 100%;
     border-radius: 12px;
 }
 
-.select-submit a {
+.select-upload-image a {
+    position: relative;
+    top: 25px;
     width: 100%;
     border-radius: 12px;
 }
 
 /* Add Brand page*/
+
 .add-brand button {
     border-radius: 12px;
     width: 100%;
@@ -521,9 +538,10 @@ small {
 }
 
 /* Error page*/
+
 .error-page p {
     font-size: 1.5rem;
-    
+
 }
 
 .error-page a {
@@ -550,14 +568,16 @@ small {
         top: -65px;
     }
 
-    .select-submit button {
+    .select-upload-image {
         position: relative;
         top: -80px;
     }
 
-    .select-submit a {
+    .select-upload-image a {
         position: relative;
-        top: -80px;
+        top: 0;
+        width: 100%;
+        border-radius: 12px;
     }
 
 }

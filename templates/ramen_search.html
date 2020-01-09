@@ -24,7 +24,7 @@
         <div class="col s12 m4 l4">
             <div class="card">
                 <div class="card-image">
-                    <img src="{{ramen.imageURL}}">
+                    <img src="{{url_for('file', filename=ramen['imageURL'])}}">
                 </div>
                 <div class="card-content">
                     <p>Brand: {{ramen.brand|capitalize}}</p>
