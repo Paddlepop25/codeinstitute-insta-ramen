@@ -31,7 +31,7 @@
     <div class="row select-flavour">
       <div class="input-field col s12">
         <i class="material-icons prefix">subject</i>
-        <input id="flavour" name="flavour" type="text" required>
+        <input id="flavour" name="flavour" type="text" data-length="40" required>
         <label for="ramen_flavour"><span>* </span>Ramen Flavour</label>
       </div>
     </div>
@@ -56,8 +56,7 @@
       </p>
     </div>
 
-    <div class="row select-country-stars">
-
+    <div class="row select-country-continent">
       <div class="input-field col s12 m6">
         <i class="material-icons prefix">local_play</i>
         <select id="country" name="country" required>
@@ -71,21 +70,46 @@
 
       <div class="input-field col s12 m6">
         <i class="material-icons prefix">local_play</i>
-        <label><span>* </span>Stars (0-5)</label>
+        <select id="continent" name="continent" required>
+          <option value="" disabled selected>Choose a Continent</option>
+              <option value="Asia" >Asia</option>
+              <option value="Europe" >Europe</option>
+              <option value="The Americas" >The Americas</option>
+              <option value="Rest of The World" >Rest of The World</option>
+        </select>
+        <label><span>* </span>Continent Select</label>
+      </div>
+    </div>
+
+    <!--<div class="row select-stars-reviews">-->
+      <!--<div class="input-field col s12 m6">-->
+      <!--  <i class="material-icons prefix">local_play</i>-->
+      <!--  <label class="active" for="rating"><span>* </span>Stars (0-5)</label>-->
+      <!--  <p class="range-field stars">-->
+      <!--    <input type="range" id="stars" name="stars" min="0" max="5" required/>-->
+      <!--  </p>-->
+      <!--</div>-->
+
+      <div class="row select-stars-reviews">
+      <div class="input-field col s12 m6">
+        <i class="material-icons prefix">local_play</i>
+        <label class="active" for="rating">Stars (0-5)</label>
         <p class="range-field stars">
           <input type="range" id="stars" name="stars" min="0" max="5" required/>
         </p>
       </div>
 
-    </div>
 
-    <div class="row select-reviews">
-      <div class="input-field col s12">
-        <i class="material-icons prefix">textsms</i>
-        <input id="reviews" name="reviews" type="text" required>
-        <label for="ramen_reviews"><span>* </span>Did you like this ramen?</label>
-      </div>
+      <!--<div class="row select-reviews">-->
+        <div class="input-field col s12 m6 select-reviews">
+          <i class="material-icons prefix">textsms</i>
+          <input id="reviews" name="reviews" type="text" data-length="50" required>
+          <label for="ramen_reviews"><span>* </span>Did you like this ramen?</label>
+        </div>
+      <!--</div>-->
     </div>
+    
+    <!--</div>-->
 
     <!--<div class="row select-upload-image">-->
     <!--  <div class="col s12">-->

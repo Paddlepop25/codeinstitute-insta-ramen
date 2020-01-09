@@ -39,12 +39,13 @@ body {
 
 .search-section {
     position: relative;
-    top: -35px;
+    top: -16px;
 }
 
 .search-button button {
     width: 60%;
     border-radius: 12px;
+    margin-bottom: 20px;
 }
 
 .search-button button:hover {
@@ -81,6 +82,35 @@ body {
     padding: 24px 10px;
 }
 
+
+/*Index page*/
+
+.search-section input:focus {
+    border-bottom: 1px solid #ff9800 !important;
+    box-shadow: 0 1px 0 0 #ff9800 !important;
+}
+
+.input-field label {
+    color: #ff9800;
+}
+
+.input-field input:focus+label {
+    color: #ff9800 !important;
+}
+
+.input-field input[type=text]:focus+label {
+    color: #ff9800;
+}
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #ff9800;
+    box-shadow: 0 1px 0 0 #ff9800;
+}
+
+.input-field .prefix.active {
+    color: #ff9800;
+}
+
 .index-page-card {
     position: relative;
     top: -70px;
@@ -88,7 +118,7 @@ body {
 
 .index-page-card .card .card-content {
     overflow-y: scroll;
-    min-height: 200px;
+    max-height: 144px;
 }
 
 .index-page-card h4 {
@@ -102,7 +132,7 @@ body {
 .index-page-card a {
     position: relative;
     width: 60%;
-    margin: 0 0 5% 20%;
+    margin: 5% 0 5% 20%;
     border-radius: 12px;
 }
 
@@ -154,9 +184,98 @@ body {
     padding: 20px;
 }
 
+form input[type=range] {
+  /*border: 1px solid #e3af0b;*/
+}
+
 .dropdown-content li>a,
 .dropdown-content li>span {
     color: #ef6c00;
+}
+
+.select-flavour input:focus {
+    border-bottom: 1px solid #ff9800 !important;
+    box-shadow: 0 1px 0 0 #ff9800 !important;
+}
+
+.select-brand p {
+    margin-top: -20px;
+}
+
+.select-brand a {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.select-brand a:hover {
+    color: #000000;
+}
+
+.select-packaging {
+    position: relative;
+    top: -20px;
+}
+
+/*.select-packaging input::after {*/
+/*    border: red ;*/
+/*}*/
+
+.select-country-continent {
+    position: relative;
+    top: -15px;
+}
+
+.select-stars-reviews {
+    position: relative;
+    top: -43px;
+}
+
+.select-stars-reviews .stars {
+    position: relative;
+    top: 15px;
+}
+
+.select-reviews {
+    position: relative;
+    top: 12px;
+}
+
+.select-reviews input:focus {
+    border-bottom: 1px solid #ff9800 !important;
+    box-shadow: 0 1px 0 0 #ff9800 !important;
+}
+
+.select-upload-image {
+    position: relative;
+    top: -55px;
+}
+
+.select-upload-image input {
+    border: 2px solid orange;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+}
+
+.select-upload-image button {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.select-upload-image button:hover {
+    color: #000000;
+}
+
+.select-upload-image a {
+    position: relative;
+    top: 25px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.select-upload-image a:hover {
+    color: #000000;
 }
 
 
@@ -166,6 +285,21 @@ body {
     position: relative;
     top: 90px;
     text-align: center;
+}
+
+.edit-stars {
+    position: relative;
+    top: -90px;
+}
+
+.edit-reviews {
+    position: relative;
+    top: 45px;
+}
+
+.edit-image {
+    position: relative;
+    top: -75px;
 }
 
 /*Footer*/
@@ -226,63 +360,6 @@ small {
     top: -5px;
 }
 
-/* Add Ramen Page*/
-
-.select-brand p {
-    margin-top: -20px;
-}
-
-.select-brand a {
-    width: 100%;
-    border-radius: 12px;
-}
-
-.select-packaging {
-    position: relative;
-    top: -20px;
-}
-
-.select-country-stars {
-    position: relative;
-    top: -15px;
-}
-
-.select-country-stars .stars {
-    position: relative;
-    top: 9px;
-}
-
-.select-reviews {
-    position: relative;
-    top: -15px;
-}
-
-.select-upload-image {
-    position: relative;
-    top: -20px;
-}
-
-.select-upload-image input {
-    border: 2px solid orange;
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border-radius: 12px;
-}
-
-.select-upload-image button {
-    /*position: relative;*/
-    /*top: -25px;*/
-    width: 100%;
-    border-radius: 12px;
-}
-
-.select-upload-image a {
-    position: relative;
-    top: 25px;
-    width: 100%;
-    border-radius: 12px;
-}
 
 /* Add Brand page*/
 
@@ -306,7 +383,7 @@ small {
 
 .ramen-collection-page .card .card-content {
     overflow-y: scroll;
-    min-height: 230px;
+    max-height: 144px;
 }
 
 .ramen-collection-page h4 {
@@ -320,7 +397,7 @@ small {
 .ramen-collection-page a {
     position: relative;
     width: 60%;
-    margin: 0 0 5% 20%;
+    margin: 5% 0 5% 20%;
     border-radius: 12px;
 }
 
@@ -346,9 +423,15 @@ small {
     border-radius: 12px;
 }
 
-.display-edit-delete div:first-child {
+.display-edit-delete a:hover {
+    color: #000000;
+}
+
+
+.display-edit {
     position: relative;
     top: -15px;
+    margin-top: 20px;
 }
 
 /* Asia Collection */
@@ -360,7 +443,7 @@ small {
 
 .asia-page .card .card-content {
     overflow-y: scroll;
-    min-height: 230px;
+    max-height: 144px;
 }
 
 .asia-page h4 {
@@ -374,7 +457,7 @@ small {
 .asia-page a {
     position: relative;
     width: 60%;
-    margin: 0 0 5% 20%;
+    margin: 5% 0 5% 20%;
     border-radius: 12px;
 }
 
@@ -391,7 +474,7 @@ small {
 
 .europe-page .card .card-content {
     overflow-y: scroll;
-    min-height: 230px;
+    max-height: 144px;
 }
 
 .europe-page h4 {
@@ -405,7 +488,7 @@ small {
 .europe-page a {
     position: relative;
     width: 60%;
-    margin: 0 0 5% 20%;
+    margin: 5% 0 5% 20%;
     border-radius: 12px;
 }
 
@@ -422,7 +505,7 @@ small {
 
 .america-page .card .card-content {
     overflow-y: scroll;
-    min-height: 230px;
+    max-height: 144px;
 }
 
 .america-page h4 {
@@ -436,7 +519,7 @@ small {
 .america-page a {
     position: relative;
     width: 60%;
-    margin: 0 0 5% 20%;
+    margin: 5% 0 5% 20%;
     border-radius: 12px;
 }
 
@@ -453,7 +536,7 @@ small {
 
 .rest-world-page .card .card-content {
     overflow-y: scroll;
-    min-height: 230px;
+    max-height: 144px;
 }
 
 .rest-world-page h4 {
@@ -467,7 +550,7 @@ small {
 .rest-world-page a {
     position: relative;
     width: 60%;
-    margin: 0 0 5% 20%;
+    margin: 5% 0 5% 20%;
     border-radius: 12px;
 }
 
@@ -499,7 +582,7 @@ small {
     }
 
     .ramen-form {
-        padding: 60px;
+        padding: 40px;
     }
 
     .select-brand a {
@@ -511,31 +594,37 @@ small {
         top: -55px;
     }
 
-    .select-country-stars {
+    .select-country-continent {
         position: relative;
         top: -60px;
     }
 
-    .select-reviews {
+    .select-stars-reviews {
         position: relative;
-        top: -80px;
+        top: -90px;
     }
 
-    .display-details p {
-        padding-left: 50px;
-    }
-
-    .display-brand {
-        padding-top: 30px
-    }
-
-
-    .display-edit-delete div:first-child {
+    .select-upload-image {
         position: relative;
-        top: 0;
+        top: -100px;
     }
-
 }
+
+
+.display-details p {
+    padding-left: 50px;
+}
+
+.display-brand {
+    padding-top: 30px
+}
+
+
+.display-edit-delete div:first-child {
+    position: relative;
+    top: 0;
+}
+
 
 /* Error page*/
 
@@ -554,7 +643,7 @@ small {
 @media (min-width: 601px) {
     .index-page-card .card .card-content {
         overflow-y: scroll;
-        min-height: 240px;
+        min-height: 160px;
     }
 
     .select-brand a {
@@ -578,6 +667,11 @@ small {
         top: 0;
         width: 100%;
         border-radius: 12px;
+    }
+
+    .edit-reviews {
+        position: relative;
+        top: 18px;
     }
 
 }

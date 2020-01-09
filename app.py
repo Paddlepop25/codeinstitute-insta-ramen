@@ -88,6 +88,7 @@ def insert_ramen():
         'flavour':request.form.get('flavour'),
         'style': request.form.get('style'),
         'country':request.form.get('country'),
+        'continent':request.form.get('continent'),
         'stars':int(request.form.get('stars')),
         'reviews':request.form.get('reviews'),
         'imageURL': ramen_image.filename
