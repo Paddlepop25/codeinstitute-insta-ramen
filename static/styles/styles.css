@@ -1,325 +1,22 @@
 body {
-    font-size: 16px;
-    font-family: 'Poppins', cursive;
-    /*background: #FFF5E6;*/
+  font-size: 16px;
+  font-family: "Poppins", cursive;
 }
 
-.noodle_img_index img {
-    width: 100vw;
-    opacity: 0.8;
-}
+/* Base page */
 
 .nav-wrapper ul li:last-child li a {
-    color: #ef6c00;
+  color: #ef6c00;
 }
 
 .nav-wrapper ul li a {
-    color: #000000;
-}
-
-.welcome-page {
-    text-align: center;
-}
-
-.welcome-page h1 {
-    font-size: 2rem;
-    margin-top: 10px;
-    margin-bottom: 0;
-}
-
-.welcome-message {
-    position: relative;
-    top: -68px;
-}
-
-.welcome-message p {
-    padding: 0 25px;
-    font-size: 1rem;
-}
-
-.search-section {
-    position: relative;
-    top: -16px;
-}
-
-.search-button button {
-    width: 60%;
-    border-radius: 12px;
-    margin-bottom: 20px;
-}
-
-.search-button button:hover {
-    color: #000000;
-    box-shadow: 4px 3px 6px 1px grey;
-}
-
-.search-result {
-    position: relative;
-    margin: 0 0 5% 20%;
-}
-
-.sorry-cat {
-    width: 100%;
-}
-
-.error-page p {
-    font-size: 1.2rem;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.error-page a {
-    width: 60%;
-    margin-left: 20%;
+  color: #000000;
 }
 
 .ramen_logo {
-    width: 2.8rem;
-    margin-left: 20px;
-    margin-top: 10px;
-}
-
-.card .card-content {
-    padding: 24px 10px;
-}
-
-
-/*Index page*/
-
-.search-section input:focus {
-    border-bottom: 1px solid #ff9800 !important;
-    box-shadow: 0 1px 0 0 #ff9800 !important;
-}
-
-.input-field label {
-    color: #ff9800;
-}
-
-.input-field input:focus+label {
-    color: #ff9800 !important;
-}
-
-.input-field input[type=text]:focus+label {
-    color: #ff9800;
-}
-
-.input-field input[type=text]:focus {
-    border-bottom: 1px solid #ff9800;
-    box-shadow: 0 1px 0 0 #ff9800;
-}
-
-.input-field .prefix.active {
-    color: #ff9800;
-}
-
-.index-page-card {
-    position: relative;
-    top: -70px;
-}
-
-.index-page-card .card .card-content {
-    overflow-y: scroll;
-    max-height: 144px;
-}
-
-.index-page-card h4 {
-    font-size: 1.8rem;
-}
-
-.index-page-card .card-content {
-    text-align: center;
-}
-
-.index-page-card a {
-    position: relative;
-    width: 60%;
-    margin: 5% 0 5% 20%;
-    border-radius: 12px;
-}
-
-.index-page-card a:hover {
-    color: #000000;
-    box-shadow: 4px 3px 6px 1px grey;
-}
-
-/* Search page*/
-
-.search-box input:focus {
-    border-bottom: 1px solid #ff9800 !important;
-    box-shadow: 0 1px 0 0 #ff9800 !important;
-}
-    
-.search-page-card .card .card-content {
-    overflow-y: scroll;
-    min-height: 200px;
-}
-
-.search-page-card h4 {
-    font-size: 1.8rem;
-    text-align: center;
-}
-
-.search-page-card .card-content {
-    text-align: left;
-}
-
-.search-page-card a {
-    position: relative;
-    width: 60%;
-    margin: 0 0 5% 20%;
-    border-radius: 12px;
-}
-
-.search-page-card a:hover {
-    color: #000000;
-    box-shadow: 4px 3px 6px 1px grey;
-}
-
-
-/* Add Ramen page*/
-
-.add-ramen h4 {
-    position: relative;
-    top: 90px;
-    text-align: center;
-}
-
-.ramen-form {
-    border: 2px solid black;
-    border-radius: 25px;
-    box-shadow: 2px 2px 8px grey;
-    margin: 100px auto;
-    padding: 20px;
-}
-
-form input[type=range] {
-  /*border: 1px solid #e3af0b;*/
-}
-
-.dropdown-content li>a,
-.dropdown-content li>span {
-    color: #ef6c00;
-}
-
-.select-flavour input:focus {
-    border-bottom: 1px solid #ff9800 !important;
-    box-shadow: 0 1px 0 0 #ff9800 !important;
-}
-
-.select-brand p {
-    margin-top: -20px;
-}
-
-.select-brand a {
-    width: 100%;
-    border-radius: 12px;
-}
-
-.select-brand a:hover {
-    color: #000000;
-    box-shadow: 4px 3px 6px 1px grey;
-}
-
-.select-packaging {
-    position: relative;
-    top: -20px;
-}
-
-.select-packaging-label {
-    color: #ff9800;
-}
-
-.select-packaging p label {
-    color: #000000;
-}
-
-.select-country-continent {
-    position: relative;
-    top: -15px;
-}
-
-.select-stars-reviews {
-    position: relative;
-    top: -43px;
-}
-
-.select-stars-reviews .stars {
-    position: relative;
-    top: 15px;
-}
-
-.select-reviews {
-    position: relative;
-    top: 12px;
-}
-
-.select-reviews input:focus {
-    border-bottom: 1px solid #ff9800 !important;
-    box-shadow: 0 1px 0 0 #ff9800 !important;
-}
-
-.select-upload-image {
-    position: relative;
-    top: -55px;
-}
-
-.select-upload-image input {
-    border: 2px solid orange;
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border-radius: 12px;
-}
-
-.select-upload-image button {
-    width: 100%;
-    border-radius: 12px;
-}
-
-.select-upload-image button:hover {
-    color: #000000;
-    box-shadow: 4px 3px 6px 1px grey;
-}
-
-.select-upload-image a {
-    position: relative;
-    top: 25px;
-    width: 100%;
-    border-radius: 12px;
-}
-
-.select-upload-image a:hover {
-    color: #000000;
-    box-shadow: 4px 3px 6px 1px grey;
-}
-
-
-/* Edit Ramen Page*/
-
-.edit-ramen h4 {
-    position: relative;
-    top: 90px;
-    text-align: center;
-}
-
-.edit-stars {
-    position: relative;
-    top: -90px;
-}
-
-.edit-reviews {
-    position: relative;
-    top: 45px;
-}
-
-.edit-image {
-    position: relative;
-    top: -75px;
-}
-
-.select-upload-image input:hover {
-    color: #000000;
-    box-shadow: 4px 3px 6px 1px grey;
+  width: 2.8rem;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 /*Footer*/
@@ -327,420 +24,741 @@ form input[type=range] {
 footer a,
 p,
 small {
-    color: #000000;
+  color: #000000;
 }
 
 .page-footer {
-    padding-bottom: 20px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 400px;
 }
 
 .page-footer a:last-child:hover {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .footer-logo {
-    text-align: center;
+  text-align: center;
 }
 
 .footer-logo p {
-    position: relative;
-    top: -8px;
-    padding: 0px 18px;
+  position: relative;
+  top: -8px;
+  padding: 0px 18px;
 }
 
 .footer-logo small {
-    position: relative;
-    top: -25px;
+  position: relative;
+  top: -25px;
 }
 
 .footer-social {
-    text-align: center;
+  text-align: center;
 }
 
 .footer-social a:hover {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .footer-social p:first-child {
-    margin-top: 0;
-    margin-bottom: 7px;
+  margin-top: 0;
+  margin-bottom: 7px;
 }
 
 .footer-social span {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
-.design {
-    margin-top: 15px;
-    margin-bottom: 0;
+.copyright {
+  margin-top: 15px;
+  margin-bottom: 0;
 }
 
 .footer-social small {
-    position: relative;
-    top: -5px;
+  position: relative;
+  top: -5px;
 }
 
+/*Index page*/
+
+.noodle_img_index img {
+  width: 100vw;
+  opacity: 0.8;
+}
+
+.welcome-page {
+  text-align: center;
+}
+
+.welcome-page h1 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.welcome-message {
+  position: relative;
+  top: -68px;
+}
+
+.welcome-message p {
+  padding: 0 25px;
+  font-size: 1rem;
+}
+
+.search-section {
+  position: relative;
+  top: -16px;
+}
+
+.search-button button {
+  width: 60%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.search-button button:hover {
+  color: #000000;
+  box-shadow: 4px 3px 6px 1px grey;
+}
+
+.search-section input:focus {
+  border-bottom: 1px solid #ff9800 !important;
+  box-shadow: 0 1px 0 0 #ff9800 !important;
+}
+
+.input-field label {
+  color: #ff9800;
+}
+
+.input-field input:focus+label {
+  color: #ff9800 !important;
+}
+
+.input-field input[type="text"]:focus+label {
+  color: #ff9800;
+}
+
+.input-field input[type="text"]:focus {
+  border-bottom: 1px solid #ff9800;
+  box-shadow: 0 1px 0 0 #ff9800;
+}
+
+.input-field .prefix.active {
+  color: #ff9800;
+}
+
+.card .card-content {
+  padding: 24px 10px;
+}
+
+.card .card-image img {
+  height: 214px;
+}
+
+.index-page-card {
+  position: relative;
+  top: -70px;
+  text-align: center
+}
+
+.index-page-card .card .card-content {
+  overflow-y: scroll;
+  max-height: 144px;
+}
+
+.index-page-card .card-content {
+  text-align: center;
+}
+
+.index-page-card a {
+  position: relative;
+  width: 60%;
+  margin: 15px auto;
+  border-radius: 12px;
+}
+
+.index-page-card a:hover {
+  color: #000000;
+  box-shadow: 4px 3px 6px 1px grey;
+}
+
+/* Search page*/
+
+.search-box h4 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.search-box input:focus {
+  border-bottom: 1px solid #ff9800 !important;
+  box-shadow: 0 1px 0 0 #ff9800 !important;
+}
+
+.search-page-card .card .card-content {
+  overflow-y: scroll;
+  max-height: 144px;
+}
+
+.search-page-card .card-content {
+  text-align: left;
+}
+
+.search-page-card a {
+  position: relative;
+  width: 60%;
+  margin: 0 0 5% 20%;
+  border-radius: 12px;
+}
+
+.search-page-card a:hover {
+  color: #000000;
+  box-shadow: 4px 3px 6px 1px grey;
+}
+
+.search-result button {
+  width: 80%;
+  margin: 5% 0 0 10%;
+}
+
+.sorry-cat {
+  width: 100%;
+}
+
+.sorry {
+  text-align: center;
+}
+
+/* Error result page */
+
+.error-page p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.error-page a {
+  width: 60%;
+  margin-left: 20%;
+}
+
+.error-page a:hover {
+  color: #000000;
+  box-shadow: 4px 3px 6px 1px grey;
+}
+
+/* Add Ramen page*/
+
+.add-ramen h4 {
+  position: relative;
+  top: 90px;
+  text-align: center;
+}
+
+.ramen-form {
+  border: 2px solid black;
+  border-radius: 25px;
+  box-shadow: 2px 2px 8px grey;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+.dropdown-content li>a,
+.dropdown-content li>span {
+  color: #ef6c00;
+}
+
+.select-flavour input:focus {
+  border-bottom: 1px solid #ff9800 !important;
+  box-shadow: 0 1px 0 0 #ff9800 !important;
+}
+
+.select-brand p {
+  margin-top: -20px;
+}
+
+.select-brand a {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.select-brand a:hover {
+  color: #000000;
+  box-shadow: 4px 3px 6px 1px grey;
+}
+
+.select-packaging {
+  position: relative;
+  top: -20px;
+  padding-left: 15px;
+}
+
+.select-packaging-label {
+  color: #ff9800;
+}
+
+.select-packaging p label {
+  color: #000000;
+}
+
+.select-country-continent {
+  position: relative;
+  top: -15px;
+}
+
+.select-stars-reviews {
+  position: relative;
+  top: -35px;
+}
+
+.select-stars-reviews .stars {
+  position: relative;
+  top: 17px;
+}
+
+.select-reviews {
+  position: relative;
+  top: 15px;
+}
+
+.select-reviews input:focus {
+  border-bottom: 1px solid #ff9800 !important;
+  box-shadow: 0 1px 0 0 #ff9800 !important;
+}
+
+.select-upload-image {
+  position: relative;
+  top: -30px;
+}
+
+.select-upload-image input {
+  border: 2px solid orange;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+}
+
+.select-upload-image button {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.select-upload-image button:hover {
+  color: #000000;
+  box-shadow: 4px 3px 6px 1px grey;
+}
+
+.select-upload-image a {
+  position: relative;
+  top: 25px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.select-upload-image a:hover {
+  color: #000000;
+  box-shadow: 4px 3px 6px 1px grey;
+}
+
+/* Edit Ramen Page*/
+
+.edit-ramen h4 {
+  position: relative;
+  top: 90px;
+  text-align: center;
+}
+
+.edit-stars {
+  position: relative;
+  top: -90px;
+}
+
+.edit-reviews {
+  position: relative;
+  top: 45px;
+}
+
+.edit-image {
+  position: relative;
+  top: -75px;
+}
+
+.select-upload-image input:hover {
+  color: #000000;
+  box-shadow: 4px 3px 6px 1px grey;
+}
 
 /* Add Brand page*/
+
+.brand-form {
+  border: 2px solid black;
+  border-radius: 25px;
+  box-shadow: 2px 2px 8px grey;
+  margin: 100px auto;
+  height: 450px;
+  padding: 40px;
+}
+
+.add-brand h4 {
+  position: relative;
+  top: 90px;
+  text-align: center;
+}
+
+.add-brand .input-field {
+  position: relative;
+  top: 20px;
+  margin-bottom: 15px;
+}
+
 .add-brand input:focus {
-    border-bottom: 1px solid #ff9800 !important;
-    box-shadow: 0 1px 0 0 #ff9800 !important;
+  border-bottom: 1px solid #ff9800 !important;
+  box-shadow: 0 1px 0 0 #ff9800 !important;
 }
 
 .add-brand button {
-    border-radius: 12px;
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 20px;
+  border-radius: 12px;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+.add-brand button:hover {
+  color: #000000;
+  box-shadow: 4px 3px 6px 1px grey;
 }
 
 .add-brand a {
-    border-radius: 12px;
-    width: 100%;
-    margin-top: 30px;
+  border-radius: 12px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.add-brand a:hover {
+  color: #000000;
+  box-shadow: 4px 3px 6px 1px grey;
 }
 
 /* Ramen Collection Page */
 
 .ramen-collection-page h4 {
-    font-size: 2.5rem;
-    text-align: center;
+  text-align: center;
+  position: relative;
+  top: 14px;
 }
 
 .ramen-collection-page .card .card-content {
-    overflow-y: scroll;
-    max-height: 144px;
-}
-
-.ramen-collection-page h4 {
-    font-size: 1.8rem;
+  overflow-y: scroll;
+  max-height: 144px;
 }
 
 .ramen-collection-page .card-content {
-    text-align: left;
+  text-align: left;
 }
 
 .ramen-collection-page a {
-    position: relative;
-    width: 60%;
-    margin: 5% 0 5% 20%;
-    border-radius: 12px;
+  position: relative;
+  width: 60%;
+  margin: 5% 0 5% 20%;
+  border-radius: 12px;
 }
 
 .ramen-collection-page a:hover {
-    color: #000000;
-    box-shadow: 4px 3px 6px 1px grey;
+  color: #000000;
+  box-shadow: 4px 3px 6px 1px grey;
 }
-
 
 /* Display Page */
 
 .display-page img {
-    width: 100%;
-    margin-top: 40px;
+  width: 100%;
+  margin-top: 40px;
 }
 
 .display-page p {
-    padding-left: 30px;
-    padding-right: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.display-details p {
+  padding-left: 50px;
+}
+
+.display-brand {
+  padding-top: 30px;
+}
+
+.display-edit {
+  position: relative;
+  top: -15px;
+  margin-top: 20px;
+}
+
+.display-edit-delete div:first-child {
+  position: relative;
+  top: 0;
 }
 
 .display-edit-delete a {
-    width: 100%;
-    border-radius: 12px;
+  width: 100%;
+  border-radius: 12px;
 }
 
 .display-edit-delete a:hover {
-    color: #000000;
-}
-
-
-.display-edit {
-    position: relative;
-    top: -15px;
-    margin-top: 20px;
+  color: #000000;
 }
 
 /* Asia Collection */
 
 .asia-page h4 {
-    font-size: 2.5rem;
-    text-align: center;
+  position: relative;
+  top: 14px;
+  text-align: center;
 }
 
 .asia-page .card .card-content {
-    overflow-y: scroll;
-    max-height: 144px;
-}
-
-.asia-page h4 {
-    font-size: 1.8rem;
+  overflow-y: scroll;
+  max-height: 144px;
 }
 
 .asia-page .card-content {
-    text-align: left;
+  text-align: left;
 }
 
 .asia-page a {
-    position: relative;
-    width: 60%;
-    margin: 5% 0 5% 20%;
-    border-radius: 12px;
+  position: relative;
+  width: 60%;
+  margin: 5% 0 5% 20%;
+  border-radius: 12px;
 }
 
 .asia-page a:hover {
-    color: #000000;
-    box-shadow: 4px 3px 6px 1px grey;
+  color: #000000;
+  box-shadow: 4px 3px 6px 1px grey;
 }
 
 /* Europe page */
 
 .europe-page h4 {
-    font-size: 2.5rem;
-    text-align: center;
+  position: relative;
+  top: 14px;
+  text-align: center;
 }
 
 .europe-page .card .card-content {
-    overflow-y: scroll;
-    max-height: 144px;
-}
-
-.europe-page h4 {
-    font-size: 1.8rem;
+  overflow-y: scroll;
+  max-height: 144px;
 }
 
 .europe-page .card-content {
-    text-align: left;
+  text-align: left;
 }
 
 .europe-page a {
-    position: relative;
-    width: 60%;
-    margin: 5% 0 5% 20%;
-    border-radius: 12px;
+  position: relative;
+  width: 60%;
+  margin: 5% 0 5% 20%;
+  border-radius: 12px;
 }
 
 .europe-page a:hover {
-    color: #000000;
-    box-shadow: 4px 3px 6px 1px grey;
+  color: #000000;
+  box-shadow: 4px 3px 6px 1px grey;
 }
 
 /* The Americas page */
 
 .america-page h4 {
-    font-size: 2.5rem;
-    text-align: center;
+  position: relative;
+  top: 14px;
+  text-align: center;
 }
 
 .america-page .card .card-content {
-    overflow-y: scroll;
-    max-height: 144px;
-}
-
-.america-page h4 {
-    font-size: 1.8rem;
+  overflow-y: scroll;
+  max-height: 144px;
 }
 
 .america-page .card-content {
-    text-align: left;
+  text-align: left;
 }
 
 .america-page a {
-    position: relative;
-    width: 60%;
-    margin: 5% 0 5% 20%;
-    border-radius: 12px;
+  position: relative;
+  width: 60%;
+  margin: 5% 0 5% 20%;
+  border-radius: 12px;
 }
 
 .america-page a:hover {
-    color: #000000;
-    box-shadow: 4px 3px 6px 1px grey;
+  color: #000000;
+  box-shadow: 4px 3px 6px 1px grey;
 }
 
 /* The Rest Of The World page */
 
 .rest-world-page h4 {
-    font-size: 2.5rem;
-    text-align: center;
+  position: relative;
+  top: 14px;
+  text-align: center;
 }
 
 .rest-world-page .card .card-content {
-    overflow-y: scroll;
-    max-height: 144px;
-}
-
-.rest-world-page h4 {
-    font-size: 1.8rem;
+  overflow-y: scroll;
+  max-height: 144px;
 }
 
 .rest-world-page .card-content {
-    text-align: left;
+  text-align: left;
 }
 
 .rest-world-page a {
-    position: relative;
-    width: 60%;
-    margin: 5% 0 5% 20%;
-    border-radius: 12px;
+  position: relative;
+  width: 60%;
+  margin: 5% 0 5% 20%;
+  border-radius: 12px;
 }
 
 .rest-world-page a:hover {
-    color: #000000;
-    box-shadow: 4px 3px 6px 1px grey;
+  color: #000000;
+  box-shadow: 4px 3px 6px 1px grey;
 }
-
-@media (min-width: 601px) {
-    .index-page-card .card .card-content {
-        overflow-y: scroll;
-        min-height: 290px;
-    }
-
-    .welcome-page h1 {
-        font-size: 2.8rem;
-    }
-
-    .welcome-message p {
-        font-size: 1.1rem;
-    }
-
-    .index-page-card h4 {
-        font-size: 2.5rem;
-        text-align: center;
-    }
-    .footer-social {
-        position: relative;
-        top: 4.5vh;
-    }
-
-    .ramen-form {
-        padding: 40px;
-    }
-
-    .select-brand a {
-        width: 40%;
-    }
-
-    .select-flavour {
-        position: relative;
-        top: -55px;
-    }
-
-    .select-country-continent {
-        position: relative;
-        top: -60px;
-    }
-
-    .select-stars-reviews {
-        position: relative;
-        top: -90px;
-    }
-
-    .select-upload-image {
-        position: relative;
-        top: -100px;
-    }
-}
-
-
-.display-details p {
-    padding-left: 50px;
-}
-
-.display-brand {
-    padding-top: 30px
-}
-
-
-.display-edit-delete div:first-child {
-    position: relative;
-    top: 0;
-}
-
 
 /* Error page*/
 
 .error-page p {
-    font-size: 1.5rem;
-
+  font-size: 1.5rem;
 }
 
 .error-page a {
-    border-radius: 12px;
+  border-radius: 12px;
 }
 
-
-
+.add-brand a {
+  margin-top: 50px;
+}
 
 @media (min-width: 601px) {
-    .index-page-card .card .card-content {
-        overflow-y: scroll;
-        min-height: 160px;
-    }
+  .index-page-card .card .card-content {
+    overflow-y: scroll;
+    min-height: 290px;
+  }
 
-    .select-brand a {
-        position: relative;
-        left: 250px;
-        bottom: 54px;
-    }
+  .welcome-message p {
+    font-size: 1.1rem;
+  }
 
-    .select-packaging {
-        position: relative;
-        top: -65px;
-    }
+  .index-page-card h4 {
+    text-align: center;
+  }
 
-    .select-upload-image {
-        position: relative;
-        top: -80px;
-    }
+  .index-page-card .card .card-content {
+    overflow-y: scroll;
+    min-height: 160px;
+  }
 
-    .select-upload-image a {
-        position: relative;
-        top: 0;
-        width: 100%;
-        border-radius: 12px;
-    }
+  .select-brand a {
+    width: 40%;
+  }
 
-    .edit-reviews {
-        position: relative;
-        top: 18px;
-    }
+  .select-flavour {
+    position: relative;
+    top: -55px;
+  }
+
+  .select-country-continent {
+    position: relative;
+    top: -60px;
+  }
+
+  .select-stars-reviews {
+    position: relative;
+    top: -90px;
+  }
+
+  .select-stars-reviews .stars {
+    position: relative;
+    top: 26px;
+  }
+
+  .select-upload-image {
+    position: relative;
+    top: -100px;
+  }
+
+  .select-brand a {
+    position: relative;
+    left: 250px;
+    bottom: 54px;
+  }
+
+  .select-packaging {
+    position: relative;
+    top: -65px;
+  }
+
+  .select-reviews {
+    position: relative;
+    top: 0;
+  }
+
+  .select-reviews input {
+    position: relative;
+    top: 15px;
+  }
+
+  .select-upload-image {
+    position: relative;
+    top: -80px;
+  }
+
+  .select-upload-image a {
+    position: relative;
+    top: 0;
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .edit-reviews {
+    position: relative;
+    top: 18px;
+  }
+  .page-footer {
+    height: 300px;
+  }
+
+  .footer-logo p {
+    padding-left: 40px;
+  }
+
+  .footer-social {
+    position: relative;
+    top: 30px;
+  }
 
 }
 
-@media (min-width: 993px) {
-    .welcome-page h1 {
-        font-size: 3rem;
-    }
-
-    .index-page-card h4 {
-        font-size: 2.7rem;
-    }
+@media (min-width: 605px) {
+  .page-footer {
+    height: 250px;
+  }
 }
 
 @media (min-width: 1200px) {
-    .welcome-page h1 {
-        font-size: 3.3rem;
-    }
-    .index-page-card h4 {
-        font-size: 3rem;
-    }
-    .index-page-card .card .card-content {
-        overflow-y: scroll;
-        min-height: 220px;
-    }
+  .index-page-card .card .card-content {
+    overflow-y: scroll;
+    min-height: 220px;
+  }
 }
 
+@media (min-width: 1272px) {
+  .page-footer {
+    height: 220px;
+  }
 
-@media (min-width: 1022px) {
-    .footer-social {
-        position: relative;
-        top: 3vh;
-    }
-}
-
-@media (min-width: 1450px) {
-    .footer-social {
-        position: relative;
-        top: 1.5vh;
-    }
+  .footer-social {
+    position: relative;
+    top: 20px;
+  }
 }

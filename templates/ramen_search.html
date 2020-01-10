@@ -3,7 +3,9 @@
 <div class="container search-box">
     <div class="row">
         <form class="col s12" action="{{ url_for('search_ramen') }}">
-            <h4>{{title}} for <em>'{{query}}'</em></h4>
+            <h4>{{title}} for 
+            <br>
+            <em>'{{query}}'</em></h4>
             <div class="row">
                 <div class="input-field col s12">
                     <input id="search" name="query" type="text" class="validate" required>

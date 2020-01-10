@@ -11,7 +11,7 @@
     <div class="row welcome-page">
       <div class="col s12">
         <div class="row">
-          <h1>Welcome to InstaRamen!</h1>
+          <h4>Welcome to InstaRamen!</h4>
         </div>
         <div class="row search-section">
           <form class="col s12" action="{{ url_for('search_ramen') }}">
@@ -42,7 +42,7 @@
   </div>
 
   <div class="container index-page-card">
-    <h4>Newly Added Ramens</h4>
+    <h5>Newly Added Ramens</h5>
     <div class="row">
       {% for three_ramen in latest_three %}
       <div class="col s12 m4 l4">

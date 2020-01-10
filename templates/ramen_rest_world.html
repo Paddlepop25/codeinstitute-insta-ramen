@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="container rest-world-page">
-  <h4>The Rest Of The World Ramen Collection</h4>
+  <h4>Rest Of The World Ramen Collection</h4>
   <div class="row">
     {% for ramen in ramens | sort (attribute='country') %}
     <div class="col s12 m6 l4">
