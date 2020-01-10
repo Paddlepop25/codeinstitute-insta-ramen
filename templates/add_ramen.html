@@ -75,7 +75,7 @@
               <option value="Asia" >Asia</option>
               <option value="Europe" >Europe</option>
               <option value="The Americas" >The Americas</option>
-              <option value="Rest of The World" >Rest of The World</option>
+              <option value="The Rest" >Rest of The World</option>
         </select>
         <label><span>* </span>Continent Select</label>
       </div>
@@ -89,36 +89,22 @@
           <input type="range" id="stars" name="stars" min="0" max="5" required/>
         </p>
       </div>
-      
+
       <div class="input-field col s12 m6 select-reviews">
         <i class="material-icons prefix">textsms</i>
         <input id="reviews" name="reviews" type="text" data-length="99" required>
         <label for="ramen_reviews"><span>* </span>Did you like this?</label>
       </div>
-
     </div>
-
-    <!--<div class="row select-upload-image">-->
-    <!--  <div class="col s12">-->
-    <!--    <div class="input">-->
-    <!--<label for="image">Upload image</label><br>-->
-    <!--      <label><span>* </span>Upload image</label>-->
-    <!--      <input type="file" name="product_image" class="btn orange">-->
-    <!--<a class="btn waves-effect waves-light orange">Add Image</a>-->
-    <!--    </div>-->
-    <!--  </div>-->
-    <!--</div>-->
 
     <div class="select-upload-image">
       <div class="row">
         <div class="col s12">
           <label for="ramen_image"><span>* </span>Click to upload image</label>
           <input type="file" name="ramen_image" id="ramen_image" required>
-          <!--<a href="" class="btn upload-image"><i class="material-icons right">upload</i>Add file</a>-->
-          <!--<label for="img">Click me to upload image</label>-->
-          <!--<input type="file" name="uploadfile" id="img" style="display:none;" />-->
         </div>
       </div>
+
       <div class="row">
         <div class="col s12 m6">
           <button class="btn waves-effect waves-light orange" type="submit" name="action">
@@ -131,16 +117,6 @@
       </div>
     </div>
 
-    <!--<div class="row select-submit">-->
-    <!--  <div class="col s12 m6">-->
-    <!--    <button class="btn waves-effect waves-light orange" type="submit" name="action">-->
-    <!--      <i class="material-icons right">playlist_add</i>Add Ramen-->
-    <!--  </button>-->
-    <!--  </div>-->
-    <!--  <div class="col s12 m6">-->
-    <!--    <a href="{{url_for('get_ramen')}}" class="btn orange"><i class="material-icons right">cancel</i>Cancel</a>-->
-    <!--  </div>-->
-    <!--</div>-->
   </form>
 </div>
 

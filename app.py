@@ -3,11 +3,10 @@ from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo, ASCENDING, DESCENDING
 from bson.objectid import ObjectId
 import re
-import math
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = '/home/ubuntu/environment/uploads'
+
 app.config['MONGO_DBNAME'] = 'ramen_database'
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
@@ -31,12 +30,12 @@ def get_ramen():
 @app.route('/ramen_asia')
 def ramen_asia():
     ramens=mongo.db.ramens.find({'continent': 'Asia'})
-    return render_template('ramen_asia.html', title="Ramen from The Asia", ramens=ramens)
+    return render_template('ramen_asia.html', title="Ramen from Asia", ramens=ramens)
     
 @app.route('/ramen_europe')
 def ramen_europe():
     ramens=mongo.db.ramens.find({'continent': 'Europe'})
-    return render_template('ramen_europe.html', title="Ramen from The Europe", ramens=ramens)
+    return render_template('ramen_europe.html', title="Ramen from Europe", ramens=ramens)
     
 @app.route('/ramen_americas')
 def ramen_americas():
@@ -48,15 +47,6 @@ def ramen_rest_world():
     ramens=mongo.db.ramens.find({'continent': 'The Rest'})
     return render_template('ramen_rest_world.html', title="Ramen from the Rest Of The World", ramens=ramens)    
     
-# @app.route('/ramen_world')
-# def ramen_world():
-#     ramens=mongo.db.ramens.find(
-#         {'$or':
-#             [{'continent': 'Asia'},{'continent': "Europe"},{'continent': "The Americas"},{'continent': "The Rest"}]
-#         }
-#         )
-#     return render_template('ramen_world.html', title="Rest Of The World", ramens=ramens)    
-
 @app.route('/search_ramen')
 def search_ramen():
     orig_query = request.args['query']
@@ -79,6 +69,7 @@ def add_ramen():
 @app.route('/insert_ramen', methods=['POST'])
 def insert_ramen():
     ramens = mongo.db.ramens
+    
     if "ramen_image" in request.files:
         ramen_image = request.files['ramen_image']
         mongo.save_file(ramen_image.filename, ramen_image)
@@ -93,6 +84,7 @@ def insert_ramen():
         'reviews':request.form.get('reviews'),
         'imageURL': ramen_image.filename
     }
+    
     ramens.insert_one(new_ramen)
     return redirect(url_for('get_ramen'))    
 
@@ -111,21 +103,21 @@ def edit_ramen(ramen_id):
 def update_ramen(ramen_id):
     ramen = mongo.db.ramens.find_one({"_id": ObjectId(ramen_id)})
     
-    # try code
     brand = request.form.get('brand')
     flavour = request.form.get('flavour')
     style = request.form.get('style')
     country = request.form.get('country')
+    continent = request.form.get('continent')
     stars = int(request.form.get('stars'))
-    reviews = request.form.get('reviews')
-    # end of try code
+    reviews = request.form.get('reviews') 
+    image_filename = request.form.get('ramen_image')
     
-    if "ramen_image" in request.files and request.files['ramen_image'].filename != "":
-        ramen_image = request.files['ramen_image']
-        image_filename = ramen_image.filename
-        mongo.save_file(ramen_image.filename, ramen_image)
-    else:
-        image_filename = ramen['imageURL']
+    # if "ramen_image" in request.files and request.files['ramen_image'].filename != "":
+    #     ramen_image = request.files['ramen_image']
+    #     image_filename = ramen_image.filename
+    #     mongo.save_file(ramen_image.filename, ramen_image)
+    # else:
+    #     image_filename = ramen['imageURL']
         
     ramen.update( {'_id': ObjectId(ramen_id)},
     {
@@ -133,9 +125,10 @@ def update_ramen(ramen_id):
         'flavour': flavour,
         'style': style,
         'country': country,
+        'continent': continent,
         'stars': int(stars),
         'reviews': reviews,
-        'imageURI': image_filename
+        'imageURL': image_filename
     })
     return redirect(url_for('get_ramen'))
     

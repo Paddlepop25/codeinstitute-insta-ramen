@@ -1,14 +1,16 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="container error-page">
-    <p>Yikes! Something went wrong</p>
+    <h4>Yikes!</h4>
     <div class="row">
         <div class="col s12">
-            <img class="sorry-cat" src="{{ url_for('static', filename='images/shocked-cat.jpg') }}"></img>
+            <img src="{{ url_for('static', filename='images/shocked-cat.jpg') }}"></img>
         </div>
         <div class="row">
             <div class="col s12">
-            <p>Click to go back to the main page</p>
+            <p>Something went wrong.
+            <br>
+            Click to go back to the main page</p>
             <a href="{{url_for('index')}}" class="waves-effect waves-light btn orange">Home</a>
             </div>
         </div>

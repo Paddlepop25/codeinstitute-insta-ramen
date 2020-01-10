@@ -221,30 +221,8 @@ small {
   margin: 5% 0 0 10%;
 }
 
-.sorry-cat {
-  width: 100%;
-}
-
 .sorry {
   text-align: center;
-}
-
-/* Error result page */
-
-.error-page p {
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 30px;
-}
-
-.error-page a {
-  width: 60%;
-  margin-left: 20%;
-}
-
-.error-page a:hover {
-  color: #000000;
-  box-shadow: 4px 3px 6px 1px grey;
 }
 
 /* Add Ramen page*/
@@ -432,7 +410,7 @@ small {
 .add-brand a {
   border-radius: 12px;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .add-brand a:hover {
@@ -627,17 +605,32 @@ small {
 
 /* Error page*/
 
+.error-page h4 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.error-page img {
+  width: 80%;
+  position: relative;
+  left: 10%;
+}
+
 .error-page p {
-  font-size: 1.5rem;
+  text-align: center;
 }
 
 .error-page a {
   border-radius: 12px;
+  width: 60%;
+  margin-left: 20%;
 }
 
-.add-brand a {
-  margin-top: 50px;
+.error-page a:hover {
+  color: #000000;
+  box-shadow: 4px 3px 6px 1px grey;
 }
+
 
 @media (min-width: 601px) {
   .index-page-card .card .card-content {
@@ -647,6 +640,10 @@ small {
 
   .welcome-message p {
     font-size: 1.1rem;
+  }
+
+  .ramen-form {
+    padding: 30px;
   }
 
   .index-page-card h4 {
@@ -737,6 +734,10 @@ small {
     top: 30px;
   }
 
+  .error-page p {
+    font-size: 1.4rem;
+  }
+
 }
 
 @media (min-width: 605px) {
@@ -745,10 +746,24 @@ small {
   }
 }
 
+@media (min-width: 768px) {
+  .ramen-form {
+    padding: 50px;
+  }
+
+  .error-page p {
+    font-size: 1.6rem;
+  }
+}
+
 @media (min-width: 1200px) {
   .index-page-card .card .card-content {
     overflow-y: scroll;
     min-height: 220px;
+  }
+
+  .ramen-form {
+    padding: 70px;
   }
 }
 
