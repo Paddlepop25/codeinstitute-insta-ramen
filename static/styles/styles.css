@@ -225,9 +225,13 @@ form input[type=range] {
     top: -20px;
 }
 
-/*.select-packaging input::after {*/
-/*    border: red ;*/
-/*}*/
+.select-packaging-label {
+    color: #ff9800;
+}
+
+.select-packaging p label {
+    color: #000000;
+}
 
 .select-country-continent {
     position: relative;
@@ -311,6 +315,11 @@ form input[type=range] {
 .edit-image {
     position: relative;
     top: -75px;
+}
+
+.select-upload-image input:hover {
+    color: #000000;
+    box-shadow: 4px 3px 6px 1px grey;
 }
 
 /*Footer*/
