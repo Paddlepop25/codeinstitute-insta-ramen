@@ -469,7 +469,7 @@ small {
 
 .display-edit {
   position: relative;
-  top: -15px;
+  top: -19px;
   margin-top: 20px;
 }
 
@@ -641,6 +641,10 @@ small {
   .welcome-message p {
     font-size: 1.1rem;
   }
+  
+  .display-page {
+    min-height: 500px;
+  }
 
   .ramen-form {
     padding: 30px;
@@ -742,6 +746,16 @@ small {
 
 @media (min-width: 605px) {
   .page-footer {
+    height: 300px;
+  }
+}
+
+@media (min-width: 739px) {
+  .display-page {
+    min-height: 550px;
+}
+
+  .page-footer {
     height: 250px;
   }
 }
@@ -753,6 +767,16 @@ small {
 
   .error-page p {
     font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1316px) {
+  .display-page {
+    min-height: 595px;
+}
+
+  .page-footer {
+    height: 200px;
   }
 }
 
@@ -768,10 +792,6 @@ small {
 }
 
 @media (min-width: 1272px) {
-  .page-footer {
-    height: 220px;
-  }
-
   .footer-social {
     position: relative;
     top: 20px;
