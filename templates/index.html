@@ -1,18 +1,10 @@
 {% extends 'base.html' %} {% block content %}
-
 <div class="container-fluid">
   <div class="container-fluid">
-    <div class="noodle_img_index">
-      <img src="/static/images/noodle_index.jpeg" alt="delicious noodle ramen seseme seeds colorful" />
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row welcome-page">
-      <div class="col s12">
-        <div class="row">
-          <h4>Welcome to InstaRamen!</h4>
-        </div>
+    <div class="col s12 ramen-welcome">
+      <div class="welcome-box"></div>
+      <div class="welcome-message">
+        <h4 class="welcome-header">Welcome to InstaRamen!</h4>
         <div class="row search-section">
           <form class="col s12" action="{{ url_for('search_ramen') }}">
             <div class="row">
@@ -28,21 +20,23 @@
         </div>
       </div>
     </div>
-    <div class="row welcome-message">
-      <p>If you love slurpping on hot, savoury instant ramen, you're in for a treat!
-        <br> This website is a collection of instant ramens from around the world.
-        <br>
-        <br> Want to view some yummy examples? On the search box above, input your favourite flavours, or click on the selection of tabs on top of the page. You will be spoiled for choice for all the exciting varieties there are in the world!
-        <br>
-        <br> Cannot find something you're lo0king for? No worries! Add a new ramen to the collection and give your honest review.
-        <br>
-        <br> Enjoy!
-      </p>
-    </div>
   </div>
 
+  <div class="row welcome-description">
+    <p>If you love slurpping on hot, savoury instant ramen, you're in for a treat!
+      <br> This website is a collection of instant ramens from around the world.
+      <br>
+      <br> Want to view some yummy examples? On the search box above, input your favourite flavours, or click on the selection of tabs on top of the page. You will be spoiled for choice for all the exciting varieties there are in the world!
+      <br>
+      <br> Cannot find something you're lo0king for? No worries! Add a new ramen to the collection and give your honest review.
+      <br>
+      <br> Enjoy!
+    </p>
+  </div>
+
+
   <div class="container index-page-card">
-    <h5>Newly Added Ramens</h5>
+    <h4>Newly Added Ramens</h4>
     <div class="row">
       {% for three_ramen in latest_three %}
       <div class="col s12 m4 l4">
@@ -65,6 +59,75 @@
       {% endfor %}
     </div>
   </div>
+
 </div>
+
+<!--mycodes-->
+<!--<div class="container-fluid">-->
+  <!--<div class="container-fluid">-->
+  <!--  <div class="noodle_img_index">-->
+  <!--    <img src="/static/images/noodle_index.jpeg" alt="delicious noodle ramen seseme seeds colorful" />-->
+  <!--  </div>-->
+  <!--</div>-->
+
+  <!--<div class="container">-->
+  <!--  <div class="row welcome-page">-->
+  <!--    <div class="col s12">-->
+  <!--      <div class="row">-->
+  <!--        <h4>Welcome to InstaRamen!</h4>-->
+  <!--      </div>-->
+  <!--      <div class="row search-section">-->
+  <!--        <form class="col s12" action="{{ url_for('search_ramen') }}">-->
+  <!--          <div class="row">-->
+  <!--            <div class="input-field col s12">-->
+  <!--              <input id="search" name="query" type="text" class="validate" required>-->
+  <!--              <label for="search">Search for Ramen flavours</label>-->
+  <!--              <div class="search-button">-->
+  <!--                <button class="btn waves-effect waves-light orange accent-3" type="submit" name="action">Search</button>-->
+  <!--              </div>-->
+  <!--            </div>-->
+  <!--          </div>-->
+  <!--        </form>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--  <div class="row welcome-message">-->
+  <!--    <p>If you love slurpping on hot, savoury instant ramen, you're in for a treat!-->
+  <!--      <br> This website is a collection of instant ramens from around the world.-->
+  <!--      <br>-->
+  <!--      <br> Want to view some yummy examples? On the search box above, input your favourite flavours, or click on the selection of tabs on top of the page. You will be spoiled for choice for all the exciting varieties there are in the world!-->
+  <!--      <br>-->
+  <!--      <br> Cannot find something you're lo0king for? No worries! Add a new ramen to the collection and give your honest review.-->
+  <!--      <br>-->
+  <!--      <br> Enjoy!-->
+  <!--    </p>-->
+  <!--  </div>-->
+  <!--</div>-->
+
+  <!--<div class="container index-page-card">-->
+  <!--  <h4>Newly Added Ramens</h4>-->
+  <!--  <div class="row">-->
+  <!--    {% for three_ramen in latest_three %}-->
+  <!--    <div class="col s12 m4 l4">-->
+  <!--      <div class="card">-->
+  <!--        <div class="card-image">-->
+  <!--          <img src="{{url_for('file', filename=three_ramen['imageURL'])}}">-->
+  <!--        </div>-->
+  <!--        <div class="card-content">-->
+  <!--          <p>Brand: {{three_ramen.brand|title}}</p>-->
+  <!--          <br>-->
+  <!--          <p>Flavour:-->
+  <!--            <br> {{three_ramen.flavour|title}}-->
+  <!--          </p>-->
+  <!--        </div>-->
+  <!--        <div class="row">-->
+  <!--          <a href="{{url_for('display_ramen', ramen_id=three_ramen._id)}}" class="waves-effect waves-light btn orange">More</a>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--    {% endfor %}-->
+  <!--  </div>-->
+  <!--</div>-->
+<!--</div>-->
 
 {% endblock %}

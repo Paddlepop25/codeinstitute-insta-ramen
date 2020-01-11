@@ -22,6 +22,7 @@
 
 <body>
   <header>
+    <div class="container-fluid">
     <nav>
       <div class="nav-wrapper orange lighten-1">
         <a href="{{url_for('index')}}" class="brand-logo"><img class="ramen_logo" src="{{ url_for('static', filename='images/noodle_icon.png') }}" alt="Ramen noodles with chopsticks logo"/></a>
@@ -50,6 +51,7 @@
         </ul>
       </div>
     </nav>
+    </div>
   </header>
 
   {% block content %} {% endblock %}
