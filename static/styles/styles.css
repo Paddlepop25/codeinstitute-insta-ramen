@@ -110,13 +110,13 @@ small {
   width: 80%;
   border-radius: 50px;
   position: relative;
-  top: 14rem;
+  top: 7rem;
   margin: 0 auto;
 }
 
 .welcome-message {
   position: relative;
-  top: -7rem;
+  top: -14rem;
   width: 70%;
   margin: 0 auto;
 }
@@ -803,6 +803,16 @@ small {
 }
 
 @media (min-width: 768px) {
+  .welcome-box {
+    position: relative;
+    top: 10rem;
+  }
+  
+  .welcome-message {
+    position: relative;
+    top: -11rem;
+  }
+  
   .ramen-form {
     padding: 50px;
   }
