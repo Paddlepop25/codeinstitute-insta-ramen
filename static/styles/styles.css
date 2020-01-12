@@ -5,6 +5,10 @@ body {
   font-family: "Poppins", cursive;
 }
 
+body h4 {
+  font-family: "Montserrat", cursive;
+}
+
 
 /* Base page */
 
@@ -254,6 +258,11 @@ small {
 
 .sorry {
   text-align: center;
+}
+
+.sorry-cat {
+  width: 95%;
+  border: 3px solid black;
 }
 
 /* Add Ramen page*/
@@ -516,6 +525,7 @@ small {
 
 .display-edit-delete a:hover {
   color: #000000;
+  box-shadow: 4px 3px 6px 1px grey;
 }
 
 /* Asia Collection */
