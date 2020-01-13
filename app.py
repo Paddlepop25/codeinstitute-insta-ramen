@@ -118,7 +118,7 @@ def update_ramen(ramen_id):
     else:
         image_filename = ramen['imageURL']
         
-    ramen.update( {'_id': ObjectId(ramen_id)},
+    mongo.db.ramens.update( {'_id': ObjectId(ramen_id)},
     {
         'brand': brand,
         'flavour': flavour,
