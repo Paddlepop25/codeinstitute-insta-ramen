@@ -11,7 +11,8 @@
                     <input id="search" name="query" type="text" class="validate" required>
                     <label for="search">Search for Ramen flavours</label>
                     <div class="search-button search-result">
-                        <button class="btn waves-effect waves-light orange accent-3" type="submit" name="action">Search</button>
+                        <button class="btn waves-effect waves-light orange accent-3" type="submit" name="action">
+                            <i class="material-icons right">search</i>Search</button>
                     </div>
                 </div>
             </div>
@@ -20,7 +21,6 @@
 </div>
 
 <div class="container search-page-card">
-    
     {% if ramen_count > 0 %}
     <div class="row">
         {% for ramen in ramen_search %}
@@ -37,7 +37,8 @@
                     </p>
                 </div>
                 <div class="row">
-                    <a href="{{url_for('display_ramen', ramen_id=ramen._id)}}" class="waves-effect waves-light btn orange">More</a>
+                    <a href="{{url_for('display_ramen', ramen_id=ramen._id)}}" class="waves-effect waves-light btn orange">
+                        <i class="material-icons right">chevron_right</i>More</a>
                 </div>
             </div>
         </div>

@@ -110,13 +110,13 @@ small {
   width: 80%;
   border-radius: 50px;
   position: relative;
-  top: 7rem;
+  top: 4rem;
   margin: 0 auto;
 }
 
 .welcome-message {
   position: relative;
-  top: -14rem;
+  top: -18rem;
   width: 70%;
   margin: 0 auto;
 }
@@ -794,7 +794,7 @@ small {
 
 @media (min-width: 739px) {
   .display-page {
-    min-height: 550px;
+    min-height: 710px;
   }
 
   .page-footer {
@@ -829,10 +829,6 @@ small {
 }
 
 @media (min-width: 1316px) {
-  .display-page {
-    min-height: 595px;
-  }
-
   .page-footer {
     height: 200px;
   }
