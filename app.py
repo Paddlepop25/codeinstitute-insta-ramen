@@ -47,19 +47,30 @@ def ramen_rest_world():
     ramens=mongo.db.ramens.find({'continent': 'The Rest'})
     return render_template('ramen_rest_world.html', title="Ramen from the Rest Of The World", ramens=ramens)    
     
-@app.route('/search_ramen')
+# @app.route('/search_ramen')
+# def search_ramen():
+#     orig_query = request.args['query']
+#     query = {'$regex': re.compile('.*{}.*'.format(orig_query)), '$options': 'i'}
+#     print(query)
+#     results=mongo.db.ramens.find({'flavour': query})
+    
+#     ramen = []
+#     for result in results:
+#         ramen.append(result)
+    
+#     return render_template('ramen_search.html', title="Search Results", query=orig_query, ramen_search=ramen)
+
+@app.route('/search_ramen/', methods=["GET", "POST"])
 def search_ramen():
-    orig_query = request.args['query']
-    query = {'$regex': re.compile('.*{}.*'.format(orig_query)), '$options': 'i'}
-    print(query)
-    results=mongo.db.ramens.find({'flavour': query})
-    
-    ramen = []
-    for result in results:
-        ramen.append(result)
-    
-    return render_template('ramen_search.html', title="Search Results", query=orig_query, ramen_search=ramen)
-    
+    # if request.method == "POST":
+    post_request = request.args['query']
+    print(post_request)
+    return render_template("ramen_search.html",
+                            title="Search Results",
+                            query=post_request,
+                            ramen_search=mongo.db.ramens.find({"flavour" : {"$regex": post_request, "$options": "i"}}),
+                            ramen_count=mongo.db.ramens.find({"flavour" : {"$regex": post_request, "$options": "i"}}).count())
+                            
 @app.route('/add_ramen')
 def add_ramen():
     brands = mongo.db.brands.find().sort([("brand", ASCENDING)])

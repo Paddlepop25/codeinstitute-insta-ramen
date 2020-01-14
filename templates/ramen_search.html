@@ -20,7 +20,8 @@
 </div>
 
 <div class="container search-page-card">
-    {% if ramen_search|length > 0 %}
+    
+    {% if ramen_count > 0 %}
     <div class="row">
         {% for ramen in ramen_search %}
         <div class="col s12 m4 l4">
