@@ -4,7 +4,7 @@ An Interactive Front-end Web Development Project - Code Institute
 <br>
 By Linda Hsu
 
-![Responsive displays of InstaRamen](https://raw.githubusercontent.com/paddlepop25/codeinstitute-insta-ramen/master/static/images/webpages/index.png)
+![Responsive displays of InstaRamen](https://raw.githubusercontent.com/Paddlepop25/codeinstitute-insta-ramen/master/static/images/webpages/index.png)
 
 <br>
 
@@ -96,3 +96,134 @@ The website was designed with an orange theme color as it is refreshing and clos
     - **Input fields -** When the user clicks on the field to input text, a simple but efficient animation provided by Materialize moves the placeholder to the top of the field while changing the bottom of the border to the theme orange colour. 
 
     - **Buttons -** Materialize also provides a neat animation in a class called 'waves' for buttons which gives an interesting effect when they are clicked on. Also, when all the buttons are hovered over, a shadow appears on the buttons to make them look 3D and pop-up, which indicates a call-to-action is possible.
+    
+    
+## Features
+
+### Existing Features
+
+1. #### Home Page
+
+![Responsive displays of InstaRamen](https://raw.githubusercontent.com/Paddlepop25/codeinstitute-insta-ramen/master/static/images/webpages/index.png)
+    
+- When the user first arrives at the page, he/she is welcomed with a large background picture of ramen, or noodles, with a search function for ramen flavours. On top of the page is an orange navigational bar with an icon of a bowl of ramen and chopsticks and links to the other pages. For the mobile devices, the links are presented when the user clicks on the 'hamburger' icon of 3 horizontal lines.
+
+-  If the user scrolls down the main page, there is a few paragraphs of text describing the purpose and intent of the website. Further down, there are 3 recently added ramens shown in the form of cards with pictures and a short but important description of the ramen brand and flavour, with a 'more' button should the user would like to view more information.
+
+- At the bottom of the page, there is a footer in the orange color with the ramen icon which points the user to the top of the page and a short summary of the website. In the 'keep in touch' section, there are links to my personal social media. Github repository and LinkedIn sites for anyone who wishes to contact me. There is also a disclaimer that this website is meant for educational purposes only.
+
+    
+2. #### Search Ramen Page
+
+![Responsive displays of InstaRamen](https://raw.githubusercontent.com/Paddlepop25/codeinstitute-insta-ramen/master/static/images/webpages/ramen-search.png)
+    <br>
+    
+- When the user has inputted a ramen flavour in the search box on the main page, he/she is brought to this search results page where on top of the page is a line that says 'Search Results for "whatever the user has input into the box."' If there is at least one possible result, the ramen is displayed in a card with an image along with the brand and flavour. There is a vertical scroll button for the user to scroll down in case the lines are too long for the card display section. A 'more' button is available for the user to click on it to view more information on the ramen on the display page.
+
+![Responsive displays of InstaRamen](https://raw.githubusercontent.com/Paddlepop25/codeinstitute-insta-ramen/master/static/images/webpages/no-results.png)
+
+- If there isn't any results from the user's search, a big picture of a sad kitty cat is shown saying no results have been found. With the search function available on top of the page, the user can perform another search without having to go back to the main page to do this.  
+
+3. #### Ramen Display Page
+
+![Responsive displays of InstaRamen](https://raw.githubusercontent.com/Paddlepop25/codeinstitute-insta-ramen/master/static/images/webpages/display-ramen.png)
+    <br>
+    
+- This page displays all the information of the ramen which includes a picture, brand, flavour, stars, country of origin and even reviews.
+
+- From there, there are 2 buttons underneath the information which allows the user to edit the information or to delete this ramen.
+
+- If the user clicks on the edit button, he/she is brought to the edit page.
+
+- If the user clicks on the delete button, he/she is brought back to the ramen collection page which displays all the ramen in the collection.
+
+3. #### Ramen Edit Page
+
+![Responsive displays of InstaRamen](https://raw.githubusercontent.com/Paddlepop25/codeinstitute-insta-ramen/master/static/images/webpages/edit-ramen.png)
+    <br>
+    
+- At this edit page, the form is pre-filled with entries from the original information. All the fields are available for the user to change if he/she wishes to. 
+
+- On the click of the 'save changes' button, the user is brought back to the ramen collection page to view all the ramens
+
+- If the user changes his/her mind and clicks on the 'cancel' button, the user is diverted to the ramen collection page.
+    
+4. #### Add Ramen Page 
+
+![Responsive displays of InstaRamen](https://raw.githubusercontent.com/Paddlepop25/codeinstitute-insta-ramen/master/static/images/webpages/add-ramen.png)
+    <br>
+    
+- On this page, the user is presented with a form with the top line saying that all fields are required. Here the user could fill in the different fields and even upload a ramen picture. On clicking the 'add ramen' button, the user is brought to the ramen collection page where the newest added ramen is shown on the top left hand side. This newly added ramen is also shown on the main page along with 2 other newly added ramens.
+
+- If the user clicks on the 'cancel' button, he/she will be brought to the ramen collection page 
+
+4. #### Ramen Collection Page 
+
+![Responsive displays of InstaRamen](https://raw.githubusercontent.com/Paddlepop25/codeinstitute-insta-ramen/master/static/images/webpages/ramen-collection.png)
+
+4. #### Ramen Continents Page 
+
+![Responsive displays of InstaRamen](https://raw.githubusercontent.com/Paddlepop25/codeinstitute-insta-ramen/master/static/images/webpages/ramen-continents.png)
+    
+7. #### Error 404 Page
+
+![Responsive displays of InstaRamen](https://raw.githubusercontent.com/Paddlepop25/codeinstitute-insta-ramen/master/static/images/webpages/error404.png)
+    <br>
+    
+- If the user has inputted an invalid entry on the URL, he/she would be brought to this page which shows that there is an error with a picture of a shocked kitty cat.
+
+- When the user scrolls down, there is a 'home' button which allows them to be brought back to the main page with a click of the button.
+
+### Features Left to Implement
+
+1. #### User log in
+
+    - A user log in feature is essential to allow edit and delete functions only to the user who created the ramen. This is to ensure no one deletes the whole collection by accident or tamper with other users' ramen entries.
+
+2. #### Pagination
+
+    - Pagination on the ramen pages would be helpful with organizing the collection as it grows. It also looks neater and helps with loading time.
+    
+## Database
+
+### MongoDB
+
+- A noSQL database [MongoDB](https://www.mongodb.com/) was chosen for this project for the developer to gain experience in learning to work with a document based database in this cloud era.
+
+### Data types
+
+- These are the types of data that are used in this project:
+    - ObjectId
+    - String
+    - Int32(Integer)
+    
+### Ramens Database
+
+- A database called 'ramen_database' which contains a main collection called 'ramens' which is where the attributes of each ramen is stored. The data structure is as follows:
+
+| Name of field | field key | field value | type |
+--- | --- | --- | --- 
+Ramen ID | _id | `<Creates ID automatically>` | ObjectId 
+Ramen Brand | brand | `<Name of ramen brand>` | string
+Ramen Flavour | flavour | `<Name of ramen flavour>` | string
+Ramen Style | style | `<Packaging style of ramen>` | string
+Ramen Country of Export | country | `<Country where Ramen is exported from>` | string
+Continent of Country | continent | `<Continent of Country>` | string
+Ramen Stars | stars | `<Rating of Ramen>` | string
+Ramen Reviews | reviews | `<Reviews of Ramen>` | int32
+Ramen Image | imageURL | `<Name of image file uploaded>` | string
+
+- In addition to the above 'ramens' collection, there is also the 'countries' collection where all the countries of the world is specificed to a particular continent. The data structure is as follows:
+
+| Name of field | field key | field value | type |
+--- | --- | --- | --- 
+Ramen ID | _id | `<Creates ID automatically>` | ObjectId 
+Country | country | `<Name of country>` | string
+Continent of Country | continent | `<Name of continent>` | string
+
+- There is also the 'brands' collection where all the brands of existing ramens are stored and future additions by users from the 'add brand' form submission will also be store. The data structure is as follows:
+
+| Name of field | field key | field value | type |
+--- | --- | --- | --- 
+Ramen ID | _id | `<Creates ID automatically>` | ObjectId 
+Ramen brand | brand | `<Brand of ramen>` | string
