@@ -62,9 +62,7 @@ def ramen_rest_world():
 
 @app.route('/search_ramen/', methods=["GET", "POST"])
 def search_ramen():
-    # if request.method == "POST":
     post_request = request.args['query']
-    print(post_request)
     return render_template("ramen_search.html",
                             title="Search Results",
                             query=post_request,
@@ -120,9 +118,10 @@ def update_ramen(ramen_id):
     continent = request.form.get('continent')
     stars = int(request.form.get('stars'))
     reviews = request.form.get('reviews') 
-    
-    if "ramen_image" in request.files and request.files['ramen_image'].filename != "":
+        
+    if 'ramen_image' in request.files and request.files['ramen_image'].filename != "":
         ramen_image = request.files['ramen_image']
+        print(ramen_image)
         image_filename = ramen_image.filename
         mongo.save_file(ramen_image.filename, ramen_image)
     else:
