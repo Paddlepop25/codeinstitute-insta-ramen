@@ -147,14 +147,6 @@ small {
   box-shadow: 4px 3px 6px 1px grey;
 }
 
-/*.search-section input {*/
-
-/*  border-bottom: 2px solid #000000 !important;*/
-
-/*  box-shadow: 0 1px 0 0 #ff9800 !important;*/
-
-/*}*/
-
 .search-section input:focus {
   border-bottom: 1px solid #ff9800 !important;
   box-shadow: 0 1px 0 0 #ff9800 !important;
