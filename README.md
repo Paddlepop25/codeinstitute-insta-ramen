@@ -3,7 +3,8 @@
 A Data Centric Frontend Web Development Project - Code Institute
 <br>
 By Linda Hsu
-
+<br>
+<br>
 ![Responsive displays of InstaRamen](https://raw.githubusercontent.com/Paddlepop25/codeinstitute-insta-ramen/master/static/images/webpages/index.png)
 
 <br>
@@ -37,7 +38,7 @@ The deployed website can be found in
 
 - An introductory message is given on the main page to explain the functions and purpose of the website. 
 
-- The 3 latest ramen additions are shown below the introductory message in the form of cards and a 'more' button suggests a call-for-action from the users if they'd like to view more information. 
+- The 3 latest ramen additions are shgown below the introductory message in the form of cards and a 'more' button suggests a call-for-action from the users if they'd like to view more information. 
 
 - The user could view the entire ramen collections or view them by continents. The display ramen cards in the ramen collection page is sorted by the latest added ramen for users to see the newest entry. The display ramen cards in each of the continents options are sorted by countries for easy reference. 
 
@@ -148,7 +149,7 @@ Wireframes were created initially to help me visualise the website in different 
 
 - Users can view ramens from different continents by clicking on a selection of 4 choices; namely Asia, Europe, The Americas and Rest of the World. This is for quick and easy reference for the users' experience.
 
-4. #### Add Ramen Page 
+5. #### Add Ramen Page 
 
 ![Responsive displays of InstaRamen Add Ramen Page](https://raw.githubusercontent.com/Paddlepop25/codeinstitute-insta-ramen/master/static/images/webpages/add-ramen.png)
     
@@ -156,7 +157,7 @@ Wireframes were created initially to help me visualise the website in different 
 
 - If the user clicks on the 'cancel' button, he/she will also be brought to the ramen collection page 
 
-3. #### Ramen Edit Page
+6. #### Ramen Edit Page
 
 ![Responsive displays of InstaRamen Ramen Edit Page](https://raw.githubusercontent.com/Paddlepop25/codeinstitute-insta-ramen/master/static/images/webpages/edit-ramen.png)
     
@@ -294,44 +295,44 @@ git clone https://github.com/*username*/*repository*
 python -m .venv venv
 ```  
 
-5. Use the following command to run a DNS toolkit for Python
+4. Use the following command to run a DNS toolkit for Python
 ```
 sudo pip3 install dnspython
 ```
 
-6. Use the following command to allow your project to run along side mongodb in python
+5. Use the following command to allow your project to run along side mongodb in python
 ```
 sudo pip3 install pymongo
 ```
 
-7. If your IDE requires a virtual environment, run the following command to activate it:
+6. If your IDE requires a virtual environment, run the following command to activate it:
 ```
 .venv\Scripts\activate 
 ```
 
-8. Install a requirements.txt file with of the correct packages that you need for the project with: 
+7. Install a requirements.txt file with of the correct packages that you need for the project with: 
 ```
 pip -r requirements.txt
 ```
 
-9.  If you need the latest version of pip, you can get it by running the following command.
+8.  If you need the latest version of pip, you can get it by running the following command.
 ```
 pip install --upgrade pip
 ```
 
-10. Go into the .flaskenv file & create a MONGO_URI which is a link to your database in MongoDB it should look something like this
+9. Go into the .flaskenv file & create a MONGO_URI which is a link to your database in MongoDB it should look something like this
 
 ```
 mongodb+srv://<username>:<password in mongo db>@<cluster_name>-qtxun.mongodb.net/<database name>?retryWrites=true&w=majority
 ```
 
-11. Run the app.py file using the following command
+10. Run the app.py file using the following command
 
 ```
 python3 app.py
 ```
 
-12. Then click on `http://127.0.0.1:5000` which will display in the termimal to view the project.
+11. Then click on `http://127.0.0.1:5000` which will display in the termimal to view the project.
 
 ### Deploying to Heroku
 
