@@ -369,7 +369,7 @@ Click on add to enter the following:
 
 | Key | Value |
 --- | ---
-MONGO_ URI | <string at number 10 in instructions>
+MONGO_ URI | <string at number 9 in instructions>
 
 11. On top of the page, click on "Deploy" and scroll down to the list of instructions given to deploy your project to Heroku. The steps should be done in the terminal
 
