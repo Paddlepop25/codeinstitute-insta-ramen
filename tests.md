@@ -178,9 +178,6 @@ Initially, the images overflow and overspill out of the placeholder of the card.
   max-height: 144px;
 }
 ``` 
-
-3. Uploading new image in the 'edit ramen' page:
-I have yet to find the solution for this feature.
     
 ## Further Testing
 - In the future, I would like to implement unit testing while building a website of this kind

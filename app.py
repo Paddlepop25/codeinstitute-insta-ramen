@@ -143,7 +143,6 @@ def update_ramen(ramen_id):
         
     if 'ramen_image' in request.files and request.files['ramen_image'].filename != "":
         ramen_image = request.files['ramen_image']
-        print(ramen_image)
         image_filename = ramen_image.filename
         mongo.save_file(ramen_image.filename, ramen_image)
     else:

@@ -2,7 +2,7 @@
 
 <div class="container edit-ramen">
   <h4>Edit Ramen</h4>
-  <form action="{{ url_for('update_ramen', ramen_id=ramen._id) }}" method="POST" class="ramen-form yellow lighten-5">
+  <form action="{{ url_for('update_ramen', ramen_id=ramen._id) }}" method="POST" enctype="multipart/form-data" class="ramen-form yellow lighten-5">
     <div class="row">
       <span>*</span><span>All fields are required</span>
     </div>
