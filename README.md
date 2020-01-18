@@ -5,7 +5,7 @@ A Data Centric Frontend Web Development Project - Code Institute
 By Linda Hsu
 <br>
 <br>
-![Responsive displays of InstaRamen](https://raw.githubusercontent.com/Paddlepop25/codeinstitute-insta-ramen/master/static/images/webpages/index.png)
+![Responsive displays of InstaRamen](https://raw.githubusercontent.com/Paddlepop25/codeinstitute-insta-ramen/master/static/images/webpages/InstaRamen%20responsive.png)
 
 <br>
 
@@ -79,7 +79,7 @@ The website was designed with an orange theme color as it is refreshing and clos
 
     - **Cancel & Delete Buttons -** The 'cancel' button is in green to give a contrast against the orange theme button indicating a different function from the rest. The 'delete' button is in bright red because it indicates danger of not being able to retrieve the ramen once it is deleted 
     
-    - **Forms -** A ligtened yellow background was chosen for the 'add ramen' and 'edit ramen' forms to give it a pop-up look on the page. All the labels fonts are in the orange colour to keep the theme consistent across all pages
+    - **Forms -** A ligtened yellow background was chosen for the 'add ramen', 'add brand' and 'edit ramen' forms to give it a pop-up look on the page. All the labels fonts are in the orange colour to keep the theme consistent across all pages
     
     - **Active Input fields -** When an input field is active, the materialized icons & bottom border transforms to orange, keeping the primary orange color theme consistent
     
@@ -95,7 +95,7 @@ The website was designed with an orange theme color as it is refreshing and clos
     
 ### Wireframes
 
-Wireframes were created initially to help me vsualise the website in different sized screens. They can be viewed via this [link](https://github.com/Paddlepop25/trent-project1-lulu-website/tree/master/assets/wireframes).
+Wireframes were created initially to help me vsualise the website in different sized screens. They can be viewed via this [link](https://github.com/Paddlepop25/codeinstitute-insta-ramen/tree/master/static/images/wireframes).
  
 ## Features
 
@@ -271,7 +271,7 @@ Here are a list of programming languages, frameworks, technologies and tools use
 
 ## Testing
 
-A full testing process can be found in a separate [tests.md](tests.md) file.
+A full testing process can be found in a separate [tests.md](https://github.com/Paddlepop25/codeinstitute-insta-ramen/blob/master/tests.md) file.
 
 ## Deployment
 
