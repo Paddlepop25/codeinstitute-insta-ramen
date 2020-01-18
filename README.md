@@ -96,6 +96,9 @@ The website was designed with an orange theme color as it is refreshing and clos
 ### Wireframes
 
 Wireframes were created initially to help me vsualise the website in different sized screens. They can be viewed via this [link](https://github.com/Paddlepop25/codeinstitute-insta-ramen/tree/master/static/images/wireframes).
+
+Initial planning was done on how to setup the database and the website. I used Microsoft Word to sketch out this ER diagram.
+![InstaRamen's ER diagram](https://raw.githubusercontent.com/Paddlepop25/codeinstitute-insta-ramen/master/static/images/ERdiagram.png)
  
 ## Features
 
@@ -367,8 +370,6 @@ Click on add to enter the following:
 | Key | Value |
 --- | ---
 MONGO_ URI | <string at number 10 in instructions>
-IP | 0.0.0.0 
-PORT | 5000
 
 11. On top of the page, click on "Deploy" and scroll down to the list of instructions given to deploy your project to Heroku. The steps should be done in the terminal
 
