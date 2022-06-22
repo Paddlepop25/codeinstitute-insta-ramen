@@ -37,7 +37,7 @@ lazy-object-proxy==1.4.3
 MarkupSafe==1.1.1
 mccabe==0.6.1
 more-itertools==8.0.2
-numpy==1.18.0
+numpy==1.22.0
 pandas==0.25.3
 parso==0.1.1
 pbr==5.4.4
